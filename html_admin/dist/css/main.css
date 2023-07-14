@@ -31451,9 +31451,8 @@ Contents:
 .form-container .search-text {
   font-size: 16px;
   font-weight:400;
-  margin-top: 50px;
-  text-align: center;
-  margin-bottom: 20px;
+  text-align: left;
+  margin-bottom: 10px;
 }
 
 .form-container .search-button {
