@@ -309,11 +309,6 @@ button {
   border-radius: 0;
 }
 
-button:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
 input,
 button,
 select,
@@ -14685,7 +14680,7 @@ body.menu-side-right .layout-w {
 }
 
 .menu-w .logged-user-menu.color-style-bright {
-  background-color: #636669;
+  background-color: #bcbcbc;
 }
 
 .menu-w .logged-user-menu.color-style-bright-alt {
@@ -15304,12 +15299,12 @@ body.menu-side-right .layout-w {
 }
 
 .menu-w.sub-menu-style-over ul.main-menu>li.active {
-  border-right-color: #636669;
-  border-bottom-color: #636669;
+  border-right-color: #bcbcbc;
+  border-bottom-color: #bcbcbc;
 }
 
 .menu-w.sub-menu-style-over ul.main-menu>li.active>a {
-  background-color: #636669;
+  background-color: #bcbcbc;
   color: #fff;
 }
 
@@ -15339,7 +15334,7 @@ body.menu-side-right .layout-w {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   position: absolute;
-  background-color: #636669;
+  background-color: #bcbcbc;
   color: #fff;
   left: 100%;
   top: -100px;
@@ -15498,7 +15493,7 @@ body.menu-side-right .layout-w {
 }
 
 .menu-w.sub-menu-style-over.sub-menu-color-bright ul.main-menu>li.active>a {
-  background-color: #636669;
+  background-color: #bcbcbc;
 }
 
 .menu-w.menu-layout-mini {
@@ -16650,11 +16645,11 @@ body.menu-side-right .layout-w {
 }
 
 .menu-position-top.menu-w.selected-menu-color-bright ul.main-menu>li.selected {
-  border-right-color: #636669;
+  border-right-color: #bcbcbc;
 }
 
 .menu-position-top.menu-w.selected-menu-color-bright ul.main-menu>li.selected>a {
-  background-color: #636669;
+  background-color: #bcbcbc;
 }
 
 .menu-position-top.menu-w.selected-menu-color-bright ul.main-menu>li.selected>a .icon-w {
@@ -16670,7 +16665,7 @@ body.menu-side-right .layout-w {
 }
 
 .menu-position-top.menu-w.selected-menu-color-bright ul.main-menu>li.selected .sub-menu-w {
-  background-color: #636669;
+  background-color: #bcbcbc;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -16693,7 +16688,7 @@ body.menu-side-right .layout-w {
 }
 
 .menu-position-top.menu-w.sub-menu-style-over.sub-menu-color-bright ul.main-menu>li.active {
-  border-right-color: #636669;
+  border-right-color: #bcbcbc;
 }
 
 .menu-position-top.menu-w.sub-menu-style-inside .sub-menu-w {
@@ -16816,8 +16811,8 @@ body.menu-side-right .layout-w {
 }
 
 .menu-position-top.menu-w.sub-menu-style-inside.sub-menu-color-bright ul.main-menu>li.active {
-  background-color: #636669;
-  border-right-color: #636669;
+  background-color: #bcbcbc;
+  border-right-color: #bcbcbc;
 }
 
 .menu-position-top.menu-w.sub-menu-style-inside.sub-menu-color-bright ul.main-menu>li.active .icon-w {
@@ -16825,7 +16820,7 @@ body.menu-side-right .layout-w {
 }
 
 .menu-position-top.menu-w.sub-menu-style-inside.sub-menu-color-bright .sub-menu-w {
-  background-color: #636669;
+  background-color: #bcbcbc;
 }
 
 .menu-position-top.menu-w.sub-menu-style-inside.sub-menu-color-bright .sub-menu-w ul.sub-menu li {
@@ -27846,7 +27841,7 @@ body.rentals-wrapper .select2-container--default .select2-results__option[aria-s
 }
 
 .top-bar .logged-user-w .logged-user-menu {
-  background: #636669;
+  background: #bcbcbc;
   -webkit-box-shadow: 0 10px 30px 0 rgba(27, 30, 35, 0.27);
   box-shadow: 0 10px 30px 0 rgba(27, 30, 35, 0.27);
   position: absolute;
@@ -28075,7 +28070,7 @@ body.rentals-wrapper .select2-container--default .select2-results__option[aria-s
 }
 
 .top-bar.color-scheme-bright {
-  background-color: #636669;
+  background-color: #bcbcbc;
 }
 
 /* 25. Search */
@@ -31430,27 +31425,29 @@ Contents:
 }
 
 .form-container input[type="text2"] {
-  width: 54%;
+  width: 170%;
   padding: 10px;
   margin: 10px 0;
   border-radius: 8px;
   border: 1px solid #C1C1C1;
   background: var(--grey-grey-10, #F6FAFD);
+  margin-left: auto;
 }
 
 .form-container input[type="date"],
 .form-container select {
-  width: 20%;
+  width: 95%;
   padding: 10px;
   margin: 10px 0;
   border-radius: 8px;
   border: 1px solid #C1C1C1;
   background: var(--grey-grey-10, #F6FAFD);
+  margin-left: auto;
 }
 
 .form-container .search-text {
   font-size: 16px;
-  font-weight:400;
+  font-weight: 400;
   text-align: left;
   margin-bottom: 10px;
 }
@@ -31486,6 +31483,32 @@ Contents:
   font-style: normal;
   font-weight: 700;
   line-height: 30px;
+}
+
+.municipio2 {
+  margin-left: 18%;
+}
+
+/*Icones*/
+.fa-bed,
+.fa-pills,
+.fa-hospital-user,
+.fa-chart-line,
+.fa-magnifying-glass,
+.fa-message,
+.fa-gear,
+.fa-pen-to-square {
+  font-size: 20px;
+  color: #12570a;
+}
+
+.fa-envelope, .fa-circle-user, .fa-coins, .fa-bell, .fa-arrow-right-from-bracket {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.fa-chevron-down {
+  font-size: 8px;
 }
 
 
