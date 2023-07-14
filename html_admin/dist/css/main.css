@@ -31489,6 +31489,68 @@ Contents:
   margin-left: 18%;
 }
 
+.hidden {
+  display: none;
+}
+
+.table-wrapper {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  margin-bottom: 20px;
+  margin-left: 25px;
+}
+
+.table-wrapper .table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 800px;
+  background-color: #f8f8f8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table-wrapper .table thead th,
+.table-wrapper .table tbody td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-wrapper .table thead th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.table-wrapper .table tbody td {
+  vertical-align: middle;
+}
+
+.table-wrapper .table tbody td:first-child {
+  font-weight: bold;
+}
+
+.table-wrapper .table .dropdown {
+  display: flex;
+  justify-content: center;
+}
+
+.table-wrapper .table .dropdown .dropdown-toggle {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #555;
+  cursor: pointer;
+}
+
+.table-wrapper .table .dropdown .dropdown-menu {
+  min-width: 250px;
+}
+
+.table-wrapper .table .dropdown .dropdown-item {
+  font-size: 14px;
+  color: #555;
+}
+
 /*Icones*/
 .fa-bed,
 .fa-pills,

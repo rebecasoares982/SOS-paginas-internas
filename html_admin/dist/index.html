@@ -826,12 +826,12 @@
               <label for="data">Data de nascimento:</label>
               <input type="date" id="data" placeholder="Data de nascimento">
             </div>
-            
+
             <div>
               <label for="nome-mae">Nome da mãe:</label>
               <input type="text2" id="nome-mae" placeholder="Nome da mãe">
             </div>
-            
+
             <div class="municipio2">
               <label for="municipio">Município de nascimento:</label>
               <select id="municipio">
@@ -846,16 +846,58 @@
           <br>
 
           <div class="search-button">
-            <button class="gray-button">Limpa filtros</button>
-            <button class="green-button">Pesquisar paciente</button>
+            <button class="gray-button"><a style="color: #fff; text-decoration: none;" href="index.html">Limpar
+                filtros</a></button>
+            <button id="pesquisarPacienteButton" class="green-button" onclick="mostrarTabela()">Pesquisar
+              paciente</button>
           </div>
         </div>
+        <style>
+          .container-resultado-paciente {
+            width: 850px;
+            padding: 20px;
+            background-color: #f8f8f8;
+            box-shadow: 0 0 10px rgba(239, 255, 220, 0.1);
+          }
 
+          .container-resultado-paciente h2 {
+            margin-top: 0;
+          }
 
+          .container-resultado-paciente p {
+            margin: 10px 0;
+          }
 
+          .container-resultado-paciente .highlight {
+            font-weight: bold;
+          }
+        </style>
 
+        <div id="resultadoPaciente" class="container-resultado-paciente hidden">
+          <div>
+            <h2>Cadastros Encontrados</h2>
+            <p>*01 paciente cadastrado</strong></p>
+          </div>
 
+          <br>
 
+          <p><strong>Gabriela Souza Melo</strong></p>
+          <p><strong>CPF:</strong> 999.890.530-47</p>
+          <p><strong>Sexo:</strong> Feminino</p>
+          <p><strong>Data de Nascimento:</strong> 29/04/1991</p>
+          <p><strong>Município de nascimento:</strong> Itabuna-BA</p>
+
+         
+            <p><strong>Nome da mãe:</strong> Paula Costa Melo</p>
+            <p><strong>Nome do Pai:</strong> Roberto Silvo Carvalho</p>
+            <p><strong>Telefone:</strong> (71) 99608-1362</p>
+            <p><strong>Unidade responsável:</strong> Hospital Municipal de Una</p>
+            <p><strong>Última atualização:</strong> 23/06/2023</p>
+    
+
+          <button class="green-button">Visualizar dados</button>
+
+        </div>
 
 
       </div>
@@ -864,6 +906,15 @@
   </div>
   <div class="display-type"></div>
   </div>
+
+  <script>
+    function mostrarTabela() {
+      document.getElementById("resultadoPaciente").classList.remove("hidden");
+      document.getElementById("pesquisarPacienteButton").classList.add("hidden");
+    }
+  </script>
+
+
   <script src="https://kit.fontawesome.com/fbf22f7a56.js" crossorigin="anonymous"></script>
 
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
