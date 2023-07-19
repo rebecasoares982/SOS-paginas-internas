@@ -31433,7 +31433,40 @@ Contents:
   margin-left: auto;
 }
 
-.form-container input[type="date"],
+@media (min-width: 150px) and (max-width: 750px) {
+  .form-container input[type="text2"] {
+    width: 102%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #C1C1C1;
+    background: var(--grey-grey-10, #F6FAFD);
+    margin-left: auto;
+  }
+}
+
+.form-container input[type="date"] {
+  width: 95%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #C1C1C1;
+  background: var(--grey-grey-10, #F6FAFD);
+  margin-left: auto;
+}
+
+@media (max-width: 450px) {
+  .form-container input[type="date"] {
+    width: 102%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #C1C1C1;
+    background: var(--grey-grey-10, #F6FAFD);
+    margin-left: auto;
+  }
+}
+
 .form-container select {
   width: 95%;
   max-width: 90%;
@@ -31481,6 +31514,17 @@ Contents:
   cursor: pointer;
 }
 
+@media only screen and (max-width: 480px) {
+  .form-container .search-button button {
+    font-size: 12px;
+    width: 200px;
+    height: 40px;
+    white-space: nowrap;
+    margin-right: 3px;
+    gap: 30px;
+  }
+}
+
 .search-button .green-button {
   background-color: #12570a;
 }
@@ -31500,6 +31544,12 @@ Contents:
 
 .municipio2 {
   margin-left: 18%;
+}
+
+@media (min-width: 150px) and (max-width: 750px) {
+  .municipio2 {
+    margin-left: 0;
+  }
 }
 
 .hidden {
