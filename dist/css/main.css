@@ -14310,7 +14310,6 @@ body.menu-side-right .layout-w {
 
 .logged-user-w .avatar-w {
   padding: 5px;
-  border: 1px solid #262626;
   border-radius: 50%;
   overflow: hidden;
   display: inline-block;
@@ -31437,12 +31436,26 @@ Contents:
 .form-container input[type="date"],
 .form-container select {
   width: 95%;
+  max-width: 90%;
   padding: 10px;
   margin: 10px 0;
   border-radius: 8px;
   border: 1px solid #C1C1C1;
   background: var(--grey-grey-10, #F6FAFD);
   margin-left: auto;
+}
+
+@media (min-width: 1400px) and (max-width: 1600px) {
+  .form-container select {
+    width: 94%;
+    max-width: 93%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #C1C1C1;
+    background: #F6FAFD;
+    margin-left: auto;
+  }
 }
 
 .form-container .search-text {
@@ -31552,10 +31565,10 @@ Contents:
 }
 
 .container-resultado-paciente {
-  width: 900px;
-  height: 290px;
+  width: 93%;
+  height: 300px;
   padding: 15px;
-  margin: 10px;
+  margin: 18px;
   background-color: #F6FAFD;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(239, 255, 220, 0.7);
@@ -31574,29 +31587,60 @@ Contents:
   font-weight: bold;
 }
 
+.container-resultado-paciente-naoencontrado {
+  width: 92%;
+  height: 290px;
+  padding: 15px;
+  margin: 10px;
+  background-color: #F6FAFD;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(239, 255, 220, 0.7);
+  border: 1px solid #C1C1C1;
+}
+
+.container-resultado-paciente-naoencontrado h2 {
+  margin-top: 0;
+}
+
+.container-resultado-paciente-naoencontrado p {
+  margin: 10px 0;
+}
+
+.container-resultado-paciente-naoencontrado .highlight {
+  font-weight: bold;
+}
+
 .column-left {
   float: left;
   width: 33%;
+  padding-left: 15px;
 }
 
 .column-center {
   float: left;
   width: 38%;
+  padding-left: 15px;
 }
 
 .column-right {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-right: 30px;
+  margin-right: 70px;
   gap: 10px;
+  padding-left: 15px;
 }
 
 .ultima-atualizacao {
   font-size: 14px;
   text-align: center;
   float: right;
-  width: 250px;
+  width: 330px;
+}
+
+.text-title-resultado {
+  padding-top: 10px;
+  padding-left: 15px;
 }
 
 .visualizar-button {
@@ -31614,9 +31658,6 @@ Contents:
   gap: 16px;
   border-radius: 70px;
 }
-
-
-
 
 .fa-ellipsis-vertical {
   font-size: 20px;
@@ -31665,8 +31706,8 @@ Contents:
   display: inline-block;
   padding: 10px 20px;
   text-decoration: none;
-  color: #000;
-  font-size: 16px;
+  color: #3E4B5B;
+  font-size: 14px;
   cursor: pointer;
 }
 
@@ -31705,6 +31746,10 @@ Contents:
   font-size: 8px;
 }
 
+.fa-user-doctor {
+  font-size: 28px;
+  color: #12570D;
+}
 
 /* ##. User Override Styles */
 /*# sourceMappingURL=main.css.map */
