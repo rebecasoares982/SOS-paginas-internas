@@ -31407,7 +31407,7 @@ Contents:
 }
 
 .form-container input[type="text"] {
-  width: 95%;
+  width: 96%;
   padding: 10px;
   margin: 10px 0;
   border-radius: 8px;
@@ -31653,8 +31653,8 @@ Contents:
 }
 
 .container-resultado-paciente-naoencontrado {
-  width: 92%;
-  height: 290px;
+  width: 94%;
+  height: 225px;
   padding: 15px;
   margin: 10px;
   background-color: #F6FAFD;
@@ -31703,10 +31703,77 @@ Contents:
   width: 330px;
 }
 
+@media (max-width: 768px) {
+  .container-resultado-paciente {
+    width: 90%;
+    height: 580px;
+    padding: 10px;
+  }
+
+  .container-resultado-paciente h2 {
+    font-size: 18px;
+  }
+
+  .container-resultado-paciente p {
+    font-size: 14px;
+    padding-bottom: 10px;
+  }
+
+  .container-resultado-paciente .highlight {
+    font-weight: bold;
+  }
+
+  .column-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: -3px;
+    margin-top: -45px;
+    gap: 10px;
+  }
+
+  .dropdown-menu-dados {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 71%;
+    width: 155px;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .ultima-atualizacao {
+    font-size: 14px;
+    text-align: left;
+    float: left;
+    padding-left: 15px;
+    width: 330px;
+  }
+}
+
 .text-title-resultado {
   padding-top: 10px;
   padding-left: 15px;
 }
+
+.adicionar-paciente-button {
+  padding: 10px 20px;
+  background-color: #12570a;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  width: 170px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 70px;
+  margin-left: auto;
+}
+
 
 .visualizar-button {
   padding: 10px 20px;
