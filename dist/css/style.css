@@ -160,7 +160,7 @@ p {
 
 abbr[title],
 abbr[data-original-title] {
-  text-decoration: underline;
+  text-decoration: none;
   -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   cursor: help;
@@ -238,7 +238,7 @@ a {
 
 a:hover {
   color: rgb(99, 99, 99);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:not([href]):not([tabindex]) {
@@ -4376,14 +4376,14 @@ fieldset:disabled .all-wrapper a.fc-button,
 
 .btn-link:hover {
   color: #0356ad;
-  text-decoration: underline;
+  text-decoration: none;
   background-color: transparent;
   border-color: transparent;
 }
 
 .btn-link:focus,
 .btn-link.focus {
-  text-decoration: underline;
+  text-decoration: none;
   border-color: transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -11468,7 +11468,7 @@ a.text-dark:focus {
   }
 
   a:not(.btn):not(.all-wrapper .fc-button) {
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   abbr[title]::after {
@@ -22423,13 +22423,6 @@ Chat Styles
   margin-top: 2rem;
 }
 
-/* 15. App - Full Chat */
-.full-chat-w {
-  /*
-    #3. Middle Section
-  */
-}
-
 .full-chat-w .full-chat-i {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -28300,7 +28293,7 @@ body.rentals-wrapper .select2-container--default .select2-results__option[aria-s
 
 .search-with-suggestions-w .ssg-items.ssg-items-blocks .ssg-item .item-name {
   font-size: 0.8rem;
-  text-decoration: underline;
+  text-decoration: none;
   color: #3E4B5B;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -31455,9 +31448,31 @@ Contents:
   margin-left: auto;
 }
 
-@media (max-width: 450px) {
+@media (min-width: 150px) and (max-width: 550px) {
   .form-container input[type="date"] {
     width: 102%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #C1C1C1;
+    background: var(--grey-grey-10, #F6FAFD);
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 390px) and (max-width: 400px) {
+  .form-container input[type="date"] {
+    width: 115%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #C1C1C1;
+    background: var(--grey-grey-10, #F6FAFD);
+    margin-left: auto;
+  }
+
+  .form-container input[type="text2"] {
+    width: 110%;
     padding: 10px;
     margin: 10px 0;
     border-radius: 8px;
@@ -31768,6 +31783,36 @@ Contents:
 .paginator a.active {
   background-color: #000;
   color: #fff;
+}
+
+.column-right {
+  position: relative;
+}
+
+.fa-solid.fa-ellipsis-vertical {
+  cursor: pointer;
+}
+
+.dropdown-menu-dados {
+  display: none;
+  position: absolute;
+  top: -210%;
+  left: 71%;
+  width: 155px;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.show {
+  display: block;
+}
+
+
+li {
+  list-style: none;
 }
 
 /*Icones*/

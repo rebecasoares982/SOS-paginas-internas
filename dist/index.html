@@ -12,7 +12,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet" type="text/css">
 
-  <link href="css/main.css?version=4.4.0" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="menu-position-side menu-side-left full-screen with-content-panel">
@@ -538,13 +538,16 @@
           </div>
 
           <div class="column-right">
-            <button class="visualizar-button">Visualizar dados</button>
-            <i class="fa-solid fa-ellipsis-vertical" data-toggle="dropdown"></i>
-            <ul class="dropdown-menu">
+            <button class="visualizar-button" onclick="toggleDropdown()">Visualizar dados</button>
+            <i class="fa-solid fa-ellipsis-vertical" data-toggle="dropdown-dados" onclick="toggleDropdown()"></i>
+            <ul class="dropdown-menu-dados" id="dropdown-menu-dados">
+              <li><a href="#">Lista de atendimento</a></li>
               <li><a href="#">Atualizar cadastro</a></li>
               <li><a href="#">Excluir cadastro</a></li>
             </ul>
           </div>
+
+
           <p class="ultima-atualizacao"><strong>Última atualização: <br>
             </strong> 23/06/2023</p>
 
@@ -576,6 +579,25 @@
       document.getElementById("resultadoPaciente").classList.remove("hidden");
       document.getElementById("pesquisarPacienteButton").classList.add("hidden");
     }
+
+    function toggleDropdown() {
+      var dropdownMenu = document.getElementById('dropdown-menu-dados');
+      dropdownMenu.classList.toggle('show');
+    }
+
+    document.addEventListener('click', function (event) {
+      var dropdownMenu = document.getElementById('dropdown-menu-dados');
+      var visualizarButton = document.querySelector('.visualizar-button');
+      var dropdownIcon = document.querySelector('.fa-solid.fa-ellipsis-vertical');
+
+      if (dropdownMenu.classList.contains('show') &&
+        !dropdownMenu.contains(event.target) &&
+        !visualizarButton.contains(event.target) &&
+        !dropdownIcon.contains(event.target)) {
+        dropdownMenu.classList.remove('show');
+      }
+    });
+
   </script>
 
 
