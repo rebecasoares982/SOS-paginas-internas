@@ -31920,12 +31920,12 @@ li {
   justify-content: space-between;
 }
 
-.form-row > div {
+.form-row>div {
   flex: 1;
   margin-right: 10px;
 }
 
-.form-row > div:last-child {
+.form-row>div:last-child {
   margin-right: 0;
 }
 
@@ -31977,6 +31977,12 @@ input[type="checkbox"] {
   width: 100%;
 }
 
+@media (min-width: 150px) and (max-width: 450px) {
+  .data_obito, .pais_nascimento {
+    padding-right: 100px;
+    padding-top: 8px;
+  }
+}
 
 /* ##. User Override Styles */
 /*# sourceMappingURL=main.css.map */
