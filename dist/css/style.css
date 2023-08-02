@@ -31947,9 +31947,34 @@ input[type="checkbox"] {
   margin-right: 5px;
 }
 
+/* Mantenha a classe checkbox-label */
 .checkbox-label {
   display: flex;
   align-items: center;
+  margin-top: -8px;
+}
+
+/* Estilo para esconder a caixa de checkbox padrão */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Mantenha a classe checkbox-custom */
+.checkbox-custom {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border: 1px solid #333;
+  background-color: #fff;
+  border-radius: 3px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+/* Mantenha a estilização para o checkbox customizado quando está marcado */
+input[type="checkbox"]:checked+.checkbox-custom {
+  background-color: #0368d2;
+  border: none;
 }
 
 .unknown-checkbox {
@@ -32011,7 +32036,10 @@ input[type="checkbox"] {
 
 /*Swith button*/
 .switch-container {
-  display: inline-block;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+  margin-right: 72px;
   font-size: 14px;
   color: #333;
 }
@@ -32047,8 +32075,9 @@ input[type="checkbox"] {
   display: none;
 }
 
-input[type="checkbox"]:checked + .switch:before {
+input[type="checkbox"]:checked+.switch:before {
   transform: translateX(20px);
+  background-color: #24b314;
 }
 
 /* Media queries para tornar responsivo */

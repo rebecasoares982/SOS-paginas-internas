@@ -38,16 +38,13 @@
             </div>
         </div>
         <div class="layout-w">
-            <!--------------------
-        START - Mobile Menu
-        -------------------->
+
+            <!------- Menu Mobile ------->
             <div class="menu-mobile menu-activated-on-click">
                 <div class="mm-logo-buttons-w">
-                    <a class="mm-logo" href="#"><img src="logo.png"></a>
+                    <a class="mm-logo" href="#">
+                        <img src="logo.png"></a>
                     <div class="mm-buttons">
-                        <div class="content-panel-open">
-                            <div class="os-icon os-icon-grid-circles"></div>
-                        </div>
                         <div class="mobile-menu-trigger">
                             <div class="os-icon os-icon-hamburger-menu-1"></div>
                         </div>
@@ -67,24 +64,19 @@
                             </div>
                         </div>
                     </div>
-                    <!--------------------
-            START - Mobile Menu List
-            -------------------->
+
+                    <!------- Menu Mobile Lista -------->
                     <ul class="main-menu">
                         <li class="has-sub-menu">
                             <a href="#">
                                 <div class="icon-w">
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </div>
-                                <span>Pesquisar</span>
+                                <span>Pesquisar paciente</span>
                             </a>
                             <ul class="sub-menu">
                                 <li>
-                                    <a href="#">Pesquisar paciente</a>
-                                </li>
-
-                                <li>
-                                    <a href="#">Pesquisar unidade</a>
+                                    <a href="#">###</a>
                                 </li>
                             </ul>
                         </li>
@@ -161,7 +153,7 @@
                 class="menu-w color-scheme-light color-style-transparent menu-position-side menu-side-left menu-layout-compact sub-menu-style-over sub-menu-color-bright selected-menu-color-light menu-activated-on-hover menu-has-selected-link">
                 <div class="logo-w">
                     <img src="logo.png">
-                    <a href="pesquisa-paciente-resultado.html">
+                    <a href="cadastro-paciente.html">
                         <!-- <div class="logo-label"></div> -->
                     </a>
                 </div>
@@ -182,7 +174,6 @@
                     </div>
                 </div>
 
-
                 <ul class="main-menu">
                     <li class="sub-header">
                         <span>Acesso rápido</span>
@@ -193,21 +184,24 @@
                             <div class="icon-w">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </div>
-                            <span>Pesquisar</span>
+                            <span>Pesquisar paciente</span>
                         </a>
                         <div class="sub-menu-w">
-                            <div class="sub-menu-header"></div>
-
+                            <div class="sub-menu-header">
+                                ###
+                            </div>
+                            <div class="sub-menu-icon">
+                                <i class="os-icon os-icon-life-buoy"></i>
+                            </div>
                             <div class="sub-menu-i">
                                 <ul class="sub-menu">
                                     <li>
-                                        <a href="#">Pesquisar paciente</a>
+                                        <a href="#">### <strong class="badge badge-danger">Novo</strong></a>
                                     </li>
                                 </ul>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a href="#">Pesquisar unidade <strong
-                                                class="badge badge-danger">Novo</strong></a>
+                                        <a href="#">###</a>
                                     </li>
                                 </ul>
                             </div>
@@ -460,114 +454,250 @@
 
                 </div>
 
+                <!-- início do conteúdo-->
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item">
                         <a href="#">Início</a>
                     </li>
                     <li class="breadcrumb-item">
-                        <a href="#">Unidade de Pesquisa</a>
+                        <a href="#">Paciente</a>
                     </li>
                     <li class="breadcrumb-item">
-                        <span>Pesquisar unidade</span>
+                        <span>Cadastro</span>
                     </li>
                 </ul>
 
                 <div class="form-container">
-                    <h5>Pesquisar Unidade</h5>
+                    <h5>Cadastro da Unidade</h5>
                     <br>
 
-                    <label for="nome-cidadao">Nome/Bairro/CNES da Unidade:</label>
-                    <input type="text" id="nome-cidadao" placeholder="Nome/Bairro/CNES da Unidade:">
+                    <form [formGroup]="formPaciente" (ngSubmit)="cadastrarPaciente()">
+                        <div class="form-row">
+                            <div class="form-column">
+                                <label for="nom_paciente_pac">Nome da Unidade:*</label>
+                                <input type="text" id="nom_paciente_pac" name="nom_paciente_pac"
+                                    formControlName="nom_paciente_pac"
+                                    [ngClass]="{'is-invalid': form.nom_paciente_pac.errors && form.nom_paciente_pac.touched }"
+                                    oninput="this.value = this.value.toUpperCase()">
 
-                    <div class="search-button">
-                        <button class="gray-button"><a style="color: #fff; text-decoration: none;"
-                                href="pesquisa-unidade.html">Limpar
-                                filtros</a></button>
-                        <button id="pesquisarPacienteButton" class="green-button" onclick="mostrarTabela()">Pesquisar
-                            Unidade</button>
-                    </div>
+                                <div *ngIf="form.nom_paciente_pac.errors?.required" class="invalid-feedback">Nome é
+                                    obrigatório.</div>
+                                <div *ngIf="form.nom_paciente_pac.errors?.minlength" class="invalid-feedback">Nome deve
+                                    ter no mínimo 3 caracteres</div>
+                                <div *ngIf="form.nom_paciente_pac.errors?.maxlength" class="invalid-feedback">Nome deve
+                                    ter no máximo 70 caracteres</div>
+                                <div *ngIf="form.nom_paciente_pac.errors?.pattern" class="invalid-feedback">Nome
+                                    inválido</div>
+                            </div>
 
-                    <div class="botao-filtro">
-                        <button class="filtro-table">
-                            Filtros <i class="fas fa-filter"></i>
-                        </button>
-                    </div>
+                            <div class="form-column">
+                                <label for="nom_social_paciente_pac">Tipo da Unidade</label>
+                                <input type="text" id="nom_social_paciente_pac" name="nom_social_paciente_pac"
+                                    formControlName="nom_social_paciente_pac"
+                                    [ngClass]="{'is-invalid': form.nom_social_paciente_pac.errors && form.nom_social_paciente_pac.touched }"
+                                    oninput="this.value = this.value.toUpperCase()">
+                            </div>
 
-                    <div class="switch-container">
-                        <label class="switch-label">
-                            Unidade
-                            <input type="checkbox" id="toggle-unit">
-                            <span class="switch"></span>
-                        </label>
-                    </div>
+                            <div class="form-column">
+                                <label for="num_cpf_pac">CNES:*</label>
+                                <input type="text" id="num_cpf_pac" name="num_cpf_pac" formControlName="num_cpf_pac"
+                                    mask="000.000.000-00"
+                                    [ngClass]="{'is-invalid': form.num_cpf_pac.errors && form.num_cpf_pac.touched }">
+
+                                <div *ngIf="form.num_cpf_pac.errors?.required" class="invalid-feedback">CNES é
+                                    obrigatório.</div>
+                            </div>
+                        </div>
 
 
-                </div>
+                        <div class="form-row">
+                            <div class="form-column">
+                                <label for="num_cns_pac">CNPJ:*</label>
+                                <input type="text" id="num_cns_pac" name="num_cns_pac" formControlName="num_cns_pac"
+                                    mask="000.000.0000.00000"
+                                    [ngClass]="{'is-invalid': form.num_cns_pac.errors && form.num_cns_pac.touched }">
 
-                <div class="container">
-                    <div class="table-responsive">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Unidade de saúde</th>
-                                    <th>CNES</th>
-                                    <th>Telefone</th>
-                                    <th>Bairro</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>UBS UNA</td>
-                                    <td>1234567</td>
-                                    <td>73 99885-5582</td>
-                                    <td>São Cristovão-BA</td>
-                                </tr>
+                                <div *ngIf="form.num_cns_pac.errors?.required" class="invalid-feedback">CNPJ é
+                                    obrigatório.</div>
+                            </div>
 
-                                <tr>
-                                    <td>Hospital ABC</td>
-                                    <td>9876543</td>
-                                    <td>55 12345-6789</td>
-                                    <td>Rua das Flores, 123</td>
-                                </tr>
+                            <div class="form-column">
+                                <label for="num_celular_pac">Telefone:*</label>
+                                <input type="text" id="num_celular_pac" name="num_celular_pac"
+                                    formControlName="num_celular_pac" mask="(00) 0 0000-0000"
+                                    [ngClass]="{'is-invalid': form.num_celular_pac.errors && form.num_celular_pac.touched }">
 
-                                <tr>
-                                    <td>Clínica XYZ</td>
-                                    <td>2468135</td>
-                                    <td>22 98765-4321</td>
-                                    <td>Avenida Central, 456</td>
-                                </tr>
+                                <div *ngIf="form.num_celular_pac.errors?.required" class="invalid-feedback">Número do
+                                    celular é obrigatório.</div>
+                            </div>
 
-                                <tr>
-                                    <td>Posto de Saúde LMN</td>
-                                    <td>7778889</td>
-                                    <td>31 87654-3210</td>
-                                    <td>Rua da Paz, 789</td>
-                                </tr>
+                            <div class="form-column"></div>
+                        </div>
 
-                                <tr>
-                                    <td>Clínica do Bem</td>
-                                    <td>5554443</td>
-                                    <td>11 93456-7890</td>
-                                    <td>Av. da Esperança, 987</td>
-                                </tr>
+                        <br>
+                        <h5 class="mt-5">Endereço</h5>
+                        <div class="form-row">
+                            <div class="form-column">
+                                <label for="num_cep_pac">CEP:*</label>
+                                <input type="text" id="num_cep_pac" name="num_cep_pac" formControlName="num_cep_pac"
+                                    mask="00000-000"
+                                    [ngClass]="{'is-invalid': form.num_cep_pac.errors && form.num_cep_pac.touched }"
+                                    (blur)="buscarCEP(form.num_cep_pac.value)">
 
-                                <tr>
-                                    <td>Posto Médico SA</td>
-                                    <td>9990001</td>
-                                    <td>91 76543-2109</td>
-                                    <td>Rua das Oportunidades, 5432</td>
-                                </tr>
+                                <div *ngIf="form.num_cep_pac.errors?.required" class="invalid-feedback"> CEP é
+                                    obrigatório.</div>
+                                <div *ngIf="form.num_cep_pac.errors?.maxlength" class="invalid-feedback"> CEP deve ter 8
+                                    dígitos.</div>
+                            </div>
 
-                                <tr>
-                                    <td>Clínica São Lucas</td>
-                                    <td>8542001</td>
-                                    <td>47 98765-4321</td>
-                                    <td>Rua dos Médicos, 1234</td>
-                                </tr>
+                            <div class="form-column">
+                                <label for="cod_tipo_logradouro_tlo">Tipo de Logradouro:*</label>
+                                <select formControlName="cod_tipo_logradouro_tlo"
+                                    [ngClass]="{'is-invalid': form.cod_tipo_logradouro_tlo.errors && form.cod_tipo_logradouro_tlo.touched }">
+                                    <option [attr.selected]="true" value="">Selecione</option>
+                                    <option [value]="tipoLogradouro.value"
+                                        *ngFor="let tipoLogradouro of tiposLogradouros">
+                                        {{ tipoLogradouro.text }}
+                                    </option>
+                                </select>
+                                <div class="invalid-feedback" *ngIf="form.cod_tipo_logradouro_tlo.errors">
+                                    <div *ngIf="form.cod_tipo_logradouro_tlo.errors?.required">
+                                        Tipo de logradouro é obrigatório.
+                                    </div>
+                                </div>
+                            </div>
 
-                            </tbody>
-                        </table>
-                    </div>
+                            <div class="form-column">
+                                <label for="des_endereco_pac">Logradouro:*</label>
+                                <input type="text" id="des_endereco_pac" name="des_endereco_pac"
+                                    formControlName="des_endereco_pac"
+                                    [ngClass]="{'is-invalid': form.des_endereco_pac.errors && form.des_endereco_pac.touched }"
+                                    oninput="this.value = this.value.toUpperCase()">
+
+                                <div *ngIf="form.des_endereco_pac.errors?.required" class="invalid-feedback"> Logradouro
+                                    é obrigatório.</div>
+                                <div *ngIf="form.des_endereco_pac.errors?.maxlength" class="invalid-feedback">
+                                    Logradouro deve ter no máximo 100 caracteres.</div>
+                                <div *ngIf="form.des_endereco_pac.errors?.pattern" class="invalid-feedback"> O
+                                    Logradouro informado possui caracteres inválidos.</div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-row">
+                            <div class="form-column">
+                                <label for="num_numero_pac">Número:*</label>
+                                <input type="text" id="num_numero_pac" name="num_numero_pac"
+                                    formControlName="num_numero_pac"
+                                    [ngClass]="{'is-invalid': form.num_numero_pac.errors && form.num_numero_pac.touched }"
+                                    oninput="this.value = this.value.toUpperCase()">
+
+                                <div *ngIf="form.num_numero_pac.errors?.required" class="invalid-feedback"> Número é
+                                    obrigatório.</div>
+                                <div *ngIf="form.num_numero_pac.errors?.maxlength" class="invalid-feedback"> Número deve
+                                    ter no máximo 10 caracteres.</div>
+                                <div *ngIf="form.num_numero_pac.errors?.pattern" class="invalid-feedback"> O Número
+                                    informado possui caracteres inválidos.</div>
+
+                                <!-- Mantenha o HTML fornecido -->
+                                <div>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="sem_numero"
+                                            (click)="toggleNumeroLogradouro($event)">
+                                        <span class="checkbox-custom"></span>
+                                        Sem Número
+                                    </label>
+                                </div>
+
+                            </div>
+
+                            <div class="form-column">
+                                <label for="nom_bairro_pac">Bairro:*</label>
+                                <input type="text" id="nom_bairro_pac" name="nom_bairro_pac"
+                                    formControlName="nom_bairro_pac"
+                                    [ngClass]="{'is-invalid': form.nom_bairro_pac.errors && form.nom_bairro_pac.touched }"
+                                    oninput="this.value = this.value.toUpperCase()">
+
+                                <div *ngIf="form.nom_bairro_pac.errors?.required" class="invalid-feedback"> Bairro é
+                                    obrigatório.</div>
+                                <div *ngIf="form.nom_bairro_pac.errors?.maxlength" class="invalid-feedback"> Bairro deve
+                                    ter no máximo 72 caracteres.</div>
+                                <div *ngIf="form.nom_bairro_pac.errors?.pattern" class="invalid-feedback"> O Bairro
+                                    informado possui caracteres inválidos.</div>
+                            </div>
+
+                            <div class="form-column">
+                                <label for="des_complemento_pac">Complemento:</label>
+                                <input type="text" id="des_complemento_pac" name="des_complemento_pac"
+                                    formControlName="des_complemento_pac"
+                                    [ngClass]="{'is-invalid': form.des_complemento_pac.errors && form.des_complemento_pac.touched }"
+                                    oninput="this.value = this.value.toUpperCase()">
+
+                                <div *ngIf="form.des_complemento_pac.errors?.maxlength" class="invalid-feedback">
+                                    Complemento deve ter no máximo 30 caracteres.</div>
+                                <div *ngIf="form.des_complemento_pac.errors?.pattern" class="invalid-feedback"> O
+                                    Complemento informado possui caracteres inválidos.</div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-column">
+                                <label for="des_referencia_pac">Ponto de Referência:</label>
+                                <input type="text" id="des_referencia_pac" name="des_referencia_pac"
+                                    formControlName="des_referencia_pac"
+                                    [ngClass]="{'is-invalid': form.des_referencia_pac.errors && form.des_referencia_pac.touched }"
+                                    oninput="this.value = this.value.toUpperCase()">
+
+                                <div *ngIf="form.des_referencia_pac.errors?.maxlength" class="invalid-feedback"> Ponto
+                                    de Referência deve ter no máximo 40 caracteres.</div>
+                                <div *ngIf="form.des_referencia_pac.errors?.pattern" class="invalid-feedback"> O Ponto
+                                    de Referência informado possui caracteres inválidos.</div>
+                            </div>
+
+                            <div class="form-column">
+                                <label for="seq_municipio_mun">Município:</label>
+                                <select #cod_municipio_mun formControlName="seq_municipio_mun"
+                                    [ngClass]="{'is-invalid': form.seq_municipio_mun.errors && form.seq_municipio_mun.touched }">
+                                    <option [attr.selected]="true" value="">Selecione</option>
+                                    <option [value]="municipio.cod_municipio_mun" *ngFor="let municipio of municipios">
+                                        {{ municipio.des_municipio_mun }}
+                                    </option>
+                                </select>
+                                <div class="invalid-feedback" *ngIf="form.seq_municipio_mun.errors">
+                                    <div *ngIf="form.seq_municipio_mun.errors?.required">
+                                        Município é obrigatório.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-column">
+                                <label for="cod_estado_est">Estado:</label>
+                                <select #cod_estado_est (change)="listarMunicipiosPorEstado(cod_estado_est.value)"
+                                    formControlName="cod_estado_est"
+                                    [ngClass]="{'is-invalid': form.cod_estado_est.errors && form.cod_estado_est.touched }">
+                                    <option [attr.selected]="true" value="">Selecione</option>
+                                    <option [value]="estado.cod_estado_est" *ngFor="let estado of estados">
+                                        {{ estado.des_sigla_est }}
+                                    </option>
+                                </select>
+                                <div class="invalid-feedback" *ngIf="form.cod_estado_est.errors">
+                                    <div *ngIf="form.cod_estado_est.errors?.required">
+                                        Estado é obrigatório.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="search-button">
+                            <button class="gray-button">
+                                <a style="color: #fff; text-decoration: none;" href="#">Cancelar Cadastro</a>
+                            </button>
+                            <button type="submit" id="pesquisarPacienteButton" class="green-button">
+                                Adicionar Unidade
+                            </button>
+                        </div>
+
+                    </form>
                 </div>
 
                 <div class="paginator">
@@ -579,7 +709,6 @@
                 </div>
 
             </div>
-
 
         </div>
     </div>
@@ -612,19 +741,27 @@
             }
         });
 
-        const toggleUnit = document.getElementById('toggle-unit');
+    </script>
 
-        toggleUnit.addEventListener('change', function () {
-            if (this.checked) {
-                // Habilitar a unidade (ação quando o switch está ligado)
-                console.log('Unidade habilitada.');
-            } else {
-                // Desabilitar a unidade (ação quando o switch está desligado)
-                console.log('Unidade desabilitada.');
-            }
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#cep').on('blur', function () {
+                var cep = $(this).val().replace(/\D/g, '');
+                if (cep.length == 8) {
+                    $.getJSON('https://viacep.com.br/ws/' + cep + '/json/', function (data) {
+                        if (!("erro" in data)) {
+                            $('#logradouro').val(data.logradouro);
+                            $('#bairro').val(data.bairro);
+                            $('#cidade').val(data.localidade);
+                            $('#estado').val(data.uf);
+                        } else {
+                            alert('CEP não encontrado.');
+                        }
+                    });
+                }
+            });
         });
-
-
     </script>
 
 
