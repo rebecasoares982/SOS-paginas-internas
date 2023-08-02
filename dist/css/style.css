@@ -31414,6 +31414,7 @@ Contents:
   border: 1px solid #C1C1C1;
   background: var(--grey-grey-10, #F6FAFD);
   margin-left: auto;
+  outline: none;
 }
 
 .form-container input[type="text2"] {
@@ -31424,6 +31425,7 @@ Contents:
   border: 1px solid #C1C1C1;
   background: var(--grey-grey-10, #F6FAFD);
   margin-left: auto;
+  outline: none;
 }
 
 @media (min-width: 150px) and (max-width: 750px) {
@@ -31435,6 +31437,7 @@ Contents:
     border: 1px solid #C1C1C1;
     background: var(--grey-grey-10, #F6FAFD);
     margin-left: auto;
+    outline: none;
   }
 }
 
@@ -31446,6 +31449,7 @@ Contents:
   border: 1px solid #C1C1C1;
   background: var(--grey-grey-10, #F6FAFD);
   margin-left: auto;
+  outline: none;
 }
 
 @media (min-width: 150px) and (max-width: 550px) {
@@ -31457,6 +31461,7 @@ Contents:
     border: 1px solid #C1C1C1;
     background: var(--grey-grey-10, #F6FAFD);
     margin-left: auto;
+    outline: none;
   }
 }
 
@@ -31469,6 +31474,7 @@ Contents:
     border: 1px solid #C1C1C1;
     background: var(--grey-grey-10, #F6FAFD);
     margin-left: auto;
+    outline: none;
   }
 
   .form-container input[type="text2"] {
@@ -31479,6 +31485,7 @@ Contents:
     border: 1px solid #C1C1C1;
     background: var(--grey-grey-10, #F6FAFD);
     margin-left: auto;
+    outline: none;
   }
 }
 
@@ -31491,6 +31498,7 @@ Contents:
   border: 1px solid #C1C1C1;
   background: var(--grey-grey-10, #F6FAFD);
   margin-left: auto;
+  outline: none;
 }
 
 @media (min-width: 1400px) and (max-width: 1600px) {
@@ -31503,6 +31511,37 @@ Contents:
     border: 1px solid #C1C1C1;
     background: #F6FAFD;
     margin-left: auto;
+    outline: none;
+  }
+}
+
+/* Adicionar estilo personalizado para o campo focado */
+.form-container input[type="text"]:focus,
+.form-container input[type="date"]:focus,
+.form-container select:focus {
+  border-color: #2B9A53;
+  box-shadow: 0 0 2px #2B9A53;
+  /* Adicionar sombra ao focar */
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-column {
+  flex: 1;
+  margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-column {
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 }
 
