@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Layout SOS</title>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="template language" name="keywords">
+    <meta content="Admin dashboard html template" name="description">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="favicon.png" rel="shortcut icon">
+
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet" type="text/css">
+
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="menu-position-side menu-side-left full-screen with-content-panel">
+    <div class="all-wrapper with-side-panel solid-bg-all">
+
+        <div class="search-with-suggestions-w">
+            <div class="search-with-suggestions-modal">
+                <div class="element-search">
+                    <input class="search-suggest-input" placeholder="Buscar" type="text">
+                    <div class="close-search-suggestions">
+                        <i class="os-icon os-icon-x"></i>
+                    </div>
+                    </input>
+                </div>
+
+                <div class="search-suggestions-group">
+
+                    <div class="ssg-content">
+                        <div class="ssg-nothing-found">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layout-w">
+
+            <!------- Menu Mobile ------->
+            <div class="menu-mobile menu-activated-on-click">
+                <div class="mm-logo-buttons-w">
+                    <a class="mm-logo" href="#">
+                        <img src="logo.png"></a>
+                    <div class="mm-buttons">
+                        <div class="mobile-menu-trigger">
+                            <div class="os-icon os-icon-hamburger-menu-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-and-user">
+                    <div class="logged-user-w">
+                        <div class="avatar-w">
+                            <i class="fa-solid fa-user-doctor"></i>
+                        </div>
+                        <div class="logged-user-info-w">
+                            <div class="logged-user-name">
+                                Antônio Marques
+                            </div>
+                            <div class="logged-user-role">
+                                Administrador
+                            </div>
+                        </div>
+                    </div>
+
+                    <!------- Menu Mobile Lista -------->
+                    <ul class="main-menu">
+                        <li class="has-sub-menu">
+                            <a href="#">
+                                <div class="icon-w">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                                <span>Pesquisar paciente</span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="#">###</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="has-sub-menu">
+                            <a href="#">
+                                <div class="icon-w">
+                                    <i class="fa-solid fa-chart-line"></i>
+                                </div>
+                                <span>Dashboard</span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="#">Dashboard 1</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="has-sub-menu">
+                            <a href="#">
+                                <div class="icon-w">
+                                    <i class="fa-solid fa-hospital-user"></i>
+                                </div>
+                                <span>Lista de pacientes</span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="#">###</a>
+                                </li>
+                                <li>
+                                    <a href="#">### <strong class="badge badge-danger">Novo</strong></a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="has-sub-menu">
+                            <a href="apps_bank.html">
+                                <div class="icon-w">
+                                    <i class="fa-solid fa-bed"></i>
+                                </div>
+                                <span>AIH- Leito</span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="###">### <strong class="badge badge-danger">Novo</strong></a>
+                                </li>
+                                <li>
+                                    <a href="#">###</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="has-sub-menu">
+                            <a href="#">
+                                <div class="icon-w">
+                                    <i class="fa-solid fa-pills"></i>
+                                </div>
+                                <span>Farmácia</span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="#">#</a>
+                                </li>
+                                <li>
+                                    <a href="#">###</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                </div>
+            </div>
+
+            <div
+                class="menu-w color-scheme-light color-style-transparent menu-position-side menu-side-left menu-layout-compact sub-menu-style-over sub-menu-color-bright selected-menu-color-light menu-activated-on-hover menu-has-selected-link">
+                <div class="logo-w">
+                    <img src="logo.png">
+                    <a href="cadastro-paciente.html">
+                        <!-- <div class="logo-label"></div> -->
+                    </a>
+                </div>
+                <div class="logged-user-w avatar-inline">
+                    <div class="logged-user-i">
+                        <div class="avatar-w">
+                            <i class="fa-solid fa-user-doctor"></i>
+                        </div>
+                        <div class="logged-user-info-w">
+                            <div class="logged-user-name">
+                                Antônio Marques
+                            </div>
+                            <div class="logged-user-role">
+                                Administrador
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <ul class="main-menu">
+                    <li class="sub-header">
+                        <span>Acesso rápido</span>
+                    </li>
+
+                    <li class=" has-sub-menu">
+                        <a href="#">
+                            <div class="icon-w">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <span>Pesquisar paciente</span>
+                        </a>
+                        <div class="sub-menu-w">
+                            <div class="sub-menu-header">
+                                ###
+                            </div>
+                            <div class="sub-menu-icon">
+                                <i class="os-icon os-icon-life-buoy"></i>
+                            </div>
+                            <div class="sub-menu-i">
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="#">### <strong class="badge badge-danger">Novo</strong></a>
+                                    </li>
+                                </ul>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="#">###</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="selected has-sub-menu">
+                        <a href="#">
+                            <div class="icon-w">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <span>Dashboard</span>
+                        </a>
+                        <div class="sub-menu-w">
+                            <div class="sub-menu-header">
+                                Dashboard
+                            </div>
+                            <div class="sub-menu-icon">
+                                <i class="os-icon os-icon-layout"></i>
+                            </div>
+                            <div class="sub-menu-i">
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="#">###</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class=" has-sub-menu">
+                        <a href="#">
+                            <div class="icon-w">
+                                <i class="fa-solid fa-hospital-user"></i>
+                            </div>
+                            <span>Lista de pacientes</span>
+                        </a>
+                        <div class="sub-menu-w">
+                            <div class="sub-menu-header">
+                                ###
+                            </div>
+                            <div class="sub-menu-icon">
+                                <i class="os-icon os-icon-file-text"></i>
+                            </div>
+                            <div class="sub-menu-i">
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="###">###</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">### <strong class="badge badge-danger">Novo</strong></a>
+                                    </li>
+                                </ul>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="###">Novo</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class=" has-sub-menu">
+                        <a href="#">
+                            <div class="icon-w">
+                                <i class="fa-solid fa-bed"></i>
+                            </div>
+                            <span>AIH- Leito</span>
+                        </a>
+                        <div class="sub-menu-w">
+                            <div class="sub-menu-header">
+                                ###
+                            </div>
+                            <div class="sub-menu-icon">
+                                <i class="os-icon os-icon-mail"></i>
+                            </div>
+                            <div class="sub-menu-i">
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="###">###</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class=" has-sub-menu">
+                        <a href="#">
+                            <div class="icon-w">
+                                <i class="fa-solid fa-pills"></i>
+                            </div>
+                            <span>Farmácia</span>
+                        </a>
+                        <div class="sub-menu-w">
+                            <div class="sub-menu-header">
+                                Users
+                            </div>
+                            <div class="sub-menu-icon">
+                                <i class="os-icon os-icon-users"></i>
+                            </div>
+                            <div class="sub-menu-i">
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="###">###</a>
+                                    </li>
+                                    <li>
+                                        <a href="###">###</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+            </div>
+
+            <div class="content-w">
+                <div class="top-bar color-scheme-transparent">
+                    <div class="top-menu-controls">
+                        <!-- <h6> Início | Pesquisar paciente | Lista de Atendimento | AIH - Leito Farmácia </h6> -->
+                        <div class="element-search autosuggest-search-activator">
+                            <input placeholder="Buscar" type="text">
+                        </div>
+
+                        <div class="messages-notifications os-dropdown-trigger os-dropdown-position-left">
+                            <i class="fa-regular fa-message"></i>
+                            <div class="new-messages-count">
+                                12
+                            </div>
+                            <div class="os-dropdown light message-list">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <div class="message-content">
+                                                <h6 class="message-from">
+                                                    John
+                                                </h6>
+                                                <h6 class="message-title">
+                                                    ###
+                                                </h6>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="message-content">
+                                                <h6 class="message-from">
+                                                    Phil
+                                                </h6>
+                                                <h6 class="message-title">
+                                                    Secutiry Updates
+                                                </h6>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="message-content">
+                                                <h6 class="message-from">
+                                                    Anna
+                                                </h6>
+                                                <h6 class="message-title">
+                                                    ###
+                                                </h6>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="message-content">
+                                                <h6 class="message-from">
+                                                    Alice
+                                                </h6>
+                                                <h6 class="message-title">
+                                                    ####
+                                                </h6>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="top-icon top-settings os-dropdown-trigger os-dropdown-position-left">
+                            <i class="fa-solid fa-gear"></i>
+                            <div class="os-dropdown">
+                                <div class="icon-w">
+                                    <i class="os-icon os-icon-ui-46"></i>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                            </i><span>Configurações da conta</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="logged-user-w">
+                            <div class="logged-user-i">
+                                <div class="avatar-w">
+                                    <i class="fa-solid fa-user-doctor"></i>
+                                </div>
+                                <div class="logged-user-menu color-style-bright">
+                                    <div class="logged-user-avatar-info">
+                                        <div class="avatar-w">
+                                            <i class="fa-solid fa-user-doctor"></i>
+                                        </div>
+                                        <div class="logged-user-info-w">
+                                            <div class="logged-user-name">
+                                                Antônio Marques
+                                            </div>
+                                            <div class="logged-user-role">
+                                                Administrador
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-icon">
+                                        <i class="fa-regular fa-envelope"></i>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <a href="#"><i
+                                                    class="os-icon os-icon-mail-01"></i><span>Mensagens</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-regular fa-circle-user"></i><span>Perfil</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-coins"></i>
+                                                </i><span>Financeiro</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-bell"></i>
+                                                <span>Notificações</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                                <span>Sair</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- início do conteúdo-->
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="#">Início</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="#">Profissionais</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <span>Cadastro</span>
+                    </li>
+                </ul>
+
+                <div class="form-container">
+                    <h5>Cadastro do Profissional</h5>
+                    <br>
+
+                    <form [formGroup]="formPaciente" (ngSubmit)="cadastrarPaciente()">
+                        <div class="form-row">
+                            <div class="form-column">
+                                <label for="nom_paciente_pac">Nome do profissional:*</label>
+                                <input type="text" id="nom_paciente_pac" name="nom_paciente_pac"
+                                    formControlName="nom_paciente_pac"
+                                    [ngClass]="{'is-invalid': form.nom_paciente_pac.errors && form.nom_paciente_pac.touched }"
+                                    oninput="this.value = this.value.toUpperCase()">
+
+                                <div *ngIf="form.nom_paciente_pac.errors?.required" class="invalid-feedback">Nome é
+                                    obrigatório.</div>
+                                <div *ngIf="form.nom_paciente_pac.errors?.minlength" class="invalid-feedback">Nome deve
+                                    ter no mínimo 3 caracteres</div>
+                                <div *ngIf="form.nom_paciente_pac.errors?.maxlength" class="invalid-feedback">Nome deve
+                                    ter no máximo 70 caracteres</div>
+                                <div *ngIf="form.nom_paciente_pac.errors?.pattern" class="invalid-feedback">Nome
+                                    inválido</div>
+                            </div>
+
+                            <div class="form-column">
+                                <label for="num_cpf_pac">CPF:*</label>
+                                <input type="text" id="num_cpf_pac" name="num_cpf_pac" formControlName="num_cpf_pac"
+                                    mask="000.000.000-00"
+                                    [ngClass]="{'is-invalid': form.num_cpf_pac.errors && form.num_cpf_pac.touched }">
+
+                                <div *ngIf="form.num_cpf_pac.errors?.required" class="invalid-feedback">CPF é
+                                    obrigatório.</div>
+                            </div>
+
+                            <div class="form-column">
+                                <label for="data_nascimento">Data de Nascimento:</label>
+                                <input type="date" id="data_nascimento" name="data_nascimento">
+                            </div>
+                        </div>
+
+
+                        <div class="form-row">
+                            <div class="form-column">
+                                <label>Sexo:*</label>
+                                <select>
+                                    <option>Masculino</option>
+                                    <option>Feminino</option>
+                                </select>
+                            </div>
+
+                            <div class="form-column">
+                                <label for="#">E-mail:*</label>
+                                <input type="text">
+                            </div>
+
+                            <div class="form-column">
+                                <label for="num_celular_pac">Telefone:*</label>
+                                <input type="text" id="num_celular_pac" name="num_celular_pac"
+                                    formControlName="num_celular_pac" mask="(00) 0 0000-0000"
+                                    [ngClass]="{'is-invalid': form.num_celular_pac.errors && form.num_celular_pac.touched }">
+
+                                <div *ngIf="form.num_celular_pac.errors?.required" class="invalid-feedback">Número do
+                                    celular é obrigatório.</div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-column">
+                                <label for="num_cns_pac">CNS:*</label>
+                                <input type="text" id="num_cns_pac" name="num_cns_pac" formControlName="num_cns_pac"
+                                    mask="000.000.0000.00000"
+                                    [ngClass]="{'is-invalid': form.num_cns_pac.errors && form.num_cns_pac.touched }">
+
+                                <div *ngIf="form.num_cns_pac.errors?.required" class="invalid-feedback">CNS é
+                                    obrigatório.</div>
+                            </div>
+
+                            <div class="form-column">
+                                <label for="#">Conselho de Classe:*</label>
+                                <input type="text">
+                            </div>
+
+                            <div class="form-column">
+                                <label for="#">Ocupação</label>
+                                <input type="text">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-column">
+                                <label for="#">Estado Emissor</label>
+                                <select>
+                                    <option>BA</option>
+                                </select>
+                            </div>
+
+                            <div class="form-column"></div><div class="form-column"></div>
+
+                        </div>
+
+                        <br>
+                        <h5 class="mt-5">Endereço</h5>
+                        <div class="form-row">
+                            <div class="form-column">
+                                <label for="num_cep_pac">CEP:*</label>
+                                <input type="text" id="num_cep_pac" name="num_cep_pac" formControlName="num_cep_pac"
+                                    mask="00000-000"
+                                    [ngClass]="{'is-invalid': form.num_cep_pac.errors && form.num_cep_pac.touched }"
+                                    (blur)="buscarCEP(form.num_cep_pac.value)">
+
+                                <div *ngIf="form.num_cep_pac.errors?.required" class="invalid-feedback"> CEP é
+                                    obrigatório.</div>
+                                <div *ngIf="form.num_cep_pac.errors?.maxlength" class="invalid-feedback"> CEP deve ter 8
+                                    dígitos.</div>
+                            </div>
+
+                            <div class="form-column">
+                                <label for="cod_tipo_logradouro_tlo">Pais de residência*</label>
+                                <select formControlName="cod_tipo_logradouro_tlo"
+                                    [ngClass]="{'is-invalid': form.cod_tipo_logradouro_tlo.errors && form.cod_tipo_logradouro_tlo.touched }">
+                                    <option [attr.selected]="true" value="">Selecione</option>
+                                    <option [value]="tipoLogradouro.value"
+                                        *ngFor="let tipoLogradouro of tiposLogradouros">
+                                        {{ tipoLogradouro.text }}
+                                    </option>
+                                </select>
+                                <div class="invalid-feedback" *ngIf="form.cod_tipo_logradouro_tlo.errors">
+                                    <div *ngIf="form.cod_tipo_logradouro_tlo.errors?.required">
+                                        Tipo de logradouro é obrigatório.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-column">
+                                <label for="des_endereco_pac">Logradouro:*</label>
+                                <input type="text" id="des_endereco_pac" name="des_endereco_pac"
+                                    formControlName="des_endereco_pac"
+                                    [ngClass]="{'is-invalid': form.des_endereco_pac.errors && form.des_endereco_pac.touched }"
+                                    oninput="this.value = this.value.toUpperCase()">
+
+                                <div *ngIf="form.des_endereco_pac.errors?.required" class="invalid-feedback"> Logradouro
+                                    é obrigatório.</div>
+                                <div *ngIf="form.des_endereco_pac.errors?.maxlength" class="invalid-feedback">
+                                    Logradouro deve ter no máximo 100 caracteres.</div>
+                                <div *ngIf="form.des_endereco_pac.errors?.pattern" class="invalid-feedback"> O
+                                    Logradouro informado possui caracteres inválidos.</div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-row">
+                            <div class="form-column">
+                                <label for="num_numero_pac">Número:*</label>
+                                <input type="text" id="num_numero_pac" name="num_numero_pac"
+                                    formControlName="num_numero_pac"
+                                    [ngClass]="{'is-invalid': form.num_numero_pac.errors && form.num_numero_pac.touched }"
+                                    oninput="this.value = this.value.toUpperCase()">
+
+                                <div *ngIf="form.num_numero_pac.errors?.required" class="invalid-feedback"> Número é
+                                    obrigatório.</div>
+                                <div *ngIf="form.num_numero_pac.errors?.maxlength" class="invalid-feedback"> Número deve
+                                    ter no máximo 10 caracteres.</div>
+                                <div *ngIf="form.num_numero_pac.errors?.pattern" class="invalid-feedback"> O Número
+                                    informado possui caracteres inválidos.</div>
+ 
+                                <div>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="sem_numero"
+                                            (click)="toggleNumeroLogradouro($event)">
+                                        <span class="checkbox-custom"></span>
+                                        Sem Número
+                                    </label>
+                                </div>
+
+                            </div>
+
+                            <div class="form-column">
+                                <label for="nom_bairro_pac">Bairro:*</label>
+                                <input type="text" id="nom_bairro_pac" name="nom_bairro_pac"
+                                    formControlName="nom_bairro_pac"
+                                    [ngClass]="{'is-invalid': form.nom_bairro_pac.errors && form.nom_bairro_pac.touched }"
+                                    oninput="this.value = this.value.toUpperCase()">
+
+                                <div *ngIf="form.nom_bairro_pac.errors?.required" class="invalid-feedback"> Bairro é
+                                    obrigatório.</div>
+                                <div *ngIf="form.nom_bairro_pac.errors?.maxlength" class="invalid-feedback"> Bairro deve
+                                    ter no máximo 72 caracteres.</div>
+                                <div *ngIf="form.nom_bairro_pac.errors?.pattern" class="invalid-feedback"> O Bairro
+                                    informado possui caracteres inválidos.</div>
+                            </div>
+
+                            <div class="form-column">
+                                <label for="des_complemento_pac">Complemento:</label>
+                                <input type="text" id="des_complemento_pac" name="des_complemento_pac"
+                                    formControlName="des_complemento_pac"
+                                    [ngClass]="{'is-invalid': form.des_complemento_pac.errors && form.des_complemento_pac.touched }"
+                                    oninput="this.value = this.value.toUpperCase()">
+
+                                <div *ngIf="form.des_complemento_pac.errors?.maxlength" class="invalid-feedback">
+                                    Complemento deve ter no máximo 30 caracteres.</div>
+                                <div *ngIf="form.des_complemento_pac.errors?.pattern" class="invalid-feedback"> O
+                                    Complemento informado possui caracteres inválidos.</div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-column">
+                                <label for="des_referencia_pac">Ponto de Referência:</label>
+                                <input type="text" id="des_referencia_pac" name="des_referencia_pac"
+                                    formControlName="des_referencia_pac"
+                                    [ngClass]="{'is-invalid': form.des_referencia_pac.errors && form.des_referencia_pac.touched }"
+                                    oninput="this.value = this.value.toUpperCase()">
+
+                                <div *ngIf="form.des_referencia_pac.errors?.maxlength" class="invalid-feedback"> Ponto
+                                    de Referência deve ter no máximo 40 caracteres.</div>
+                                <div *ngIf="form.des_referencia_pac.errors?.pattern" class="invalid-feedback"> O Ponto
+                                    de Referência informado possui caracteres inválidos.</div>
+                            </div>
+
+                            <div class="form-column">
+                                <label for="seq_municipio_mun">Município:</label>
+                                <select #cod_municipio_mun formControlName="seq_municipio_mun"
+                                    [ngClass]="{'is-invalid': form.seq_municipio_mun.errors && form.seq_municipio_mun.touched }">
+                                    <option [attr.selected]="true" value="">Selecione</option>
+                                    <option [value]="municipio.cod_municipio_mun" *ngFor="let municipio of municipios">
+                                        {{ municipio.des_municipio_mun }}
+                                    </option>
+                                </select>
+                                <div class="invalid-feedback" *ngIf="form.seq_municipio_mun.errors">
+                                    <div *ngIf="form.seq_municipio_mun.errors?.required">
+                                        Município é obrigatório.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-column">
+                                <label for="cod_estado_est">Estado:</label>
+                                <select #cod_estado_est (change)="listarMunicipiosPorEstado(cod_estado_est.value)"
+                                    formControlName="cod_estado_est"
+                                    [ngClass]="{'is-invalid': form.cod_estado_est.errors && form.cod_estado_est.touched }">
+                                    <option [attr.selected]="true" value="">Selecione</option>
+                                    <option [value]="estado.cod_estado_est" *ngFor="let estado of estados">
+                                        {{ estado.des_sigla_est }}
+                                    </option>
+                                </select>
+                                <div class="invalid-feedback" *ngIf="form.cod_estado_est.errors">
+                                    <div *ngIf="form.cod_estado_est.errors?.required">
+                                        Estado é obrigatório.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="search-button">
+                            <button class="gray-button">
+                                <a style="color: #fff; text-decoration: none;" href="#">Cancelar Cadastro</a>
+                            </button>
+                            <button type="submit" id="pesquisarPacienteButton" class="green-button">
+                                Adicionar Profissional
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="paginator">
+                    <a href="#">Anterior</a>
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">Próximo</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="display-type"></div>
+    </div>
+
+    <script>
+        function mostrarTabela() {
+            document.getElementById("resultadoPaciente").classList.remove("hidden");
+            document.getElementById("pesquisarPacienteButton").classList.add("hidden");
+        }
+
+        function toggleDropdown() {
+            var dropdownMenu = document.getElementById('dropdown-menu-dados');
+            dropdownMenu.classList.toggle('show');
+        }
+
+        document.addEventListener('click', function (event) {
+            var dropdownMenu = document.getElementById('dropdown-menu-dados');
+            var visualizarButton = document.querySelector('.visualizar-button');
+            var dropdownIcon = document.querySelector('.fa-solid.fa-ellipsis-vertical');
+
+            if (dropdownMenu.classList.contains('show') &&
+                !dropdownMenu.contains(event.target) &&
+                !visualizarButton.contains(event.target) &&
+                !dropdownIcon.contains(event.target)) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#cep').on('blur', function () {
+                var cep = $(this).val().replace(/\D/g, '');
+                if (cep.length == 8) {
+                    $.getJSON('https://viacep.com.br/ws/' + cep + '/json/', function (data) {
+                        if (!("erro" in data)) {
+                            $('#logradouro').val(data.logradouro);
+                            $('#bairro').val(data.bairro);
+                            $('#cidade').val(data.localidade);
+                            $('#estado').val(data.uf);
+                        } else {
+                            alert('CEP não encontrado.');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+
+
+    <script src="https://kit.fontawesome.com/fbf22f7a56.js" crossorigin="anonymous"></script>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
+    <script src="bower_components/ckeditor/ckeditor.js"></script>
+    <script src="bower_components/bootstrap-validator/dist/validator.min.js"></script>
+    <script src="bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="bower_components/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="bower_components/bootstrap/js/dist/util.js"></script>
+    <script src="bower_components/bootstrap/js/dist/alert.js"></script>
+    <script src="bower_components/bootstrap/js/dist/button.js"></script>
+    <script src="bower_components/bootstrap/js/dist/carousel.js"></script>
+    <script src="bower_components/bootstrap/js/dist/collapse.js"></script>
+    <script src="bower_components/bootstrap/js/dist/dropdown.js"></script>
+    <script src="bower_components/bootstrap/js/dist/modal.js"></script>
+    <script src="bower_components/bootstrap/js/dist/tab.js"></script>
+    <script src="bower_components/bootstrap/js/dist/tooltip.js"></script>
+    <script src="bower_components/bootstrap/js/dist/popover.js"></script>
+    <script src="js/main.js?version=4.4.0"></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-XXXXXXX-9', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+
+</html>
