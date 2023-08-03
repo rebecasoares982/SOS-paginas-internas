@@ -460,25 +460,33 @@
 
                 </div>
 
-                <!--Inicio Conteúdo-->
+                <!--INICIO CONTEÚDO-->
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item">
                         <a href="#">Início</a>
                     </li>
                     <li class="breadcrumb-item">
-                        <a href="#">Unidade de Pesquisa</a>
+                        <a href="#">Profissionais</a>
                     </li>
                     <li class="breadcrumb-item">
-                        <span>Pesquisar unidade</span>
+                        <span>Pesquisa</span>
                     </li>
                 </ul>
 
                 <div class="form-container">
-                    <h5>Pesquisar Unidade</h5>
+                    <h5>Pesquisar Profissionais</h5>
                     <br>
 
-                    <label for="nome-cidadao">Nome/Bairro/CNES da Unidade:</label>
-                    <input type="text" id="nome-cidadao" placeholder="Nome/Bairro/CNES da Unidade:">
+                    <label for="nome-cidadao">Nome/CNS/CPF do Profissional:</label>
+                    <input type="text" id="nome-cidadao" placeholder="Nome/CNS/CPF do Profissional:">
+                    <div>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="sem_numero"
+                                (click)="toggleNumeroLogradouro($event)">
+                            <span class="checkbox-custom"></span>
+                            Todas as CBO´s
+                        </label>
+                    </div>
 
                     <div class="search-button">
                         <button class="gray-button"><a style="color: #fff; text-decoration: none;"
@@ -510,60 +518,46 @@
                         <table class="table table-striped">
                             <thead>
                                 <tr>
-                                    <th>Unidade de saúde</th>
-                                    <th>CNES</th>
-                                    <th>Telefone</th>
-                                    <th>Bairro</th>
+                                    <th>Nome do profissional</th>
+                                    <th>CPF</th>
+                                    <th>CBO</th>
+                                    <th>Unidade</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>UBS UNA</td>
-                                    <td>1234567</td>
-                                    <td>73 99885-5582</td>
-                                    <td>São Cristovão-BA</td>
+                                    <td>Marcos Santos</td>
+                                    <td>078.548.975-22</td>
+                                    <td>Clínico Geral</td>
+                                    <td>Salvador-BA</td>
                                 </tr>
 
                                 <tr>
-                                    <td>Hospital ABC</td>
-                                    <td>9876543</td>
-                                    <td>55 12345-6789</td>
-                                    <td>Rua das Flores, 123</td>
+                                    <td>Marcos Santos</td>
+                                    <td>078.548.975-22</td>
+                                    <td>Clínico Geral</td>
+                                    <td>Salvador-BA</td>
                                 </tr>
 
                                 <tr>
-                                    <td>Clínica XYZ</td>
-                                    <td>2468135</td>
-                                    <td>22 98765-4321</td>
-                                    <td>Avenida Central, 456</td>
+                                    <td>Marcos Santos</td>
+                                    <td>078.548.975-22</td>
+                                    <td>Clínico Geral</td>
+                                    <td>Salvador-BA</td>
                                 </tr>
 
                                 <tr>
-                                    <td>Posto de Saúde LMN</td>
-                                    <td>7778889</td>
-                                    <td>31 87654-3210</td>
-                                    <td>Rua da Paz, 789</td>
+                                    <td>Marcos Santos</td>
+                                    <td>078.548.975-22</td>
+                                    <td>Clínico Geral</td>
+                                    <td>Salvador-BA</td>
                                 </tr>
 
                                 <tr>
-                                    <td>Clínica do Bem</td>
-                                    <td>5554443</td>
-                                    <td>11 93456-7890</td>
-                                    <td>Av. da Esperança, 987</td>
-                                </tr>
-
-                                <tr>
-                                    <td>Posto Médico SA</td>
-                                    <td>9990001</td>
-                                    <td>91 76543-2109</td>
-                                    <td>Rua das Oportunidades, 5432</td>
-                                </tr>
-
-                                <tr>
-                                    <td>Clínica São Lucas</td>
-                                    <td>8542001</td>
-                                    <td>47 98765-4321</td>
-                                    <td>Rua dos Médicos, 1234</td>
+                                    <td>Marcos Santos</td>
+                                    <td>078.548.975-22</td>
+                                    <td>Clínico Geral</td>
+                                    <td>Salvador-BA</td>
                                 </tr>
 
                             </tbody>
