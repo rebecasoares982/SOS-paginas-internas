@@ -31407,7 +31407,7 @@ Contents:
 }
 
 .form-container input[type="text"] {
-  width: 96%;
+  /*width: 96%;*/
   padding: 10px;
   margin: 10px 0;
   border-radius: 8px;
@@ -32134,6 +32134,69 @@ input[type="checkbox"]:checked+.switch:before {
   }
 }
 
+.botao-selecionados {
+  display: flex;
+  align-items: center;
+  background: #95B3A9;
+  height: 45px;
+  padding: 8px 16px;
+  margin-top: 15px;
+  border-radius: 8px;
+  border: none;
+  opacity: 0.5;
+  justify-content: flex-end;
+  margin-right: 68px;
+}
+
+.botao-selecionados:hover { 
+  opacity: 1.0;
+  color: #fff;
+  background: #2A3734;
+}
+
+.contador-selecionados {
+  background: #F1F3F5;
+  color: #54786E;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.container-pesquisar-profissional {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ /* Estilos para o ícone de busca */
+ .input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+ }
+
+
+.input-container input[type="text"] {
+  padding-right: 30px; /* Espaço para o ícone */
+}
+
+.input-container i.fa-search {
+  position: absolute;
+  right: 10px;
+  font-size: 16px;
+  color: #888; /* Cor do ícone */
+  cursor: pointer;
+}
+
+/* Resto do seu estilo CSS */
+.container-pesquisar-profissional {
+  /* ... */
+}
 
 /* ##. User Override Styles */
 /*# sourceMappingURL=main.css.map */
