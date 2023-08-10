@@ -10,9 +10,10 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="favicon.png" rel="shortcut icon">
 
-    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet" type="text/css">
-
     <link href="css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
 </head>
 
 <body class="menu-position-side menu-side-left full-screen with-content-panel">
@@ -480,83 +481,241 @@
                     <div class="container-pesquisar-profissional">
                         <div style="flex-grow: 1;">
                             <label for="nome-cidadao">Pesquisar por Nome/CNS ou CPF do profissional:</label>
-                             <div class="input-container">
-                                <input type="text" id="nome-cidadao" placeholder="Pesquisar por Nome/CNS ou CPF do profissional:">
+                            <div class="input-container">
+                                <input type="text" id="nome-cidadao"
+                                    placeholder="Pesquisar por Nome/CNS ou CPF do profissional:">
                                 <i class="fa fa-search"></i>
                             </div>
-                        
-                            <div>
-                                <label class="checkbox-label">
-                                    <input type="checkbox" name="sem_numero" (click)="toggleNumeroLogradouro($event)">
-                                    <span class="checkbox-custom"></span>
-                                    Todas as CBO´s
-                                </label>
+
+                        </div>
+
+                        <div class="custom-dropdown">
+                            <button class="botao-filtrar-cbo">Filtrar CBO<i class="fa-solid fa-angle-down"></i></button>
+                            <div class="result-container">
+                                <p><b>Médico</b><br>Código: 515105</p>
+                                <p><b>Médico Pediatra</b><br>Código: 445925</p>
+                                <p><b>Médico Ortopedista</b><br>Código: 589622</p>
                             </div>
                         </div>
-                     
-                    
-                        <button class="botao-selecionados" href="#">Selecionados</a>
-                            <div class="contador-selecionados">
-                                0
-                            </div>
-                            <div style="margin-left: 10px;">
-                                <i class="fas fa-ellipsis-v"></i>
-                            </div>
-                        </button>
                     </div>
- 
-                </div>
 
-                <div class="container">
-                    <div class="table-responsive">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Nome do profissional</th>
-                                    <th>CPF</th>
-                                    <th>CBO</th>
-                                    <th>Unidade</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Marcos Santos</td>
-                                    <td>078.548.975-22</td>
-                                    <td>Clínico Geral</td>
-                                    <td>Salvador-BA</td>
-                                </tr>
+                    <button class="botao-selecionados">
+                        Selecionados
+                        <div class="contador-selecionados">0</div>
+                        <div style="margin-left: 10px;">
+                            <i class="fas fa-ellipsis-v"></i>
+                            <div class="expanded-container">
+                                <div style="color: #22292F;" class="action" id="vincular">
+                                    <i class="fas fa-link"></i> Vincular
+                                </div>
+                                <div style="color: #22292F; font-size: 13.5px;;" class="action" id="bloquear">
+                                    <i class="fas fa-ban"></i> Bloquear Acesso
+                                </div>
+                                <div style="color: #F22626;" class="action" id="excluir">
+                                    <i class="fas fa-trash-alt"></i> Excluir
+                                </div>
+                            </div>
+                        </div>
+                    </button>
 
-                                <tr>
-                                    <td>Marcos Santos</td>
-                                    <td>078.548.975-22</td>
-                                    <td>Clínico Geral</td>
-                                    <td>Salvador-BA</td>
-                                </tr>
+                    <!-- Conteúdo do modal -->
+                    <div id="modal" class="modal">
+                        <div class="modal-content">
+                            <span class="close" id="close-modal">&times;</span>
+                            <img class="icone-vincular" src="icone-vincular.png">
+                            <h5>Vincular lotação</h5>
+                            <p>Preencha as informações abaixo para vincular o profissional as unidades.</p>
+                            <form>
+                                <label for="nome">Nome</label>
+                                <input type="text" id="nome" value="Danilo Oliveira Santos Reis" required>
 
-                                <tr>
-                                    <td>Marcos Santos</td>
-                                    <td>078.548.975-22</td>
-                                    <td>Clínico Geral</td>
-                                    <td>Salvador-BA</td>
-                                </tr>
+                                <label for="cbo">CBO</label>
+                                <select id="perfil">
+                                    <option value="medico">Médico</option>
+                                </select>
 
-                                <tr>
-                                    <td>Marcos Santos</td>
-                                    <td>078.548.975-22</td>
-                                    <td>Clínico Geral</td>
-                                    <td>Salvador-BA</td>
-                                </tr>
+                                <label for="perfil">Perfil</label>
+                                <select id="perfil">
+                                    <option value="" disabled selected>Selecione o perfil do profissional</option>
+                                    <option value="medico">Médico</option>
+                                </select>
 
-                                <tr>
-                                    <td>Marcos Santos</td>
-                                    <td>078.548.975-22</td>
-                                    <td>Clínico Geral</td>
-                                    <td>Salvador-BA</td>
-                                </tr>
+                                <label for="vincular-unidades">Vincular unidades</label>
+                                <input type="text" id="vincular-unidades" placeholder="Pesquisar unidades" required>
 
-                            </tbody>
-                        </table>
+                                <ul id="unidades-list">
+                                    <li>UNA-BA</li>
+                                    <li>SFC - BA</li>
+                                </ul>
+
+                                <div class="botoes-modal-vinculo">
+                                    <button class="botao-cancelar-vinculo" type="button" id="cancelar">Cancelar</button>
+                                    <button class="botao-salvar-vinculo" type="button" id="salvar">Salvar</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
+                    <div id="modal-overlay" class="modal-overlay"></div>
+
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            const modal = document.getElementById('modal');
+                            const overlay = document.getElementById('modal-overlay');
+                            const vincularButton = document.getElementById('vincular');
+                            const closeButton = document.getElementById('close-modal');
+
+                            vincularButton.addEventListener('click', function () {
+                                modal.style.display = 'block';
+                                overlay.style.display = 'block'; // Exibir a sobreposição
+                            });
+
+                            closeButton.addEventListener('click', function () {
+                                modal.style.display = 'none';
+                                overlay.style.display = 'none'; // Esconder a sobreposição
+                            });
+                        });
+                    </script>
+
+                    <!-- Modal de múltiplos vinculos -->
+                    <div id="modal-multiplos-vinculos" class="modal">
+                        <div class="modal-content">
+                            <span class="close" id="close-modal">&times;</span>
+                            <img class="icone-vincular" src="icone-vincular.png">
+                            <h5>Editar múltiplos vinculos (1 de 4)</h5>
+                            <p>Preencha as informações abaixo para vincular o profissional as unidades.</p>
+                            <div class="scroll-container">
+                                <div class="person-container" id="personContainer">
+                                    <div class="person-card" id="pedro">
+                                        <i class="fa-solid fa-circle-user"></i>
+                                        <h6>Pedro Lima</h6>
+                                    </div>
+                                    <div class="person-card" id="person1">
+                                        <i class="fa-solid fa-circle-user"></i>
+                                        <h6>Pedro Jr</h6>
+                                    </div>
+                                    <div class="person-card" id="person2">
+                                        <i class="fa-solid fa-circle-user"></i>
+                                        <h6>Pedro Santos</h6>
+                                    </div>
+                                    <div class="person-card" id="person3">
+                                        <i class="fa-solid fa-circle-user"></i>
+                                        <h6>Pedro Silva</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <form id="form">
+                                <label for="nome">Nome</label>
+                                <input type="text" id="nome" value="Danilo Oliveira Santos Reis" required>
+
+                                <label for="cbo">CBO</label>
+                                <select id="perfil">
+                                    <option value="medico">Médico</option>
+                                </select>
+
+                                <label for="perfil">Perfil</label>
+                                <select id="perfil">
+                                    <option value="" disabled selected>Selecione o perfil do profissional</option>
+                                    <option value="medico">Médico</option>
+                                </select>
+
+                                <label for="vincular-unidades">Vincular unidades</label>
+                                <input type="text" id="vincular-unidades" placeholder="Pesquisar unidades" required>
+
+                                <ul id="unidades-list">
+                                    <li>UNA-BA</li>
+                                    <li>SFC - BA</li>
+                                </ul>
+
+                                <div class="botoes-modal-vinculo">
+                                    <button class="botao-cancelar-vinculo" type="button" id="cancelar">Cancelar</button>
+                                    <button class="botao-salvar-vinculo" type="button" id="salvar">Continuar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="modal-overlay" class="modal-overlay"></div>
+
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            const modal = document.getElementById('modal-multiplos-vinculos');
+                            const overlay = document.getElementById('modal-overlay');
+                            const vincularButton = document.getElementById('multiplos-vinculos');
+                            const closeButton = document.getElementById('close-modal');
+
+                            vincularButton.addEventListener('click', function () {
+                                modal.style.display = 'block';
+                                overlay.style.display = 'block'; // Exibir a sobreposição
+                            });
+
+                            closeButton.addEventListener('click', function () {
+                                modal.style.display = 'none';
+                                overlay.style.display = 'none'; // Esconder a sobreposição
+                            });
+                        });
+
+                        const personCards = document.querySelectorAll(".person-card");
+                        const formCards = document.querySelectorAll(".form-card");
+
+                        personCards.forEach((card, index) => {
+                            card.addEventListener("click", () => {
+                                formCards.forEach(formCard => {
+                                    formCard.style.display = "none";
+                                });
+
+                                formCards[index].style.display = "block";
+                            });
+                        });
+                    </script>
+
+                    <!-- Modal de Exclusão -->
+                    <div id="modal-excluir" class="modal">
+                        <div class="modal-content">
+                            <span class="close" id="close-modal">&times;</span>
+                            <img class="icone-vincular" src="icone-excluir.png">
+                            <h5>Excluir profissional</h5>
+                            <p>Você está prestes a excluir um profissional, tem certeza que deseja confirmar a exclusão?
+                            </p>
+                            <p><strong>Obs: Essa ação não poderá ser desfeita.</strong></p>
+                            <div class="botoes-modal-excluir">
+                                <button class="botao-cancelar-profissional" type="button"
+                                    id="cancelar-excluir">Cancelar</button>
+                                <button class="botao-excluir-profissional" type="button"
+                                    id="confirmar-excluir">Excluir</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="modal-overlay" class="modal-overlay"></div>
+
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            const modalExcluir = document.getElementById('modal-excluir');
+                            const overlay = document.getElementById('modal-overlay');
+                            const excluirButton = document.getElementById('excluir');
+                            const cancelarExcluirButton = document.getElementById('cancelar-excluir');
+                            const confirmarExcluirButton = document.getElementById('confirmar-excluir');
+
+                            excluirButton.addEventListener('click', function () {
+                                modalExcluir.style.display = 'block';
+                                overlay.style.display = 'block'; // Exibir a sobreposição
+                            });
+
+                            cancelarExcluirButton.addEventListener('click', function () {
+                                modalExcluir.style.display = 'none';
+                                overlay.style.display = 'none'; // Esconder a sobreposição
+                            });
+
+                            confirmarExcluirButton.addEventListener('click', function () {
+                                // Lógica para ação de exclusão
+                                modalExcluir.style.display = 'none';
+                                overlay.style.display = 'none'; // Esconder a sobreposição
+                            });
+
+                            closeButton.addEventListener('click', function () {
+                                modal.style.display = 'none';
+                                overlay.style.display = 'none'; // Esconder a sobreposição
+                            });
+                        });
+                    </script>
                 </div>
 
                 <div class="paginator">
