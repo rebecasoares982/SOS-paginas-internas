@@ -32695,13 +32695,13 @@ Contents:
  }
 
  .marcador-em-atendimento {
-  width: 11px;
-  height: 66px;
-  border-radius: 8px 0px 0px 8px;
-  background: #A911B6;
-  float: left;
-  margin-right: 10px;
-}
+   width: 11px;
+   height: 66px;
+   border-radius: 8px 0px 0px 8px;
+   background: #A911B6;
+   float: left;
+   margin-right: 10px;
+ }
 
  .container-tabela-interno {
    padding: 8px 16px;
@@ -32924,13 +32924,34 @@ Contents:
  }
 
  .coluna {
-   display: flex;
+    
    align-items: center;
  }
 
  /* Estilo para os radio buttons */
  input[type="radio"] {
    margin-right: 10px;
+ }
+
+ .aviso-atendimento {
+   align-items: center;
+   justify-content: center;
+   height: 48px;
+   border: 1px solid #ccc;
+   display: inline-flex;
+   padding: 16px;
+   justify-content: center;
+   align-items: center;
+   gap: 8px;
+   border-radius: 8px;
+   border: 1px solid #715909;
+   background: #FFF8E0;
+ }
+
+ .text-aviso-atendimento {
+   text-align: center;
+   margin: 0;
+   color: #2F2B22;
  }
 
  /* ##. User Override Styles */
