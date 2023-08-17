@@ -42,7 +42,7 @@
             <!---- Mobile Menu ---->
             <div class="menu-mobile menu-activated-on-click">
                 <div class="mm-logo-buttons-w">
-                    <a class="mm-logo" href="#"><img src="logo.png"></a>
+                    <a class="mm-logo" href="#"><img src="SOS.png"></a>
                     <div class="mm-buttons">
                         <div class="content-panel-open">
                             <div class="os-icon os-icon-grid-circles"></div>
@@ -158,7 +158,7 @@
             <div
                 class="menu-w color-scheme-light color-style-transparent menu-position-side menu-side-left menu-layout-compact sub-menu-style-over sub-menu-color-bright selected-menu-color-light menu-activated-on-hover menu-has-selected-link">
                 <div class="logo-w">
-                    <img src="./assets/images/logo.png">
+                    <img src="SOS.png">
                     <a href="cadastro-paciente.html">
                         <!-- <div class="logo-label"></div> -->
                     </a>
@@ -353,9 +353,12 @@
                 <div class="top-bar color-scheme-transparent">
                     <div class="top-menu-controls">
                         <!-- <h6> Início | Pesquisar paciente | Lista de Atendimento | AIH - Leito Farmácia </h6> -->
+
+                        <!--
                         <div class="element-search autosuggest-search-activator">
                             <input placeholder="Buscar" type="text">
                         </div>
+                        -->
 
                         <!-- <div class="messages-notifications os-dropdown-trigger os-dropdown-position-left">
                             <i class="fa-regular fa-message"></i>
@@ -513,7 +516,98 @@
                     <Br>
 
                     <div class="new-container">
-                        <button class="new-adicionar-paciente">Adicionar paciente +</button>
+                        <button class="new-adicionar-paciente action" id="adicionar">Adicionar paciente +</button>
+
+                        <!-- Conteúdo do modal -->
+                        <div id="modal" class="modal">
+                            <div class="modal-content-adicionar-paciente">
+                                <span class="close" id="close-modal">&times;</span>
+                                <img class="icone-adicionar-paciente" src="icone-adicionar-paciente.png">
+                                <h5>Adicionar paciente</h5>
+                                <p>Adicione um paciente a lista de atendimentos.</p>
+                                <form>
+                                    <label for="nome">Paciente</label>
+                                    <input type="text" id="nome" value="Rogério Oliveira Santos" required>
+
+                                    <label for="profissional">Profissional</label>
+                                    <select id="profissional">
+                                        <option value="medico">Dav</option>
+                                    </select>
+
+                                    <label for="servicos">Tipos de serviços</label>
+                                    <div id="servicos" class="colunas">
+                                        <div class="coluna text-nowrap">
+                                            <input type="checkbox" name="servico" value="ADM_MEDICAMENTO"
+                                                id="adm-medicamento">
+                                            <label for="adm-medicamento">ADM. MEDICAMENTO</label><br>
+
+                                            <input type="checkbox" name="servico" value="CURATIVO" id="curativo">
+                                            <label for="curativo">CURATIVO</label><br>
+
+                                            <input type="checkbox" name="servico" value="DEMANDA_ESPONTANEA"
+                                                id="demanda-espontanea">
+                                            <label for="demanda-espontanea">DEMANDA ESPONTÂNEA</label><br>
+
+                                            <input type="checkbox" name="servico" value="Outro" id="outro">
+                                            <label for="outro">Outro</label>
+                                            <input type="text" name="outro_servico" placeholder="Outro serviço"><br>
+                                        </div>
+                                        <div class="coluna">
+                                            <input type="checkbox" name="servico" value="ESCUTA_INICIAL"
+                                                id="escuta-inicial">
+                                            <label for="escuta-inicial">ESCUTA INICIAL</label><br>
+
+                                            <input type="checkbox" name="servico" value="Exames" id="exames">
+                                            <label for="exames">Exames</label><br>
+
+                                            <input type="checkbox" name="servico" value="NEBULIZACAO" id="nebulizacao">
+                                            <label for="nebulizacao">NEBULIZAÇÃO</label><br>
+                                        </div>
+                                        <div class="coluna">
+                                            <input type="checkbox" name="servico" value="ODONTOLOGIA" id="odontologia">
+                                            <label for="odontologia">ODONTOLOGIA</label><br>
+
+                                            <input type="checkbox" name="servico" value="Procedimentos"
+                                                id="procedimentos">
+                                            <label for="procedimentos">Procedimentos</label><br>
+
+                                            <input type="checkbox" name="servico" value="VACINA" id="vacina">
+                                            <label for="vacina">VACINA</label><br>
+                                        </div>
+                                    </div>
+
+                                    <br>
+
+                                    <div class="botoes-modal-adicionar">
+                                        <button class="botao-cancelar-adicionar" type="button"
+                                            id="cancelar">Cancelar</button>
+                                        <button class="botao-salvar-adicionar" type="button"
+                                            id="salvar">Adicionar</button>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                        <div id="modal-overlay" class="modal-overlay"></div>
+
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                const modal = document.getElementById('modal');
+                                const overlay = document.getElementById('modal-overlay');
+                                const adicionarButton = document.getElementById('adicionar');
+                                const closeButton = document.getElementById('close-modal');
+
+                                adicionarButton.addEventListener('click', function () {
+                                    modal.style.display = 'block';
+                                    overlay.style.display = 'block'; // Exibir a sobreposição
+                                });
+
+                                closeButton.addEventListener('click', function () {
+                                    modal.style.display = 'none';
+                                    overlay.style.display = 'none'; // Esconder a sobreposição
+                                });
+                            });
+                        </script>
 
                         <br>
 
@@ -555,26 +649,109 @@
                             <tr class="topo-tabela">
                                 <th>Horário de entrada</th>
                                 <th>Nome</th>
+                                <th>Nível de Urgência</th>
                                 <th>Tipos de serviço</th>
+                                <th>Localização</th>
                                 <th>Profissional</th>
                                 <th></th>
                             </tr>
 
-                            <br>
-
-                            <tr>
-                                <td class="text-nowrap">20/08/2023 | 15:01
+                            <tr class="mt-3">
+                                <td class="text-nowrap">
+                                    <div class="marcador-aguardando-atendimento"></div>
+                                    <br>
+                                    <b>20/08/2023 | 15:01</b>
                                     <br> Aguardando atendimento
                                 </td>
 
-                                <td class="text-nowrap">Ana Maria Oliveira
+
+                                <td class="text-nowrap">
+                                    <b>Ana Maria Oliveira</b>
                                     <br>
                                     57 anos e 8 meses
                                 </td>
-                                <td class="text-nowrap">Escuta inicial ....... Demanda espontânea ....... +2
-                                    <br>
+
+                                <td class="text-nowrap">
+                                    <span class="container-pouco-urgente"><b>Pouco Urgente</b></span>
                                 </td>
-                                <td class="text-nowrap">Davila Monique Serra Ascendino
+
+                                
+
+                                <td class="text-nowrap">
+                                    <span class="container-tabela-interno"><b>Escuta inicial</b></span>
+                                    <span class="container-tabela-interno"><b>+3</b></span>
+                                </td>
+
+                                <td class="text-nowrap">
+                                    <b>Leito</b>
+                                    <br>
+                                    Médica
+                                </td>
+
+                                <td class="text-nowrap">
+                                    <b>Davila Monique Serra Ascendino</b>
+                                    <br>
+                                    Médica
+                                </td>
+
+                                <td>
+                                    <div class="icon-container">
+                                        <span><i class="fa-solid fa-ear-listen"></i></span>
+                                        <span><i class="fa-solid fa-user-group"></i></span>
+                                        <span class="custom-ellipsis-vertical">
+                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <div class="result-container-ellipsis">
+                                                <p><i class="fa-solid fa-hourglass-half"
+                                                        style="margin-right: 5px;"></i><b>Cidadão não aguardou</b></p>
+                                                <button class="action" id="gerardeclaracao"><i
+                                                        class="fa-regular fa-file-lines"
+                                                        style="margin-right: 5px;"></i><b>Gerar declaração de
+                                                        comparecimento</b></button>
+                                                <p><i class="fa-regular fa-eye"
+                                                        style="margin-right: 5px;"></i><b>Visualizar prontuário</b></p>
+                                                <p><i class="fa-solid fa-ban"
+                                                        style="margin-right: 5px;"></i><b>Visualizar atendimentos do
+                                                        dia</b></p>
+                                                <button class="action" id="editarpaciente" style="font-size: 14px;"><i
+                                                        class="fa-regular fa-pen-to-square"
+                                                        style="margin-right: 5px;"></i><b>Editar</b></button>
+                                            </div>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="mt-3">
+                                <td class="text-nowrap">
+                                    <div class="marcador-em-atendimento"></div>
+                                    <br>
+                                    <b>20/08/2023 | 15:01</b>
+                                    <br> Em atendimento
+                                </td>
+
+
+                                <td class="text-nowrap">
+                                    <b>Ana Maria Oliveira</b>
+                                    <br>
+                                    57 anos e 8 meses
+                                </td>
+
+                                <td class="text-nowrap">
+                                    <span class="container-nao-urgente"><b>Não urgente</b></span>
+                                </td>
+
+                                
+
+                                <td class="text-nowrap">
+                                     
+                                </td>
+
+                                <td class="text-nowrap">
+                                    
+                                </td>
+
+                                <td class="text-nowrap">
+                                    <b>Davila Monique Serra Ascendino</b>
                                     <br>
                                     Médica
                                 </td>
@@ -587,36 +764,181 @@
                                     </div>
                                 </td>
                             </tr>
-
-                            <Br>
-
-                            <tr>
-                                <td class="text-nowrap">20/08/2023 | 15:01
-                                    <br> Aguardando atendimento
-                                </td>
-
-                                <td class="text-nowrap">Ana Maria Oliveira
-                                    <br>
-                                    57 anos e 8 meses
-                                </td>
-                                <td class="text-nowrap">Escuta inicial ....... Demanda espontânea ....... +2
-                                    <br>
-                                </td>
-                                <td class="text-nowrap">Davila Monique Serra Ascendino
-                                    <br>
-                                    Médica
-                                </td>
-
-                                <td>
-                                    <div class="icon-container">
-                                        <span><i class="fa-solid fa-ear-listen"></i></span>
-                                        <span><i class="fa-solid fa-user-group"></i></span>
-                                        <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
-                                    </div>
-                                </td>
-                            </tr>
-
                         </table>
+
+                        <br>
+
+                        <p><b>01</b> Resultado</p>
+
+                        <!-- Conteúdo do modal -->
+                        <div id="modaleditarpaciente" class="modal">
+                            <div class="modal-content-editar-paciente">
+                                <span class="close" id="close-modal">&times;</span>
+                                <img class="icone-editar-paciente" src="icone-editar.png">
+                                <h5>Editar item na lista de atendimentos</h5>
+                                <form>
+                                    <label for="nome">Cidadão</label>
+                                    <input type="text" id="nome" value="Rogério Oliveira Santos" required>
+
+                                    <label for="profissional">Profissional</label>
+                                    <select id="profissional">
+                                        <option value="medico">Davila Monique Serra - 0127312938129</option>
+                                    </select>
+
+                                    <label for="servicos">Tipos de serviços</label>
+                                    <div id="servicos" class="colunas">
+                                        <div class="coluna text-nowrap">
+                                            <input type="checkbox" name="servico" value="ADM_MEDICAMENTO"
+                                                id="adm-medicamento">
+                                            <label for="adm-medicamento">ADM. MEDICAMENTO</label><br>
+
+                                            <input type="checkbox" name="servico" value="CURATIVO" id="curativo">
+                                            <label for="curativo">CURATIVO</label><br>
+
+                                            <input type="checkbox" name="servico" value="DEMANDA_ESPONTANEA"
+                                                id="demanda-espontanea">
+                                            <label for="demanda-espontanea">DEMANDA ESPONTÂNEA</label><br>
+                                        </div>
+                                        <div class="coluna">
+                                            <input type="checkbox" name="servico" value="ESCUTA_INICIAL"
+                                                id="escuta-inicial">
+                                            <label for="escuta-inicial">ESCUTA INICIAL</label><br>
+
+                                            <input type="checkbox" name="servico" value="Exames" id="exames">
+                                            <label for="exames">Exames</label><br>
+
+                                            <input type="checkbox" name="servico" value="NEBULIZACAO" id="nebulizacao">
+                                            <label for="nebulizacao">NEBULIZAÇÃO</label><br>
+                                        </div>
+                                        <div class="coluna">
+                                            <input type="checkbox" name="servico" value="ODONTOLOGIA" id="odontologia">
+                                            <label for="odontologia">ODONTOLOGIA</label><br>
+
+                                            <input type="checkbox" name="servico" value="Procedimentos"
+                                                id="procedimentos">
+                                            <label for="procedimentos">Procedimentos</label><br>
+
+                                            <input type="checkbox" name="servico" value="VACINA" id="vacina">
+                                            <label for="vacina">VACINA</label><br>
+                                        </div>
+                                    </div>
+
+                                    <br>
+
+                                    <div class="botoes-modal-adicionar">
+                                        <button class="botao-cancelar-adicionar" type="button"
+                                            id="cancelar">Cancelar</button>
+                                        <button class="botao-salvar-adicionar" type="button" id="salvar">Salvar</button>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                        <div id="modal-overlay" class="modal-overlay"></div>
+
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                const modaleditarpaciente = document.getElementById('modaleditarpaciente');
+                                const overlay = document.getElementById('modal-overlay');
+                                const editarpacienteButton = document.getElementById('editarpaciente');
+                                const closeButton = document.getElementById('close-modal');
+
+                                editarpacienteButton.addEventListener('click', function () {
+                                    modaleditarpaciente.style.display = 'block';
+                                    overlay.style.display = 'block'; // Exibir a sobreposição
+                                });
+
+                                closeButton.addEventListener('click', function () {
+                                    modaleditarpaciente.style.display = 'none';
+                                    overlay.style.display = 'none'; // Esconder a sobreposição
+                                });
+                            });
+                        </script>
+
+                        <!-- Conteúdo do modal - Gerar Declaração  -->
+                        <div id="modalgerardeclaracao" class="modal">
+                            <div class="modal-content-gerar-declaracao">
+                                <span class="close" id="close-modal">&times;</span>
+                                <img class="icone-editar-paciente" src="icone-adicionar-paciente.png">
+                                <h5>Gerar declaração de comparecimento</h5>
+
+                                <br>
+
+                                <form>
+                                    <h6>Ana Maria Oliveira</h6>
+                                    <div class="info-container">
+                                        <h6>CPF:</h6>
+                                        <h6 style="color: #668091;">000.000.000-00</h6>
+                                        <span class="spacer"></span>
+                                        <h6>CNS:</h6>
+                                        <h6 style="color:red;">Não informado</h6>
+
+                                    </div>
+
+                                    <br>
+
+                                    <label for="periodo"><b>Período <span style="color: red">*</span></b></label>
+                                    <div id="periodo" class="colunas">
+                                        <div class="coluna">
+                                            <input type="radio" name="periodo" value="matutino" id="matutino">
+                                            <label for="matutino">Matutino</label>
+
+                                            <span style="margin-right: 10px;"></span>
+
+                                            <input type="radio" name="periodo" value="vespertino" id="vespertino">
+                                            <label for="vespertino">Vespertino</label>
+
+                                            <span style="margin-right: 10px;"></span>
+
+                                            <input type="radio" name="periodo" value="noturno" id="noturno">
+                                            <label for="noturno">Noturno</label>
+
+                                            <span style="margin-right: 10px;"></span>
+
+                                            <input type="radio" name="periodo" value="personalizado"
+                                                id="horario-personalizado">
+                                            <label for="horario-personalizado">Horário Personalizado</label>
+                                        </div>
+                                    </div>
+
+                                    <br>
+
+                                    <label for="outro"><b>Incluir nome do acomapanhante</b></label>
+                                    <input type="text" name="nome_acompanhante" placeholder="" style="width: 265px">
+
+                                    <br>
+                                    <br>
+
+                                    <div class="botoes-modal-adicionar">
+                                        <button class="botao-cancelar-adicionar" type="button"
+                                            id="cancelar">Cancelar</button>
+                                        <button class="botao-salvar-adicionar" type="button" id="salvar">Gerar
+                                            declaração</button>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                        <div id="modal-overlay" class="modal-overlay"></div>
+
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                const modalgerardeclaracao = document.getElementById('modalgerardeclaracao');
+                                const overlay = document.getElementById('modal-overlay');
+                                const gerardeclaracaoButton = document.getElementById('gerardeclaracao');
+                                const closeButton = document.getElementById('close-modal');
+
+                                gerardeclaracaoButton.addEventListener('click', function () {
+                                    modalgerardeclaracao.style.display = 'block';
+                                    overlay.style.display = 'block'; // Exibir a sobreposição
+                                });
+
+                                closeButton.addEventListener('click', function () {
+                                    modalgerardeclaracao.style.display = 'none';
+                                    overlay.style.display = 'none'; // Esconder a sobreposição
+                                });
+                            });
+                        </script>
 
                     </div>
 

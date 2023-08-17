@@ -130,7 +130,7 @@ TABLE OF CONTENTS
    line-height: 1.5;
    color: #363636;
    text-align: left;
-   background-color: #fff;
+   background-color: #fff !important;
  }
 
  [tabindex="-1"]:focus {
@@ -12659,7 +12659,7 @@ TABLE OF CONTENTS
    margin: 0px;
    padding: 10px 30px 10px 30px;
    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-   background-color: transparent;
+   background-color: #fff;
    letter-spacing: 0.7px;
  }
 
@@ -15065,7 +15065,7 @@ TABLE OF CONTENTS
 
  .menu-w.color-style-transparent {
    background: none;
-   background-color: transparent;
+   background-color: #fff;
    background-image: none;
    -webkit-box-shadow: none;
    box-shadow: none;
@@ -27936,7 +27936,7 @@ TODO Application
  }
 
  .top-bar.color-scheme-transparent {
-   background-color: transparent;
+   background-color: #fff;
    -webkit-box-shadow: none;
    box-shadow: none;
    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -31388,6 +31388,7 @@ Contents:
  .form-container {
    max-width: auto;
    padding: 20px;
+   background-color: #fff;
  }
 
  .form-container input[type="text"] {
@@ -32401,6 +32402,33 @@ Contents:
    margin-right: 0;
  }
 
+ /* Estilos para os botões do modal */
+ .botoes-modal-adicionar {
+   display: flex;
+ }
+
+ .botao-cancelar-adicionar,
+ .botao-salvar-adicionar {
+   width: 300px;
+   height: 53px;
+   padding: 15px 16px 14px 16px;
+   border-radius: 8px;
+   background-color: #fff;
+   color: #54786E;
+   margin-right: 12px;
+ }
+
+ .botao-cancelar-adicionar {
+   border: 1px solid #BDD2CB;
+   margin-right: 12px;
+ }
+
+ .botao-salvar-adicionar {
+   border: 1px solid #1F5C30;
+   background-color: #1F5C30;
+   color: #F5F8F7;
+   margin-right: 0;
+ }
 
  /* Estilos para a lista de unidades */
  #unidades-list {
@@ -32439,6 +32467,8 @@ Contents:
    height: 60px;
    margin-bottom: 15px;
  }
+
+
 
  /*multiplos vinculos - perfil*/
  /*.person-container {
@@ -32628,30 +32658,280 @@ Contents:
    font-size: 12px;
    font-style: normal;
    font-weight: 500;
-   line-height: 16px; 
+   line-height: 16px;
    /* 133.333% */
  }
 
  table {
-  border-collapse: collapse;
-  width: 100%;
+   border-collapse: collapse;
+   width: 100%;
+ }
+
+ th,
+ td {
+   border: 1px solid transparent;
+   padding: 5px;
+   text-align: left;
+   font-size: 13px;
+ }
+
+ td {
+   white-space: nowrap;
+ }
+
+ .icon-container {
+   display: flex;
+   flex-direction: row;
+   gap: 10px;
+ }
+
+ .marcador-aguardando-atendimento {
+   width: 11px;
+   height: 66px;
+   border-radius: 8px 0px 0px 8px;
+   background: #B69111;
+   float: left;
+   margin-right: 10px;
+ }
+
+ .marcador-em-atendimento {
+  width: 11px;
+  height: 66px;
+  border-radius: 8px 0px 0px 8px;
+  background: #A911B6;
+  float: left;
+  margin-right: 10px;
 }
 
-th, td {
-  border: 1px solid transparent;
-  padding: 8px;
-  text-align: left;
-  font-size: 13px;
-}
+ .container-tabela-interno {
+   padding: 8px 16px;
+   align-items: center;
+   gap: 4px;
+   border-radius: 16px;
+   background: #F4F4F4;
+   mix-blend-mode: multiply;
+ }
 
-td {
-  white-space: nowrap;
-}
+ .fa-ear-listen,
+ .fa-user-group,
+ .fa-ellipsis-vertical {
+   width: 24px;
+   height: 24px;
+   flex-shrink: 0;
+   font-size: 15px;
+ }
 
-.icon-container {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-}
+
+ .custom-ellipsis-vertical {
+   position: relative;
+   display: inline-block;
+ }
+
+ .result-container-ellipsis {
+   display: none;
+   position: absolute;
+   width: auto;
+   height: auto;
+   top: 100%;
+   right: 15px;
+   padding: 16px;
+   border-radius: 8px;
+   border: 1px solid #ccc;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+   background-color: white;
+   gap: 8px;
+ }
+
+ .result-container-ellipsis p {
+   margin: 0;
+   padding: 5px 0;
+ }
+
+ .custom-ellipsis-vertical:hover .result-container-ellipsis {
+   display: block;
+ }
+
+ .colunas {
+   display: flex;
+ }
+
+ .coluna {
+   flex: 1;
+   margin-right: 20px;
+ }
+
+ .coluna:last-child {
+   margin-right: 0;
+ }
+
+ /* Estilização dos checkboxes */
+ input[type="checkbox"] {
+   display: none;
+ }
+
+ /* Estilização dos rótulos (labels) para os checkboxes */
+ input[type="checkbox"]+label {
+   position: relative;
+   padding-left: 30px;
+   /* Aumentado para acomodar espaço para o ícone */
+   cursor: pointer;
+ }
+
+ /* Estilização das caixas de check personalizadas */
+ input[type="checkbox"]+label::before {
+   content: "";
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 17px;
+   height: 17px;
+   border: 2px solid #ccc;
+   border-radius: 3px;
+   background-color: #fff;
+ }
+
+ /* Estilização do sinal de check */
+ input[type="checkbox"]:checked+label::before {
+   background-color: #0F6F32;
+   border-color: #0F6F32;
+   content: "\2713";
+   /* Código do caractere unicode para o checkmark */
+   font-size: 14px;
+   line-height: 1;
+   color: white;
+   text-align: center;
+ }
+
+ .modal-content-adicionar-paciente {
+   background-color: #fff;
+   border-radius: 12px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   padding: 30px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 80%;
+   max-width: 600px;
+   zoom: 80%
+ }
+
+ .modal-content-editar-paciente {
+   background-color: #fff;
+   border-radius: 12px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   padding: 30px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 80%;
+   max-width: 600px;
+   zoom: 80%
+ }
+
+ .modal-content-gerar-declaracao {
+   background-color: #fff;
+   border-radius: 12px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   padding: 30px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 80%;
+   max-width: 600px;
+   zoom: 80%
+ }
+
+ .icone-adicionar-paciente {
+   width: 60px;
+   height: 60px;
+   margin-bottom: 15px;
+ }
+
+ .icone-editar-paciente {
+   width: 60px;
+   height: 60px;
+   margin-bottom: 15px;
+ }
+
+ /* Estilo para os radio buttons */
+ input[type="radio"] {
+   display: none;
+ }
+
+ /* Estilo para as labels dos radio buttons */
+ input[type="radio"]+label {
+   display: inline-block;
+   position: relative;
+   padding-left: 25px;
+   /* Espaçamento para a bolinha */
+   cursor: pointer;
+ }
+
+ /* Estilo para as bolinhas */
+ input[type="radio"]+label::before {
+   content: '';
+   position: absolute;
+   left: 0;
+   top: 50%;
+   transform: translateY(-50%);
+   width: 18px;
+   height: 18px;
+   border: 2px solid #ccc;
+   border-radius: 50%;
+   background-color: transparent;
+ }
+
+ /* Estilo para as bolinhas quando selecionadas */
+ input[type="radio"]:checked+label::before {
+   background-color: #0F6F32;
+   width: 15px;
+   height: 15px;
+   border: 1px solid #ccc;
+   border-radius: 50%;
+ }
+
+ .container-pouco-urgente {
+   padding: 8px 16px;
+   align-items: center;
+   gap: 4px;
+   border-radius: 16px;
+   border: 1px solid #2B641C;
+   background: #A2FF76;
+   mix-blend-mode: multiply;
+ }
+
+ .container-nao-urgente {
+   padding: 8px 16px;
+   align-items: center;
+   gap: 4px;
+   border-radius: 16px;
+   border: 1px solid #000466;
+   background: #76ADFF;
+   mix-blend-mode: multiply;
+ }
+
+ .info-container {
+   display: flex;
+   align-items: center;
+ }
+
+ .spacer {
+   margin: 0 8px;
+   /* Espaçamento horizontal entre os textos */
+ }
+
+ .coluna {
+   display: flex;
+   align-items: center;
+ }
+
+ /* Estilo para os radio buttons */
+ input[type="radio"] {
+   margin-right: 10px;
+ }
+
  /* ##. User Override Styles */
  /*# sourceMappingURL=main.css.map */
