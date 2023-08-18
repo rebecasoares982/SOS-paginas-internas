@@ -32964,6 +32964,8 @@ Contents:
    height: 50px;
    border-radius: 5px;
    gap: 8px;
+   z-index: 1; /* Mantém o passador acima do conteúdo, mas abaixo do dropdown */
+
  }
 
  .page-number-container {
