@@ -32964,16 +32964,15 @@ Contents:
    height: 50px;
    border-radius: 5px;
    gap: 8px;
-   z-index: 1; /* Mantém o passador acima do conteúdo, mas abaixo do dropdown */
-
+   z-index: 1;
  }
 
  .page-number-container {
-  display: flex;
-  width: 36px;
-  padding: 8px;
-  align-items: center;
-  gap: 10px;
+   display: flex;
+   width: 36px;
+   padding: 8px;
+   align-items: center;
+   gap: 10px;
  }
 
  .arrow-icon {
@@ -32994,9 +32993,10 @@ Contents:
    line-height: normal;
  }
 
- .fa-angle-left, .fa-angle-right {
-  font-size: 18px;
-  color: #B0BFC9;
+ .fa-angle-left,
+ .fa-angle-right {
+   font-size: 18px;
+   color: #B0BFC9;
  }
 
  /* ##. User Override Styles */
