@@ -1007,37 +1007,7 @@
             }
         });
     </script>
-
-    <script>
-        // Obtém os elementos relevantes
-const dropdown = document.querySelector('.dropdown');
-const pageIndicator = document.getElementById('page-indicator');
-
-// Função para ocultar o passador
-function hidePageIndicator() {
-  pageIndicator.style.display = 'none';
-}
-
-// Função para mostrar o passador
-function showPageIndicator() {
-  pageIndicator.style.display = 'flex';
-}
-
-// Evento de abertura do dropdown
-dropdown.addEventListener('click', () => {
-  hidePageIndicator();
-});
-
-// Evento de fechamento do dropdown
-document.addEventListener('click', (event) => {
-  if (!dropdown.contains(event.target)) {
-    showPageIndicator();
-  }
-});
-
-    </script>
-
-
+ 
     <script src="https://kit.fontawesome.com/fbf22f7a56.js" crossorigin="anonymous"></script>
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
