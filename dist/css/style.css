@@ -32924,7 +32924,7 @@ Contents:
  }
 
  .coluna {
-    
+   /*display: flex;*/
    align-items: center;
  }
 
@@ -32952,6 +32952,49 @@ Contents:
    text-align: center;
    margin: 0;
    color: #2F2B22;
+ }
+
+ .page-indicator {
+   position: absolute;
+   margin-top: -20px;
+   right: 55px;
+   display: flex;
+   align-items: center;
+   width: 100px;
+   height: 50px;
+   border-radius: 5px;
+   gap: 8px;
+ }
+
+ .page-number-container {
+  display: flex;
+  width: 36px;
+  padding: 8px;
+  align-items: center;
+  gap: 10px;
+ }
+
+ .arrow-icon {
+   font-size: 20px;
+ }
+
+ .page-number {
+   display: flex;
+   width: 36px;
+   padding: 8px;
+   flex-direction: column;
+   align-items: center;
+   gap: 10px;
+   border-radius: 5px;
+   background: var(--color-primary-100, #E0F8E6);
+   color: #0F6F32;
+   font-size: 14px;
+   line-height: normal;
+ }
+
+ .fa-angle-left, .fa-angle-right {
+  font-size: 18px;
+  color: #B0BFC9;
  }
 
  /* ##. User Override Styles */
