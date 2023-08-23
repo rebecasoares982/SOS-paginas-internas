@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Layout SOS</title>
+  <meta charset="utf-8">
+  <meta content="ie=edge" http-equiv="x-ua-compatible">
+  <meta content="template language" name="keywords">
+  <meta content="Admin dashboard html template" name="description">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="favicon.png" rel="shortcut icon">
+
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body class="menu-position-side menu-side-left full-screen with-content-panel">
+  <div class="all-wrapper with-side-panel solid-bg-all">
+
+    <div class="search-with-suggestions-w">
+      <div class="search-with-suggestions-modal">
+        <div class="element-search">
+          <input class="search-suggest-input" placeholder="Buscar" type="text">
+          <div class="close-search-suggestions">
+            <i class="os-icon os-icon-x"></i>
+          </div>
+        </div>
+
+        <div class="search-suggestions-group">
+
+          <div class="ssg-content">
+            <div class="ssg-nothing-found">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="layout-w">
+
+      <!---- Mobile Menu ---->
+      <div class="menu-mobile menu-activated-on-click">
+        <div class="mm-logo-buttons-w">
+          <a class="mm-logo" href="#"><img src="SOS.png"></a>
+          <div class="mm-buttons">
+            <div class="content-panel-open">
+              <div class="os-icon os-icon-grid-circles"></div>
+            </div>
+            <div class="mobile-menu-trigger">
+              <div class="os-icon os-icon-hamburger-menu-1"></div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-and-user">
+          <div class="logged-user-w">
+            <div class="avatar-w">
+              <i class="fa-solid fa-user-doctor"></i>
+            </div>
+            <div class="logged-user-info-w">
+              <div class="logged-user-name">
+                Antônio Marques
+              </div>
+              <div class="logged-user-role">
+                Administrador
+              </div>
+            </div>
+          </div>
+
+          <!---- Mobile Menu List  ------>
+          <ul class="main-menu">
+            <li class="has-sub-menu">
+              <a [routerLink]="['/pesquisar-paciente']">
+                <div class="icon-w">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <span>Paciente</span>
+              </a>
+              <ul class="sub-menu">
+                <li>
+                  <a href="#">Pesquisar</a>
+                </li>
+
+                <li>
+                  <a href="#">Cadastrar</a>
+                </li>
+              </ul>
+
+              <ul class="sub-menu">
+                <li>
+                  <a href="#">Lista de atendimento</a>
+                </li>
+
+                <li>
+                  <a href="#">PEP - Prontuário</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="has-sub-menu">
+              <a [routerLink]="['/profissional']">
+                <div class="icon-w">
+                  <i class="fa-solid fa-hospital-user"></i>
+                </div>
+                <span>Unidade</span>
+              </a>
+
+              <ul class="sub-menu">
+                <li>
+                  <a href="#">Pesquisar</a>
+                </li>
+
+                <li>
+                  <a href="#">Cadastrar</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="has-sub-menu">
+              <a [routerLink]="['/unidade']">
+                <div class="icon-w">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <span>Profissional</span>
+              </a>
+
+              <ul class="sub-menu">
+                <li>
+                  <a href="#">Pesquisar</a>
+                </li>
+
+                <li>
+                  <a href="#">Cadastrar</a>
+                </li>
+              </ul>
+            </li>
+
+            <!--<li class="has-sub-menu">
+                  <a href="#">
+                    <div class="icon-w">
+                      <i class="fa-solid fa-pills"></i>
+                    </div>
+                    <span>Farmácia</span>
+                  </a>
+                  <ul class="sub-menu">
+                    <li>
+                      <a href="#">#</a>
+                    </li>
+                    <li>
+                      <a href="#">###</a>
+                    </li>
+                  </ul>
+                </li>-->
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="menu-w color-scheme-light color-style-transparent menu-position-side menu-side-left menu-layout-compact sub-menu-style-over sub-menu-color-bright selected-menu-color-light menu-activated-on-hover menu-has-selected-link">
+        <div class="logo-w">
+          <img src="SOS.png">
+          <a href="cadastro-paciente.html">
+            <!-- <div class="logo-label"></div> -->
+          </a>
+        </div>
+        <div class="logged-user-w avatar-inline">
+          <div class="logged-user-i">
+            <div class="avatar-w">
+              <i class="fa-solid fa-user-doctor"></i>
+            </div>
+            <div class="logged-user-info-w">
+              <div class="logged-user-name">
+                Antônio Marques
+              </div>
+              <div class="logged-user-role">
+                Administrador
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Desktop -->
+
+        <ul class="main-menu">
+          <li class="sub-header">
+            <span>Acesso rápido</span>
+          </li>
+
+          <li class="selected has-sub-menu">
+            <a [routerLink]="['/paciente']">
+              <div class="icon-w">
+                <div class="fa-solid fa-bed-pulse"></div>
+              </div>
+              <span>Paciente</span>
+            </a>
+            <div class="sub-menu-w">
+              <div class="sub-menu-header">
+                Paciente
+              </div>
+              <div class="sub-menu-icon">
+                <!--<i class="os-icon os-icon-layout"></i>-->
+              </div>
+              <div class="sub-menu-i">
+                <ul class="sub-menu">
+                  <li>
+                    <a [routerLink]="['/paciente']">Pesquisar</a>
+                  </li>
+
+                  <li>
+                    <a [routerLink]="['/paciente/criar']">Cadastrar</a>
+                  </li>
+                </ul>
+                <ul class="sub-menu">
+                  <li>
+                    <a [routerLink]="['#']">Lista de atendimento</a>
+                  </li>
+
+                  <li>
+                    <a [routerLink]="['#']">PEP</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="selected has-sub-menu">
+            <a [routerLink]="['/unidade']">
+              <div class="icon-w">
+                <div class="fa-solid fa-house-chimney-medical"></div>
+              </div>
+              <span>Unidade</span>
+            </a>
+            <div class="sub-menu-w">
+              <div class="sub-menu-header">
+                Unidade
+              </div>
+              <div class="sub-menu-icon">
+                <!--<i class="os-icon os-icon-layout"></i>-->
+              </div>
+              <div class="sub-menu-i">
+                <ul class="sub-menu">
+                  <li>
+                    <a [routerLink]="['/unidade']">Pesquisar unidade</a>
+                  </li>
+
+                  <li>
+                    <a [routerLink]="['/unidade/criar']">Cadastrar unidade</a>
+                  </li>
+                </ul>
+
+                <ul class="sub-menu">
+                  <li>
+                    <a [routerLink]="['/unidade']">Cadastrar Leitos</a>
+                  </li>
+
+                  <li>
+                    <a [routerLink]="['/unidade/criar']">Gestão de Leitos</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="selected has-sub-menu">
+            <a [routerLink]="['/profissional']">
+              <div class="icon-w">
+                <div class="fa-solid fa-hospital-user"></div>
+              </div>
+              <span>Profissional</span>
+            </a>
+            <div class="sub-menu-w">
+              <div class="sub-menu-header">
+                Profissional
+              </div>
+              <div class="sub-menu-icon">
+                <!--<i class="os-icon os-icon-layout"></i>-->
+              </div>
+              <div class="sub-menu-i">
+                <ul class="sub-menu">
+                  <li>
+                    <a [routerLink]="['/profissional']">Listar profissional</a>
+                  </li>
+
+                  <li>
+                    <a [routerLink]="['/profissional/criar']">Cadastrar profissional</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <!--<li--> <!--class=" has-sub-menu"-->
+          <li>
+            <a href="#">
+              <div class="icon-w">
+                <i class="fa-solid fa-bed-pulse"></i>
+              </div>
+              <span>AIH - Leito</span>
+            </a>
+            <!--<div class="sub-menu-w">
+                  <div class="sub-menu-header">
+                    Acesso menu AIH-Leito
+                  </div>
+                  <div class="sub-menu-icon">
+                    <i class="os-icon os-icon-users"></i>
+                  </div>
+                  <div class="sub-menu-i">
+                    <ul class="sub-menu">
+                      <li>
+                        <a href="###">###</a>
+                      </li>
+                      <li>
+                        <a href="###">###</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>-->
+          </li>
+
+          <!--<li class=" has-sub-menu">-->
+          <li>
+            <a href="#">
+              <div class="icon-w">
+                <i class="fa-solid fa-pills"></i>
+              </div>
+              <span>Farmácia</span>
+            </a>
+            <!--<div class="sub-menu-w">
+                  <div class="sub-menu-header">
+                    Acesso menu Farmácia
+                  </div>
+                  <div class="sub-menu-icon">
+                    <i class="os-icon os-icon-users"></i>
+                  </div>
+                  <div class="sub-menu-i">
+                    <ul class="sub-menu">
+                      <li>
+                        <a href="###">###</a>
+                      </li>
+                      <li>
+                        <a href="###">###</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>-->
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="content-w">
+        <div class="top-bar color-scheme-transparent">
+          <div class="top-menu-controls">
+            <!-- <h6> Início | Pesquisar paciente | Lista de Atendimento | AIH - Leito Farmácia </h6> -->
+
+            <!--
+                        <div class="element-search autosuggest-search-activator">
+                            <input placeholder="Buscar" type="text">
+                        </div>
+                        -->
+
+            <!-- <div class="messages-notifications os-dropdown-trigger os-dropdown-position-left">
+                            <i class="fa-regular fa-message"></i>
+                            <div class="new-messages-count">
+                                12
+                            </div>
+                            <div class="os-dropdown light message-list">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <div class="message-content">
+                                                <h6 class="message-from">
+                                                    John
+                                                </h6>
+                                                <h6 class="message-title">
+                                                    ###
+                                                </h6>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="message-content">
+                                                <h6 class="message-from">
+                                                    Phil
+                                                </h6>
+                                                <h6 class="message-title">
+                                                    Secutiry Updates
+                                                </h6>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="message-content">
+                                                <h6 class="message-from">
+                                                    Anna
+                                                </h6>
+                                                <h6 class="message-title">
+                                                    ###
+                                                </h6>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="message-content">
+                                                <h6 class="message-from">
+                                                    Alice
+                                                </h6>
+                                                <h6 class="message-title">
+                                                    ####
+                                                </h6>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    -->
+
+            <div class="top-icon top-settings os-dropdown-trigger os-dropdown-position-left">
+              <i class="fa-solid fa-gear"></i>
+              <div class="os-dropdown">
+                <div class="icon-w">
+                  <i class="os-icon os-icon-ui-46"></i>
+                </div>
+                <ul>
+                  <li>
+                    <a href="#">
+                      <i class="fa-solid fa-pen-to-square"></i>
+                      </i><span>Configurações da conta</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="logged-user-w">
+              <div class="logged-user-i">
+                <div class="avatar-w">
+                  <i class="fa-solid fa-user-doctor"></i>
+                </div>
+                <div class="logged-user-menu color-style-bright">
+                  <div class="logged-user-avatar-info">
+                    <div class="avatar-w">
+                      <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                    <div class="logged-user-info-w">
+                      <div class="logged-user-name">
+                        Antônio Marques
+                      </div>
+                      <div class="logged-user-role">
+                        Administrador
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-icon">
+                    <i class="fa-regular fa-envelope"></i>
+                  </div>
+                  <ul>
+                    <!-- <li>
+                                            <a href="#"><i
+                                                    class="os-icon os-icon-mail-01"></i><span>Mensagens</span></a>
+                                        </li> -->
+
+                    <li>
+                      <a href="#">
+                        <i class="fa-regular fa-circle-user"></i><span>Perfil</span></a>
+                    </li>
+
+                    <!-- <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-coins"></i>
+                                                </i><span>Financeiro</span></a>
+                                        </li> -->
+
+                    <li>
+                      <a href="#">
+                        <i class="fa-solid fa-bell"></i>
+                        <span>Notificações</span></a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        <span>Sair</span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!--INICIO CONTEÚDO-->
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="#">Início</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="#">Administrador</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="#">Dashboard</a>
+          </li>
+        </ul>
+
+        <div class="form-container">
+
+          <div class="dashboard">Dashboard</div>
+
+          <div class="container-filtro-atendimentos">
+            <div class="total-de-atendimentos">Total de Atendimentos</div>
+
+            <div class="grafico-linhas">
+              <div class="tooltip">
+                <div class="frame-3">
+                  <div class="upa">45</div>
+                </div>
+                <svg class="group-2" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.6178 -3.39392e-07L4.22265 -6.36206e-07C2.62817 -7.756e-07 1.6748 1.77452 2.55499 3.10405L3.14815 4L4.1897 5.57325C4.96424 6.74319 6.67131 6.77271 7.48584 5.63025L8.64815 4L9.24629 3.16105C10.1902 1.83714 9.24375 -1.97248e-07 7.6178 -3.39392e-07Z"
+                    fill="#22292F" />
+                  <path d="M11.5 0L0.5 -9.61651e-07L3.14815 4L8.64815 4L11.5 0Z" fill="#22292F" />
+                </svg>
+              </div>
+              <div class="frame-26">
+                <div class="frame-427319174">
+                  <div class="outubro">Outubro</div>
+                  <svg class="chevron-down-1" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 9L12 15L18 9" stroke="#22292F" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="_1">1</div>
+              <div class="_2">2</div>
+              <div class="_3">3</div>
+              <div class="_32">3</div>
+              <div class="_4">4</div>
+              <div class="_5">5</div>
+              <div class="_6">6</div>
+              <div class="_7">7</div>
+              <div class="_8">8</div>
+              <div class="_9">9</div>
+              <div class="_10">10</div>
+              <div class="_11">11</div>
+              <div class="rectangle-17"></div>
+              <div class="rectangle-18"></div>
+              <div class="rectangle-19"></div>
+              <div class="rectangle-20"></div>
+              <div class="rectangle-21"></div>
+              <div class="rectangle-22"></div>
+              <div class="rectangle-23"></div>
+              <div class="rectangle-24"></div>
+              <div class="rectangle-25"></div>
+              <div class="rectangle-26"></div>
+              <div class="rectangle-27"></div>
+              <div class="rectangle-28"></div>
+            </div>
+          </div>
+
+
+
+          <div class="container-grafico-porcentagem">
+
+            <div class="progress-pie-chart">
+              <div class="chart-container">
+                
+                </div>
+              </div>
+            </div>
+            <div class="taxa-de-ocupa-o-dos-leitos">Taxa de ocupação dos leitos</div>
+            <div class="spinner-container">
+              <div class="spinner-text">Loading</div>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card">
+              <div class="frame-427319175">
+                <div class="_53">53</div>
+                <div class="icon">
+                  <svg class="circle-check-solid-1" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2090_3380)">
+                      <path
+                        d="M12 24C15.1826 24 18.2348 22.7357 20.4853 20.4853C22.7357 18.2348 24 15.1826 24 12C24 8.8174 22.7357 5.76516 20.4853 3.51472C18.2348 1.26428 15.1826 0 12 0C8.8174 0 5.76516 1.26428 3.51472 3.51472C1.26428 5.76516 0 8.8174 0 12C0 15.1826 1.26428 18.2348 3.51472 20.4853C5.76516 22.7357 8.8174 24 12 24ZM17.2969 9.79688L11.2969 15.7969C10.8562 16.2375 10.1438 16.2375 9.70781 15.7969L6.70781 12.7969C6.26719 12.3562 6.26719 11.6438 6.70781 11.2078C7.14844 10.7719 7.86094 10.7672 8.29688 11.2078L10.5 13.4109L15.7031 8.20312C16.1437 7.7625 16.8562 7.7625 17.2922 8.20312C17.7281 8.64375 17.7328 9.35625 17.2922 9.79219L17.2969 9.79688Z"
+                        fill="#227338" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_2090_3380">
+                        <rect width="24" height="24" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+              <div class="frame-427319178">
+                <div class="pacientes-atendidos">Pacientes atendidos</div>
+                <div class="bottom">
+                  <svg class="arrow-rise-s" width="16" height="17" viewBox="0 0 16 17" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M8.45488 6.10777L14 4.5L12.6198 10.1061L10.898 8.4532L8.12069 11.3463C8.02641 11.4445 7.89615 11.5 7.76 11.5C7.62385 11.5 7.49359 11.4445 7.39931 11.3463L5.36 9.22199L2.36069 12.3463C2.16946 12.5455 1.85294 12.5519 1.65373 12.3607C1.45453 12.1695 1.44807 11.8529 1.63931 11.6537L4.99931 8.15373C5.09359 8.05552 5.22385 8 5.36 8C5.49615 8 5.62641 8.05552 5.72069 8.15373L7.76 10.278L10.1766 7.76067L8.45488 6.10777Z"
+                      fill="#35B257" />
+                  </svg>
+
+                  <div class="_26">26%</div>
+                  <div class="ao-m-s-anterior">ao mês anterior</div>
+                </div>
+              </div>
+            </div>
+            <div class="divider"></div>
+            <div class="card-2">
+              <div class="frame-427319175">
+                <div class="_15">15</div>
+                <div class="icon">
+                  <svg class="bed-pulse-solid-1" width="24" height="18" viewBox="0 0 24 18" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2090_3393)">
+                      <path
+                        d="M18.12 0.337862L19.65 2.25036H23.1C23.5988 2.25036 24 2.62653 24 3.09411C24 3.56169 23.5988 3.93786 23.1 3.93786H19.2C18.915 3.93786 18.6488 3.8113 18.48 3.60036L17.5763 2.47185L15.8138 5.98396C15.675 6.25818 15.39 6.4445 15.0675 6.4656C14.745 6.48669 14.4338 6.34607 14.2538 6.09294L12.72 3.93786H8.1C7.60125 3.93786 7.2 3.56169 7.2 3.09411C7.2 2.62653 7.60125 2.25036 8.1 2.25036H13.2C13.5 2.25036 13.7813 2.39099 13.95 2.62653L14.865 3.91325L16.5863 0.485518C16.7213 0.21833 16.995 0.0355179 17.31 0.00387729C17.625 -0.0277633 17.9325 0.0987992 18.12 0.337862ZM12 5.62536H12.4763L13.2525 6.71872C13.6725 7.30935 14.4 7.64333 15.1538 7.5906C15.9075 7.53786 16.575 7.10896 16.8975 6.4656L17.3213 5.62536H20.4C22.3875 5.62536 24 7.13708 24 9.00036V16.8754C24 17.4976 23.4638 18.0004 22.8 18.0004C22.1363 18.0004 21.6 17.4976 21.6 16.8754V15.7504H13.2H12H2.4V16.8754C2.4 17.4976 1.86375 18.0004 1.2 18.0004C0.53625 18.0004 0 17.4976 0 16.8754V3.37536C0 2.7531 0.53625 2.25036 1.2 2.25036C1.86375 2.25036 2.4 2.7531 2.4 3.37536V12.3754H10.8V6.75036C10.8 6.1281 11.3363 5.62536 12 5.62536ZM6.6 5.62536C7.39565 5.62536 8.15871 5.92168 8.72132 6.44913C9.28393 6.97657 9.6 7.69194 9.6 8.43786C9.6 9.18379 9.28393 9.89915 8.72132 10.4266C8.15871 10.954 7.39565 11.2504 6.6 11.2504C5.80435 11.2504 5.04129 10.954 4.47868 10.4266C3.91607 9.89915 3.6 9.18379 3.6 8.43786C3.6 7.69194 3.91607 6.97657 4.47868 6.44913C5.04129 5.92168 5.80435 5.62536 6.6 5.62536Z"
+                        fill="#227338" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_2090_3393">
+                        <rect width="24" height="18" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+              <div class="frame-427319177">
+                <div class="pacientes-internados">Pacientes internados</div>
+                <div class="bottom">
+                  <svg class="arrow-rise-s2" width="16" height="17" viewBox="0 0 16 17" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M8.45488 6.10777L14 4.5L12.6198 10.1061L10.898 8.4532L8.12069 11.3463C8.02641 11.4445 7.89615 11.5 7.76 11.5C7.62385 11.5 7.49359 11.4445 7.39931 11.3463L5.36 9.22199L2.36069 12.3463C2.16946 12.5455 1.85294 12.5519 1.65373 12.3607C1.45453 12.1695 1.44807 11.8529 1.63931 11.6537L4.99931 8.15373C5.09359 8.05552 5.22385 8 5.36 8C5.49615 8 5.62641 8.05552 5.72069 8.15373L7.76 10.278L10.1766 7.76067L8.45488 6.10777Z"
+                      fill="#35B257" />
+                  </svg>
+
+                  <div class="_102">10%</div>
+                  <div class="ao-m-s-anterior">ao mês anterior</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cards2">
+            <div class="card">
+              <div class="frame-427319175">
+                <div class="_103">10</div>
+                <div class="icon">
+                  <svg class="calendar-solid-1" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2090_3406)">
+                      <path
+                        d="M4.28571 1.25V2.5H2.14286C0.959821 2.5 0 3.33984 0 4.375V6.25H20V4.375C20 3.33984 19.0402 2.5 17.8571 2.5H15.7143V1.25C15.7143 0.558594 15.0759 0 14.2857 0C13.4955 0 12.8571 0.558594 12.8571 1.25V2.5H7.14286V1.25C7.14286 0.558594 6.50446 0 5.71429 0C4.92411 0 4.28571 0.558594 4.28571 1.25ZM20 7.5H0V18.125C0 19.1602 0.959821 20 2.14286 20H17.8571C19.0402 20 20 19.1602 20 18.125V7.5Z"
+                        fill="#227338" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_2090_3406">
+                        <rect width="20" height="20" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+              <div class="frame-427319178">
+                <div class="altas-previstas-para-hoje">Altas previstas para hoje</div>
+                <div class="bottom">
+                  <svg class="arrow-rise-s3" width="16" height="17" viewBox="0 0 16 17" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M8.45488 6.10777L14 4.5L12.6198 10.1061L10.898 8.4532L8.12069 11.3463C8.02641 11.4445 7.89615 11.5 7.76 11.5C7.62385 11.5 7.49359 11.4445 7.39931 11.3463L5.36 9.22199L2.36069 12.3463C2.16946 12.5455 1.85294 12.5519 1.65373 12.3607C1.45453 12.1695 1.44807 11.8529 1.63931 11.6537L4.99931 8.15373C5.09359 8.05552 5.22385 8 5.36 8C5.49615 8 5.62641 8.05552 5.72069 8.15373L7.76 10.278L10.1766 7.76067L8.45488 6.10777Z"
+                      fill="#35B257" />
+                  </svg>
+
+                  <div class="_06">06%</div>
+                  <div class="ao-m-s-anterior">ao mês anterior</div>
+                </div>
+              </div>
+            </div>
+            <div class="divider"></div>
+            <div class="card-2">
+              <div class="frame-427319175">
+                <div class="_103">10</div>
+                <div class="icon2">
+                  <svg class="circle-xmark-solid-1" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2090_3419)">
+                      <path
+                        d="M12 24C15.1826 24 18.2348 22.7357 20.4853 20.4853C22.7357 18.2348 24 15.1826 24 12C24 8.8174 22.7357 5.76516 20.4853 3.51472C18.2348 1.26428 15.1826 0 12 0C8.8174 0 5.76516 1.26428 3.51472 3.51472C1.26428 5.76516 0 8.8174 0 12C0 15.1826 1.26428 18.2348 3.51472 20.4853C5.76516 22.7357 8.8174 24 12 24ZM8.20312 8.20312C8.64375 7.7625 9.35625 7.7625 9.79219 8.20312L11.9953 10.4062L14.1984 8.20312C14.6391 7.7625 15.3516 7.7625 15.7875 8.20312C16.2234 8.64375 16.2281 9.35625 15.7875 9.79219L13.5844 11.9953L15.7875 14.1984C16.2281 14.6391 16.2281 15.3516 15.7875 15.7875C15.3469 16.2234 14.6344 16.2281 14.1984 15.7875L11.9953 13.5844L9.79219 15.7875C9.35156 16.2281 8.63906 16.2281 8.20312 15.7875C7.76719 15.3469 7.7625 14.6344 8.20312 14.1984L10.4062 11.9953L8.20312 9.79219C7.7625 9.35156 7.7625 8.63906 8.20312 8.20312Z"
+                        fill="#F22626" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_2090_3419">
+                        <rect width="24" height="24" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+              <div class="frame-427319176">
+                <div class="atend-cancelados">Atend. cancelados</div>
+                <div class="bottom">
+                  <svg class="arrow-rise-s4" width="16" height="17" viewBox="0 0 16 17" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M7.54512 10.8922L2 12.5L3.38019 6.8939L5.10197 8.5468L7.87931 5.65373C7.97359 5.55552 8.10385 5.5 8.24 5.5C8.37615 5.5 8.50641 5.55552 8.60069 5.65373L10.64 7.77801L13.6393 4.65373C13.8305 4.45453 14.1471 4.44807 14.3463 4.63931C14.5455 4.83054 14.5519 5.14706 14.3607 5.34627L11.0007 8.84627C10.9064 8.94448 10.7761 9 10.64 9C10.5039 9 10.3736 8.94448 10.2793 8.84627L8.24 6.72199L5.82335 9.23933L7.54512 10.8922Z"
+                      fill="#F22626" />
+                  </svg>
+
+                  <div class="_22">2%</div>
+                  <div class="ao-m-s-anterior">ao mês anterior</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cards3">
+            <div class="card">
+              <div class="frame-427319175">
+                <div class="_15">15</div>
+                <div class="icon">
+                  <svg class="bed-solid-1-1" width="24" height="18" viewBox="0 0 24 18" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1.2 1.125C1.86375 1.125 2.4 1.62773 2.4 2.25V11.25H10.8V5.625C10.8 5.00273 11.3363 4.5 12 4.5H20.4C22.3875 4.5 24 6.01172 24 7.875V15.75C24 16.3723 23.4638 16.875 22.8 16.875C22.1363 16.875 21.6 16.3723 21.6 15.75V14.625H13.2H12H2.4V15.75C2.4 16.3723 1.86375 16.875 1.2 16.875C0.53625 16.875 0 16.3723 0 15.75V2.25C0 1.62773 0.53625 1.125 1.2 1.125ZM6.6 4.5C7.39565 4.5 8.15871 4.79632 8.72132 5.32376C9.28393 5.85121 9.6 6.56658 9.6 7.3125C9.6 8.05842 9.28393 8.77379 8.72132 9.30124C8.15871 9.82868 7.39565 10.125 6.6 10.125C5.80435 10.125 5.04129 9.82868 4.47868 9.30124C3.91607 8.77379 3.6 8.05842 3.6 7.3125C3.6 6.56658 3.91607 5.85121 4.47868 5.32376C5.04129 4.79632 5.80435 4.5 6.6 4.5Z"
+                      fill="#227338" />
+                  </svg>
+                </div>
+              </div>
+              <div class="leitos-livres">Leitos livres</div>
+            </div>
+            <div class="divider2"></div>
+            <div class="card-2">
+              <div class="frame-427319175">
+                <div class="_53">53</div>
+                <div class="icon">
+                  <svg class="users-solid" width="24" height="19" viewBox="0 0 24 19" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2090_3440)">
+                      <path
+                        d="M5.4 0C6.19565 0 6.95871 0.312778 7.52132 0.869527C8.08393 1.42628 8.4 2.18139 8.4 2.96875C8.4 3.75611 8.08393 4.51122 7.52132 5.06797C6.95871 5.62472 6.19565 5.9375 5.4 5.9375C4.60435 5.9375 3.84129 5.62472 3.27868 5.06797C2.71607 4.51122 2.4 3.75611 2.4 2.96875C2.4 2.18139 2.71607 1.42628 3.27868 0.869527C3.84129 0.312778 4.60435 0 5.4 0ZM19.2 0C19.9956 0 20.7587 0.312778 21.3213 0.869527C21.8839 1.42628 22.2 2.18139 22.2 2.96875C22.2 3.75611 21.8839 4.51122 21.3213 5.06797C20.7587 5.62472 19.9956 5.9375 19.2 5.9375C18.4044 5.9375 17.6413 5.62472 17.0787 5.06797C16.5161 4.51122 16.2 3.75611 16.2 2.96875C16.2 2.18139 16.5161 1.42628 17.0787 0.869527C17.6413 0.312778 18.4044 0 19.2 0ZM0 11.0846C0 8.89883 1.7925 7.125 4.00125 7.125H5.6025C6.19875 7.125 6.765 7.25488 7.275 7.48496C7.22625 7.75215 7.20375 8.03047 7.20375 8.3125C7.20375 9.73008 7.83375 11.0029 8.8275 11.875C8.82 11.875 8.8125 11.875 8.80125 11.875H0.79875C0.36 11.875 0 11.5188 0 11.0846ZM15.1988 11.875C15.1912 11.875 15.1838 11.875 15.1725 11.875C16.17 11.0029 16.7963 9.73008 16.7963 8.3125C16.7963 8.03047 16.77 7.75586 16.725 7.48496C17.235 7.25117 17.8013 7.125 18.3975 7.125H19.9988C22.2075 7.125 24 8.89883 24 11.0846C24 11.5225 23.64 11.875 23.2013 11.875H15.1988ZM8.4 8.3125C8.4 7.36767 8.77929 6.46153 9.45442 5.79343C10.1295 5.12533 11.0452 4.75 12 4.75C12.9548 4.75 13.8705 5.12533 14.5456 5.79343C15.2207 6.46153 15.6 7.36767 15.6 8.3125C15.6 9.25733 15.2207 10.1635 14.5456 10.8316C13.8705 11.4997 12.9548 11.875 12 11.875C11.0452 11.875 10.1295 11.4997 9.45442 10.8316C8.77929 10.1635 8.4 9.25733 8.4 8.3125ZM4.8 18.0092C4.8 15.2779 7.03875 13.0625 9.79875 13.0625H14.2013C16.9613 13.0625 19.2 15.2779 19.2 18.0092C19.2 18.5547 18.7537 19 18.1987 19H5.80125C5.25 19 4.8 18.5584 4.8 18.0092Z"
+                        fill="#227338" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_2090_3440">
+                        <rect width="24" height="19" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+              <div class="usu-rios-no-sistema">Usuários no sistema</div>
+            </div>
+          </div>
+          <div class="order-list">
+            <div class="frame-78">
+              <div class="lista-de-pacientes-internados">
+                Lista de pacientes internados
+              </div>
+              <div class="filter">
+                <div class="_2023">2023</div>
+                <svg class="chevron-down" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M4.26558 6.26598C4.48688 6.04468 4.84567 6.04468 5.06697 6.26598L7.99961 9.19862L10.9322 6.26598C11.1535 6.04468 11.5123 6.04468 11.7336 6.26598C11.9549 6.48728 11.9549 6.84607 11.7336 7.06737L8.4003 10.4007C8.17901 10.622 7.82021 10.622 7.59892 10.4007L4.26558 7.06737C4.04429 6.84607 4.04429 6.48728 4.26558 6.26598Z"
+                    fill="#22292F" />
+                </svg>
+              </div>
+            </div>
+            <div class="table">
+              <div class="header">
+                <div class="leito">Leito</div>
+                <div class="a-es">Ações</div>
+                <div class="id">
+                  <div class="entrada">Entrada</div>
+                  <svg class="arrows" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M8.92422 2.52605V9.50001C8.92422 9.73473 8.73394 9.92501 8.49922 9.92501C8.2645 9.92501 8.07422 9.73473 8.07422 9.50001V2.52605L6.79974 3.80053C6.63377 3.96651 6.36467 3.96651 6.1987 3.80053C6.03273 3.63456 6.03273 3.36546 6.1987 3.19949L8.1987 1.19949C8.36467 1.03352 8.63377 1.03352 8.79974 1.19949L10.7997 3.19949C10.9657 3.36546 10.9657 3.63456 10.7997 3.80053C10.6338 3.96651 10.3647 3.96651 10.1987 3.80053L8.92422 2.52605ZM3.92422 2.50001C3.92422 2.26529 3.73394 2.07501 3.49922 2.07501C3.2645 2.07501 3.07422 2.26529 3.07422 2.50001V9.47397L1.79974 8.19949C1.63377 8.03352 1.36467 8.03352 1.1987 8.19949C1.03273 8.36546 1.03273 8.63456 1.1987 8.80053L3.1987 10.8005C3.36467 10.9665 3.63377 10.9665 3.79974 10.8005L5.79974 8.80053C5.96571 8.63456 5.96571 8.36546 5.79974 8.19949C5.63377 8.03352 5.36467 8.03352 5.1987 8.19949L3.92422 9.47397V2.50001Z"
+                      fill="#D5DDE2" />
+                  </svg>
+                </div>
+                <div class="id2">
+                  <div class="previs-o-de-sa-da">Previsão de saída</div>
+                  <svg class="arrows2" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M8.92422 2.52605V9.50001C8.92422 9.73473 8.73394 9.92501 8.49922 9.92501C8.2645 9.92501 8.07422 9.73473 8.07422 9.50001V2.52605L6.79974 3.80053C6.63377 3.96651 6.36467 3.96651 6.1987 3.80053C6.03273 3.63456 6.03273 3.36546 6.1987 3.19949L8.1987 1.19949C8.36467 1.03352 8.63377 1.03352 8.79974 1.19949L10.7997 3.19949C10.9657 3.36546 10.9657 3.63456 10.7997 3.80053C10.6338 3.96651 10.3647 3.96651 10.1987 3.80053L8.92422 2.52605ZM3.92422 2.50001C3.92422 2.26529 3.73394 2.07501 3.49922 2.07501C3.2645 2.07501 3.07422 2.26529 3.07422 2.50001V9.47397L1.79974 8.19949C1.63377 8.03352 1.36467 8.03352 1.1987 8.19949C1.03273 8.36546 1.03273 8.63456 1.1987 8.80053L3.1987 10.8005C3.36467 10.9665 3.63377 10.9665 3.79974 10.8005L5.79974 8.80053C5.96571 8.63456 5.96571 8.36546 5.79974 8.19949C5.63377 8.03352 5.36467 8.03352 5.1987 8.19949L3.92422 9.47397V2.50001Z"
+                      fill="#D5DDE2" />
+                  </svg>
+                </div>
+                <div class="customer-name">
+                  <div class="nome">Nome</div>
+                  <svg class="arrows3" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M8.92422 2.52605V9.50001C8.92422 9.73473 8.73394 9.92501 8.49922 9.92501C8.2645 9.92501 8.07422 9.73473 8.07422 9.50001V2.52605L6.79974 3.80053C6.63377 3.96651 6.36467 3.96651 6.1987 3.80053C6.03273 3.63456 6.03273 3.36546 6.1987 3.19949L8.1987 1.19949C8.36467 1.03352 8.63377 1.03352 8.79974 1.19949L10.7997 3.19949C10.9657 3.36546 10.9657 3.63456 10.7997 3.80053C10.6338 3.96651 10.3647 3.96651 10.1987 3.80053L8.92422 2.52605ZM3.92422 2.50001C3.92422 2.26529 3.73394 2.07501 3.49922 2.07501C3.2645 2.07501 3.07422 2.26529 3.07422 2.50001V9.47397L1.79974 8.19949C1.63377 8.03352 1.36467 8.03352 1.1987 8.19949C1.03273 8.36546 1.03273 8.63456 1.1987 8.80053L3.1987 10.8005C3.36467 10.9665 3.63377 10.9665 3.79974 10.8005L5.79974 8.80053C5.96571 8.63456 5.96571 8.36546 5.79974 8.19949C5.63377 8.03352 5.36467 8.03352 5.1987 8.19949L3.92422 9.47397V2.50001Z"
+                      fill="#D5DDE2" />
+                  </svg>
+                </div>
+                <div class="status-order">
+                  <div class="gravidade">Gravidade</div>
+                  <svg class="arrows4" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M8.92422 2.52605V9.50001C8.92422 9.73473 8.73394 9.92501 8.49922 9.92501C8.2645 9.92501 8.07422 9.73473 8.07422 9.50001V2.52605L6.79974 3.80053C6.63377 3.96651 6.36467 3.96651 6.1987 3.80053C6.03273 3.63456 6.03273 3.36546 6.1987 3.19949L8.1987 1.19949C8.36467 1.03352 8.63377 1.03352 8.79974 1.19949L10.7997 3.19949C10.9657 3.36546 10.9657 3.63456 10.7997 3.80053C10.6338 3.96651 10.3647 3.96651 10.1987 3.80053L8.92422 2.52605ZM3.92422 2.50001C3.92422 2.26529 3.73394 2.07501 3.49922 2.07501C3.2645 2.07501 3.07422 2.26529 3.07422 2.50001V9.47397L1.79974 8.19949C1.63377 8.03352 1.36467 8.03352 1.1987 8.19949C1.03273 8.36546 1.03273 8.63456 1.1987 8.80053L3.1987 10.8005C3.36467 10.9665 3.63377 10.9665 3.79974 10.8005L5.79974 8.80053C5.96571 8.63456 5.96571 8.36546 5.79974 8.19949C5.63377 8.03352 5.36467 8.03352 5.1987 8.19949L3.92422 9.47397V2.50001Z"
+                      fill="#D5DDE2" />
+                  </svg>
+                </div>
+              </div>
+              <div class="row-1">
+                <div class="dec-1-2021">Dec 1, 2021</div>
+                <div class="indeterminado">Indeterminado</div>
+                <div class="h-22">H22</div>
+                <div class="customer-name">
+                  <div class="frank-murlo">Frank Murlo</div>
+                </div>
+                <div class="status">
+                  <div class="ellipse-13"></div>
+                  <div class="leve">Leve</div>
+                </div>
+                <svg class="more" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6 10C5.46957 10 4.96086 10.2107 4.58579 10.5858C4.21071 10.9609 4 11.4696 4 12C4 12.5304 4.21071 13.0391 4.58579 13.4142C4.96086 13.7893 5.46957 14 6 14C6.53043 14 7.03914 13.7893 7.41421 13.4142C7.78929 13.0391 8 12.5304 8 12C8 11.4696 7.78929 10.9609 7.41421 10.5858C7.03914 10.2107 6.53043 10 6 10ZM12 10C11.4696 10 10.9609 10.2107 10.5858 10.5858C10.2107 10.9609 10 11.4696 10 12C10 12.5304 10.2107 13.0391 10.5858 13.4142C10.9609 13.7893 11.4696 14 12 14C12.5304 14 13.0391 13.7893 13.4142 13.4142C13.7893 13.0391 14 12.5304 14 12C14 11.4696 13.7893 10.9609 13.4142 10.5858C13.0391 10.2107 12.5304 10 12 10ZM18 10C17.4696 10 16.9609 10.2107 16.5858 10.5858C16.2107 10.9609 16 11.4696 16 12C16 12.5304 16.2107 13.0391 16.5858 13.4142C16.9609 13.7893 17.4696 14 18 14C18.5304 14 19.0391 13.7893 19.4142 13.4142C19.7893 13.0391 20 12.5304 20 12C20 11.4696 19.7893 10.9609 19.4142 10.5858C19.0391 10.2107 18.5304 10 18 10Z"
+                    fill="#22292F" />
+                </svg>
+              </div>
+              <div class="row-2">
+                <div class="nov-15-2021">Nov 15, 2021</div>
+                <div class="nov-15-2023">Nov 15, 2023</div>
+                <div class="h-23">H23</div>
+                <div class="customer-name">
+                  <div class="thomas-bleir">Thomas Bleir</div>
+                </div>
+                <svg class="more2" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6 10C5.46957 10 4.96086 10.2107 4.58579 10.5858C4.21071 10.9609 4 11.4696 4 12C4 12.5304 4.21071 13.0391 4.58579 13.4142C4.96086 13.7893 5.46957 14 6 14C6.53043 14 7.03914 13.7893 7.41421 13.4142C7.78929 13.0391 8 12.5304 8 12C8 11.4696 7.78929 10.9609 7.41421 10.5858C7.03914 10.2107 6.53043 10 6 10ZM12 10C11.4696 10 10.9609 10.2107 10.5858 10.5858C10.2107 10.9609 10 11.4696 10 12C10 12.5304 10.2107 13.0391 10.5858 13.4142C10.9609 13.7893 11.4696 14 12 14C12.5304 14 13.0391 13.7893 13.4142 13.4142C13.7893 13.0391 14 12.5304 14 12C14 11.4696 13.7893 10.9609 13.4142 10.5858C13.0391 10.2107 12.5304 10 12 10ZM18 10C17.4696 10 16.9609 10.2107 16.5858 10.5858C16.2107 10.9609 16 11.4696 16 12C16 12.5304 16.2107 13.0391 16.5858 13.4142C16.9609 13.7893 17.4696 14 18 14C18.5304 14 19.0391 13.7893 19.4142 13.4142C19.7893 13.0391 20 12.5304 20 12C20 11.4696 19.7893 10.9609 19.4142 10.5858C19.0391 10.2107 18.5304 10 18 10Z"
+                    fill="#22292F" />
+                </svg>
+
+                <div class="status2">
+                  <div class="ellipse-132"></div>
+                  <div class="m-dia">Média</div>
+                </div>
+              </div>
+              <div class="row-3">
+                <div class="nov-02-2021">Nov 02, 2021</div>
+                <div class="indeterminado">Indeterminado</div>
+                <div class="h-24">H24</div>
+                <div class="customer-name">
+                  <div class="bill-norton">Bill Norton</div>
+                </div>
+                <svg class="more3" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6 10C5.46957 10 4.96086 10.2107 4.58579 10.5858C4.21071 10.9609 4 11.4696 4 12C4 12.5304 4.21071 13.0391 4.58579 13.4142C4.96086 13.7893 5.46957 14 6 14C6.53043 14 7.03914 13.7893 7.41421 13.4142C7.78929 13.0391 8 12.5304 8 12C8 11.4696 7.78929 10.9609 7.41421 10.5858C7.03914 10.2107 6.53043 10 6 10ZM12 10C11.4696 10 10.9609 10.2107 10.5858 10.5858C10.2107 10.9609 10 11.4696 10 12C10 12.5304 10.2107 13.0391 10.5858 13.4142C10.9609 13.7893 11.4696 14 12 14C12.5304 14 13.0391 13.7893 13.4142 13.4142C13.7893 13.0391 14 12.5304 14 12C14 11.4696 13.7893 10.9609 13.4142 10.5858C13.0391 10.2107 12.5304 10 12 10ZM18 10C17.4696 10 16.9609 10.2107 16.5858 10.5858C16.2107 10.9609 16 11.4696 16 12C16 12.5304 16.2107 13.0391 16.5858 13.4142C16.9609 13.7893 17.4696 14 18 14C18.5304 14 19.0391 13.7893 19.4142 13.4142C19.7893 13.0391 20 12.5304 20 12C20 11.4696 19.7893 10.9609 19.4142 10.5858C19.0391 10.2107 18.5304 10 18 10Z"
+                    fill="#22292F" />
+                </svg>
+
+                <div class="status2">
+                  <div class="ellipse-133"></div>
+                  <div class="grave">Grave</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="display-type"></div>
+
+      </div>
+
+      <div>
+        <canvas id="myChart"></canvas>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+      <script src="https://kit.fontawesome.com/fbf22f7a56.js" crossorigin="anonymous"></script>
+
+      <script src="bower_components/jquery/dist/jquery.min.js"></script>
+      <script src="bower_components/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
+      <script src="bower_components/ckeditor/ckeditor.js"></script>
+      <script src="bower_components/bootstrap-validator/dist/validator.min.js"></script>
+      <script src="bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+      <script src="bower_components/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js"></script>
+      <script src="bower_components/bootstrap/js/dist/util.js"></script>
+      <script src="bower_components/bootstrap/js/dist/alert.js"></script>
+      <script src="bower_components/bootstrap/js/dist/button.js"></script>
+      <script src="bower_components/bootstrap/js/dist/carousel.js"></script>
+      <script src="bower_components/bootstrap/js/dist/collapse.js"></script>
+      <script src="bower_components/bootstrap/js/dist/dropdown.js"></script>
+      <script src="bower_components/bootstrap/js/dist/modal.js"></script>
+      <script src="bower_components/bootstrap/js/dist/tab.js"></script>
+      <script src="bower_components/bootstrap/js/dist/tooltip.js"></script>
+      <script src="bower_components/bootstrap/js/dist/popover.js"></script>
+      <script src="js/main.js?version=4.4.0"></script>
+      <script>
+        (function (i, s, o, g, r, a, m) {
+          i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+          }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-XXXXXXX-9', 'auto');
+        ga('send', 'pageview');
+      </script>
+</body>
+
+</html>
