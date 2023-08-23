@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Layout SOS</title>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="template language" name="keywords">
+    <meta content="Admin dashboard html template" name="description">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="favicon.png" rel="shortcut icon">
+
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body class="menu-position-side menu-side-left full-screen with-content-panel">
+    <div class="all-wrapper with-side-panel solid-bg-all">
+
+        <div class="search-with-suggestions-w">
+            <div class="search-with-suggestions-modal">
+                <div class="element-search">
+                    <input class="search-suggest-input" placeholder="Buscar" type="text">
+                    <div class="close-search-suggestions">
+                        <i class="os-icon os-icon-x"></i>
+                    </div>
+                </div>
+
+                <div class="search-suggestions-group">
+
+                    <div class="ssg-content">
+                        <div class="ssg-nothing-found">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layout-w">
+
+            <!---- Mobile Menu ---->
+            <div class="menu-mobile menu-activated-on-click">
+                <div class="mm-logo-buttons-w">
+                    <a class="mm-logo" href="#"><img src="SOS.png"></a>
+                    <div class="mm-buttons">
+                        <div class="content-panel-open">
+                            <div class="os-icon os-icon-grid-circles"></div>
+                        </div>
+                        <div class="mobile-menu-trigger">
+                            <div class="os-icon os-icon-hamburger-menu-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-and-user">
+                    <div class="logged-user-w">
+                        <div class="avatar-w">
+                            <i class="fa-solid fa-user-doctor"></i>
+                        </div>
+                        <div class="logged-user-info-w">
+                            <div class="logged-user-name">
+                                Antônio Marques
+                            </div>
+                            <div class="logged-user-role">
+                                Administrador
+                            </div>
+                        </div>
+                    </div>
+
+                    <!---- Mobile Menu List  ------>
+                    <ul class="main-menu">
+                        <li class="has-sub-menu">
+                            <a [routerLink]="['/pesquisar-paciente']">
+                                <div class="icon-w">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                                <span>Paciente</span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="#">Pesquisar</a>
+                                </li>
+
+                                <li>
+                                    <a href="#">Cadastrar</a>
+                                </li>
+                            </ul>
+
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="#">Lista de atendimento</a>
+                                </li>
+
+                                <li>
+                                    <a href="#">PEP - Prontuário</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="has-sub-menu">
+                            <a [routerLink]="['/profissional']">
+                                <div class="icon-w">
+                                    <i class="fa-solid fa-hospital-user"></i>
+                                </div>
+                                <span>Unidade</span>
+                            </a>
+
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="#">Pesquisar</a>
+                                </li>
+
+                                <li>
+                                    <a href="#">Cadastrar</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="has-sub-menu">
+                            <a [routerLink]="['/unidade']">
+                                <div class="icon-w">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                                <span>Profissional</span>
+                            </a>
+
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="#">Pesquisar</a>
+                                </li>
+
+                                <li>
+                                    <a href="#">Cadastrar</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!--<li class="has-sub-menu">
+                  <a href="#">
+                    <div class="icon-w">
+                      <i class="fa-solid fa-pills"></i>
+                    </div>
+                    <span>Farmácia</span>
+                  </a>
+                  <ul class="sub-menu">
+                    <li>
+                      <a href="#">#</a>
+                    </li>
+                    <li>
+                      <a href="#">###</a>
+                    </li>
+                  </ul>
+                </li>-->
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="menu-w color-scheme-light color-style-transparent menu-position-side menu-side-left menu-layout-compact sub-menu-style-over sub-menu-color-bright selected-menu-color-light menu-activated-on-hover menu-has-selected-link">
+                <div class="logo-w">
+                    <img src="SOS.png">
+                    <a href="cadastro-paciente.html">
+                        <!-- <div class="logo-label"></div> -->
+                    </a>
+                </div>
+                <div class="logged-user-w avatar-inline">
+                    <div class="logged-user-i">
+                        <div class="avatar-w">
+                            <i class="fa-solid fa-user-doctor"></i>
+                        </div>
+                        <div class="logged-user-info-w">
+                            <div class="logged-user-name">
+                                Antônio Marques
+                            </div>
+                            <div class="logged-user-role">
+                                Administrador
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Desktop -->
+
+                <ul class="main-menu">
+                    <li class="sub-header">
+                        <span>Acesso rápido</span>
+                    </li>
+
+                    <li class="selected has-sub-menu">
+                        <a [routerLink]="['/paciente']">
+                            <div class="icon-w">
+                                <div class="fa-solid fa-bed-pulse"></div>
+                            </div>
+                            <span>Paciente</span>
+                        </a>
+                        <div class="sub-menu-w">
+                            <div class="sub-menu-header">
+                                Paciente
+                            </div>
+                            <div class="sub-menu-icon">
+                                <!--<i class="os-icon os-icon-layout"></i>-->
+                            </div>
+                            <div class="sub-menu-i">
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a [routerLink]="['/paciente']">Pesquisar</a>
+                                    </li>
+
+                                    <li>
+                                        <a [routerLink]="['/paciente/criar']">Cadastrar</a>
+                                    </li>
+                                </ul>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a [routerLink]="['#']">Lista de atendimento</a>
+                                    </li>
+
+                                    <li>
+                                        <a [routerLink]="['#']">PEP</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="selected has-sub-menu">
+                        <a [routerLink]="['/unidade']">
+                            <div class="icon-w">
+                                <div class="fa-solid fa-house-chimney-medical"></div>
+                            </div>
+                            <span>Unidade</span>
+                        </a>
+                        <div class="sub-menu-w">
+                            <div class="sub-menu-header">
+                                Unidade
+                            </div>
+                            <div class="sub-menu-icon">
+                                <!--<i class="os-icon os-icon-layout"></i>-->
+                            </div>
+                            <div class="sub-menu-i">
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a [routerLink]="['/unidade']">Pesquisar unidade</a>
+                                    </li>
+
+                                    <li>
+                                        <a [routerLink]="['/unidade/criar']">Cadastrar unidade</a>
+                                    </li>
+                                </ul>
+
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a [routerLink]="['/unidade']">Cadastrar Leitos</a>
+                                    </li>
+
+                                    <li>
+                                        <a [routerLink]="['/unidade/criar']">Gestão de Leitos</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="selected has-sub-menu">
+                        <a [routerLink]="['/profissional']">
+                            <div class="icon-w">
+                                <div class="fa-solid fa-hospital-user"></div>
+                            </div>
+                            <span>Profissional</span>
+                        </a>
+                        <div class="sub-menu-w">
+                            <div class="sub-menu-header">
+                                Profissional
+                            </div>
+                            <div class="sub-menu-icon">
+                                <!--<i class="os-icon os-icon-layout"></i>-->
+                            </div>
+                            <div class="sub-menu-i">
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a [routerLink]="['/profissional']">Listar profissional</a>
+                                    </li>
+
+                                    <li>
+                                        <a [routerLink]="['/profissional/criar']">Cadastrar profissional</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!--<li--> <!--class=" has-sub-menu"-->
+                    <li>
+                        <a href="#">
+                            <div class="icon-w">
+                                <i class="fa-solid fa-bed-pulse"></i>
+                            </div>
+                            <span>AIH - Leito</span>
+                        </a>
+                        <!--<div class="sub-menu-w">
+                  <div class="sub-menu-header">
+                    Acesso menu AIH-Leito
+                  </div>
+                  <div class="sub-menu-icon">
+                    <i class="os-icon os-icon-users"></i>
+                  </div>
+                  <div class="sub-menu-i">
+                    <ul class="sub-menu">
+                      <li>
+                        <a href="###">###</a>
+                      </li>
+                      <li>
+                        <a href="###">###</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>-->
+                    </li>
+
+                    <!--<li class=" has-sub-menu">-->
+                    <li>
+                        <a href="#">
+                            <div class="icon-w">
+                                <i class="fa-solid fa-pills"></i>
+                            </div>
+                            <span>Farmácia</span>
+                        </a>
+                        <!--<div class="sub-menu-w">
+                  <div class="sub-menu-header">
+                    Acesso menu Farmácia
+                  </div>
+                  <div class="sub-menu-icon">
+                    <i class="os-icon os-icon-users"></i>
+                  </div>
+                  <div class="sub-menu-i">
+                    <ul class="sub-menu">
+                      <li>
+                        <a href="###">###</a>
+                      </li>
+                      <li>
+                        <a href="###">###</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>-->
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="content-w">
+                <div class="top-bar color-scheme-transparent">
+                    <div class="top-menu-controls">
+                        <!-- <h6> Início | Pesquisar paciente | Lista de Atendimento | AIH - Leito Farmácia </h6> -->
+
+                        <!--
+                        <div class="element-search autosuggest-search-activator">
+                            <input placeholder="Buscar" type="text">
+                        </div>
+                        -->
+
+                        <!-- <div class="messages-notifications os-dropdown-trigger os-dropdown-position-left">
+                            <i class="fa-regular fa-message"></i>
+                            <div class="new-messages-count">
+                                12
+                            </div>
+                            <div class="os-dropdown light message-list">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <div class="message-content">
+                                                <h6 class="message-from">
+                                                    John
+                                                </h6>
+                                                <h6 class="message-title">
+                                                    ###
+                                                </h6>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="message-content">
+                                                <h6 class="message-from">
+                                                    Phil
+                                                </h6>
+                                                <h6 class="message-title">
+                                                    Secutiry Updates
+                                                </h6>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="message-content">
+                                                <h6 class="message-from">
+                                                    Anna
+                                                </h6>
+                                                <h6 class="message-title">
+                                                    ###
+                                                </h6>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="message-content">
+                                                <h6 class="message-from">
+                                                    Alice
+                                                </h6>
+                                                <h6 class="message-title">
+                                                    ####
+                                                </h6>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    -->
+
+                        <div class="top-icon top-settings os-dropdown-trigger os-dropdown-position-left">
+                            <i class="fa-solid fa-gear"></i>
+                            <div class="os-dropdown">
+                                <div class="icon-w">
+                                    <i class="os-icon os-icon-ui-46"></i>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                            </i><span>Configurações da conta</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="logged-user-w">
+                            <div class="logged-user-i">
+                                <div class="avatar-w">
+                                    <i class="fa-solid fa-user-doctor"></i>
+                                </div>
+                                <div class="logged-user-menu color-style-bright">
+                                    <div class="logged-user-avatar-info">
+                                        <div class="avatar-w">
+                                            <i class="fa-solid fa-user-doctor"></i>
+                                        </div>
+                                        <div class="logged-user-info-w">
+                                            <div class="logged-user-name">
+                                                Antônio Marques
+                                            </div>
+                                            <div class="logged-user-role">
+                                                Administrador
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-icon">
+                                        <i class="fa-regular fa-envelope"></i>
+                                    </div>
+                                    <ul>
+                                        <!-- <li>
+                                            <a href="#"><i
+                                                    class="os-icon os-icon-mail-01"></i><span>Mensagens</span></a>
+                                        </li> -->
+
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-regular fa-circle-user"></i><span>Perfil</span></a>
+                                        </li>
+
+                                        <!-- <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-coins"></i>
+                                                </i><span>Financeiro</span></a>
+                                        </li> -->
+
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-bell"></i>
+                                                <span>Notificações</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                                <span>Sair</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!--INICIO CONTEÚDO-->
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="#">Início</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="#">Lista de atendimentos</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="#">Histórico</a>
+                    </li>
+                </ul>
+
+                <div class="form-container">
+                <div class="frame-container-historico-pep">
+                    <div class="ana-maria-oliveira">Ana Maria Oliveira
+                        <div class="placeholder">| Feminino</div>
+                    </div>
+
+                    <br>
+                    <div class="horizontal-flex-container">
+                        <div class="placeholder">37 anos e 5 meses | Nasceu em 25/02/1986</div>
+                        <div class="info">
+                          <p class="info-item">CPF: Não informado</p>
+                          <p class="info-item">CNS: 947.019.8134.79238</p>
+                          <p class="info-item">Nome da mãe: Fulana de Souza</p>
+                          <p class="info-item">Nome do pai: Fulano de Souza</p>
+                        </div>
+                      </div>
+                    <Br>
+
+                    <div class="content-03">
+                        <div class="tabs-historico-pep">
+                            <div class="text-folha-rosto">Folha de rosto</div>
+                        </div>
+                        <div class="tabs-historico-pep">
+                            <div class="text-pep">PEP</div>
+                        </div>
+                        <div class="tabs-historico-pep2">
+                            <div class="text-historico">Histórico</div>
+                        </div>
+                    </div>
+
+                    <div class="frame-427319120">
+                        <div class="button-filtrar">
+                          <div class="text-filtrar">Filtrar (0)</div>
+                        </div>
+                        <div class="frame-427319075">
+                          <div class="text-exibir">Exibir</div>
+                          <div class="frame-427319076">
+                            <div class="text-todos-atendimentos">Todos os atendimentos</div>
+                            <svg
+                              class="caret-circle-down-d"
+                              width="16"
+                              height="17"
+                              viewBox="0 0 16 17"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M8 2C8 2 9.32209 2 10.5302 2.51101C10.5302 2.51101 11.6968 3.00442 12.5962 3.90381C12.5962 3.90381 13.4956 4.80319 13.989 5.96975C13.989 5.96975 14.5 7.17791 14.5 8.5C14.5 8.5 14.5 9.82208 13.989 11.0302C13.989 11.0302 13.4956 12.1968 12.5962 13.0962C12.5962 13.0962 11.6968 13.9956 10.5302 14.489C10.5302 14.489 9.32208 15 8 15C8 15 6.67791 15 5.46975 14.489C5.46975 14.489 4.30319 13.9956 3.40381 13.0962C3.40381 13.0962 2.50442 12.1968 2.01101 11.0302C2.01101 11.0302 1.5 9.82209 1.5 8.5C1.5 8.5 1.5 7.17791 2.01101 5.96975C2.01101 5.96975 2.50442 4.80319 3.40381 3.90381C3.40381 3.90381 4.30319 3.00442 5.46975 2.51101C5.46975 2.51101 6.67791 2 8 2ZM8 3C8 3 6.8807 3 5.85931 3.43201C5.85931 3.43201 4.87238 3.84945 4.11091 4.61091C4.11091 4.61091 3.34945 5.37238 2.93201 6.35931C2.93201 6.35931 2.5 7.3807 2.5 8.5C2.5 8.5 2.5 9.6193 2.93201 10.6407C2.93201 10.6407 3.34945 11.6276 4.11091 12.3891C4.11091 12.3891 4.87238 13.1506 5.85931 13.568C5.85931 13.568 6.8807 14 8 14C8 14 9.1193 14 10.1407 13.568C10.1407 13.568 11.1276 13.1506 11.8891 12.3891C11.8891 12.3891 12.6506 11.6276 13.068 10.6407C13.068 10.6407 13.5 9.6193 13.5 8.5C13.5 8.5 13.5 7.3807 13.068 6.35931C13.068 6.35931 12.6506 5.37238 11.8891 4.61091C11.8891 4.61091 11.1276 3.84945 10.1407 3.43201C10.1407 3.43201 9.1193 3 8 3Z"
+                                fill="#22292F"/>
+                              <path
+                                d="M6.12165 7.41552C6.02683 7.31016 5.89174 7.25 5.75 7.25C5.74152 7.25 5.73304 7.25022 5.72457 7.25065C5.60995 7.25648 5.50083 7.30158 5.41552 7.37835C5.31016 7.47317 5.25 7.60826 5.25 7.75C5.25 7.75848 5.25022 7.76696 5.25065 7.77543C5.25648 7.89005 5.30158 7.99917 5.37835 8.08448L7.62835 10.5845C7.81308 10.7897 8.12923 10.8064 8.33448 10.6216C8.34751 10.6099 8.35992 10.5975 8.37165 10.5845L10.6214 8.08476L10.6216 8.08448C10.7043 7.99267 10.75 7.87352 10.75 7.75C10.75 7.74124 10.7498 7.73247 10.7493 7.72372C10.7423 7.5913 10.683 7.46706 10.5845 7.37835C10.4927 7.29572 10.3735 7.25 10.25 7.25L10.2477 7.25001C10.2397 7.25004 10.2317 7.25027 10.2237 7.25069C10.0913 7.25766 9.96706 7.31695 9.87835 7.41552L9.87811 7.41579L8 9.50258L6.12165 7.41552Z"
+                                fill="#22292F"/>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <div class="frame-427319066">
+                          <div class="off-2">
+                            <div class="rectangle2-34624083"></div>
+                            <div class="ellipse2-968"></div>
+                          </div>
+                          <div class="text-ver-somente">Ver somente meus atendimentos</div>
+                        </div>
+                        <div class="input-with-label-5">
+                          <div class="label-5">Tipo de atendimento</div>
+                          <div class="input-5">
+                            <svg class="chevron-down" width="24" height="24"></svg>
+                          </div>
+                        </div>
+                        <svg
+                          class="vector-9"
+                          width="1580"
+                          viewBox="0 0 1580 0"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M0 0L1580 0.000138128" stroke="#D5DDE2" />
+                        </svg>
+                      
+                        <svg
+                          class="vector-10"
+                          width="1580"
+                          viewBox="0 0 1580 0"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M0 0L1580 0.000138128" stroke="#D5DDE2" />
+                        </svg>
+                      
+                        <div class="label-2">Data</div>
+                        <div class="label-3">Hoje</div>
+                        <div class="label-4">08/08/2023</div>
+                        <div class="frame-427319124">
+                          <svg
+                            class="checkbox-3"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M18.6667 1.33333H5.33333C3.12419 1.33333 1.33333 3.12419 1.33333 5.33333V18.6667C1.33333 20.8758 3.12419 22.6667 5.33333 22.6667H18.6667C20.8758 22.6667 22.6667 20.8758 22.6667 18.6667V5.33333C22.6667 3.12419 20.8758 1.33333 18.6667 1.33333ZM5.33333 0C2.38781 0 0 2.38781 0 5.33333V18.6667C0 21.6122 2.38781 24 5.33333 24H18.6667C21.6122 24 24 21.6122 24 18.6667V5.33333C24 2.38781 21.6122 0 18.6667 0H5.33333Z"
+                              fill="#B0BFC9"
+                            />
+                          </svg>
+                      
+                          <div class="selecionar-todos-da-p-gina-0-atendimento">
+                            Selecionar todos da página (0 atendimento)
+                          </div>
+                        </div>
+                        <div class="frame-427319125">
+                          <div class="frame-427319128">
+                            <div class="frame-427319127">
+                              <div class="placeholder-3">
+                                Davila Monique Serra Ascendino - Enfermeiro da estratégia de saúde da
+                                família - 423423 | Equipe 1249081428091 - USF CAMAMUZINHO
+                                <br>
+                                <p class="pt-2"><b>CONSULTA COM PROFISSIONAL DE APS - 46</b> (CIAP2)</p>
+                              </div>
+                            </div>
+                            <div class="frame-427319146">
+                              <div class="badge-3">
+                                <div class="text-atendido-hora">Procedimento clínico</div>
+                              </div>
+                              <div class="badge-3">
+                                <div class="text-atendido-hora">Atendido às 15:35</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="rectangle2-34624086"></div>
+                          <div class="frame-427319145">
+                            <label class="checkbox-label">
+                              <input type="checkbox">
+                              <span class="custom-checkbox"></span>
+                            </label>
+                      
+                            <div class="frame-427319129">
+                              <div class="escuta-inicial">Escuta inicial</div>
+                              <div class="badge-2">
+                                <div class="text-pouco-urgente">Pouco urgente</div>
+                              </div>
+                            </div>
+                          </div>
+                          <svg
+                            class="chevron-down-3"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6 9L12 15L18 9"
+                              stroke="#516778"
+                              stroke-width="1.66667"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                      
+                          <svg
+                            class="printer-d-3"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M5.25 7.5V3.75C5.25 3.33579 5.58579 3 6 3H18C18.4142 3 18.75 3.33579 18.75 3.75V7.5C18.75 7.91421 18.4142 8.25 18 8.25H6C5.58579 8.25 5.25 7.91421 5.25 7.5ZM17.25 6.75H6.75V4.5H17.25V6.75Z"
+                              fill="#516778"
+                            />
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M5.25 20.625V14.25C5.25 13.8358 5.58579 13.5 6 13.5H18C18.4142 13.5 18.75 13.8358 18.75 14.25V20.625C18.75 21.0392 18.4142 21.375 18 21.375H6C5.58579 21.375 5.25 21.0392 5.25 20.625ZM17.25 19.875H6.75V15H17.25V19.875Z"
+                              fill="#516778"
+                            />
+                            <path
+                              d="M20.625 15.75H18C17.5858 15.75 17.25 16.0858 17.25 16.5C17.25 16.9142 17.5858 17.25 18 17.25H21.375C21.7892 17.25 22.125 16.9142 22.125 16.5V9C22.125 8.0534 21.4071 7.38986 21.4071 7.38986C20.7149 6.75 19.7531 6.75 19.7531 6.75L4.24687 6.75C3.28514 6.75 2.59288 7.38986 2.59288 7.38986C1.875 8.0534 1.875 9 1.875 9V16.5C1.875 16.9142 2.21079 17.25 2.625 17.25H6C6.41421 17.25 6.75 16.9142 6.75 16.5C6.75 16.0858 6.41421 15.75 6 15.75H3.375V9C3.375 8.70955 3.61103 8.49139 3.61103 8.49139C3.87219 8.25 4.24687 8.25 4.24687 8.25L19.7531 8.25C20.1278 8.25 20.389 8.49139 20.389 8.49139C20.625 8.70955 20.625 9 20.625 9V15.75Z"
+                              fill="#516778"
+                            />
+                            <path
+                              d="M18.75 10.875C18.75 11.4963 18.2463 12 17.625 12C17.0037 12 16.5 11.4963 16.5 10.875C16.5 10.2537 17.0037 9.75 17.625 9.75C18.2463 9.75 18.75 10.2537 18.75 10.875Z"
+                              fill="#516778"
+                            />
+                          </svg>
+                        </div>
+
+                        <div class="frame-4273191282">
+                          <div class="frame-427319128">
+                            <div class="frame-427319127">
+                              <div class="placeholder-3">
+                                Davila Monique Serra Ascendino - Enfermeiro da estratégia de saúde da
+                                família - 423423 | Equipe 1249081428091 - USF CAMAMUZINHO
+                                <br>
+                                <p class="pt-2"><b>CONSULTA COM PROFISSIONAL DE APS - 46</b> (CIAP2)</p>
+                              </div>
+                            </div>
+                            <div class="frame-427319146">
+                              <div class="badge-3">
+                                <div class="text-atendido-hora">Procedimento clínico</div>
+                              </div>
+                              <div class="badge-3">
+                                <div class="text-atendido-hora">Atendido às 15:35</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="rectangle2-34624086"></div>
+                          <div class="frame-427319145">
+                            <label class="checkbox-label">
+                              <input type="checkbox">
+                              <span class="custom-checkbox"></span>
+                            </label>
+                            <div class="frame-427319129">
+                              <div class="consulta">Consulta</div>
+                              <div class="badge-33">
+                                <div class="text-nao-urgente">Não urgente</div>
+                              </div>
+                            </div>
+                          </div>
+                          <svg
+                            class="chevron-down-3"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6 9L12 15L18 9"
+                              stroke="#516778"
+                              stroke-width="1.66667"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                      
+                          <svg
+                            class="printer-d-3"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M5.25 7.5V3.75C5.25 3.33579 5.58579 3 6 3H18C18.4142 3 18.75 3.33579 18.75 3.75V7.5C18.75 7.91421 18.4142 8.25 18 8.25H6C5.58579 8.25 5.25 7.91421 5.25 7.5ZM17.25 6.75H6.75V4.5H17.25V6.75Z"
+                              fill="#516778"
+                            />
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M5.25 20.625V14.25C5.25 13.8358 5.58579 13.5 6 13.5H18C18.4142 13.5 18.75 13.8358 18.75 14.25V20.625C18.75 21.0392 18.4142 21.375 18 21.375H6C5.58579 21.375 5.25 21.0392 5.25 20.625ZM17.25 19.875H6.75V15H17.25V19.875Z"
+                              fill="#516778"
+                            />
+                            <path
+                              d="M20.625 15.75H18C17.5858 15.75 17.25 16.0858 17.25 16.5C17.25 16.9142 17.5858 17.25 18 17.25H21.375C21.7892 17.25 22.125 16.9142 22.125 16.5V9C22.125 8.0534 21.4071 7.38986 21.4071 7.38986C20.7149 6.75 19.7531 6.75 19.7531 6.75L4.24687 6.75C3.28514 6.75 2.59288 7.38986 2.59288 7.38986C1.875 8.0534 1.875 9 1.875 9V16.5C1.875 16.9142 2.21079 17.25 2.625 17.25H6C6.41421 17.25 6.75 16.9142 6.75 16.5C6.75 16.0858 6.41421 15.75 6 15.75H3.375V9C3.375 8.70955 3.61103 8.49139 3.61103 8.49139C3.87219 8.25 4.24687 8.25 4.24687 8.25L19.7531 8.25C20.1278 8.25 20.389 8.49139 20.389 8.49139C20.625 8.70955 20.625 9 20.625 9V15.75Z"
+                              fill="#516778"
+                            />
+                            <path
+                              d="M18.75 10.875C18.75 11.4963 18.2463 12 17.625 12C17.0037 12 16.5 11.4963 16.5 10.875C16.5 10.2537 17.0037 9.75 17.625 9.75C18.2463 9.75 18.75 10.2537 18.75 10.875Z"
+                              fill="#516778"
+                            />
+                          </svg>
+                        </div>
+                        <div class="frame-4273191292">
+                          <div class="frame-427319128">
+                            <div class="frame-427319127">
+                              <div class="placeholder-3">
+                                Davila Monique Serra Ascendino - Enfermeiro da estratégia de saúde da
+                                família - 423423 | Equipe 1249081428091 - USF CAMAMUZINHO
+                                 <br>
+                                <p class="pt-2"><b>CONSULTA COM PROFISSIONAL DE APS - 46</b> (CIAP2)</p>
+                              </div>
+                            </div>
+                            <div class="frame-427319146">
+                              <div class="badge-3">
+                                <div class="text-atendido-hora">Procedimento clínico</div>
+                              </div>
+                              <div class="badge-3">
+                                <div class="text-atendido-hora">Atendido às 15:35</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="rectangle2-34624086"></div>
+                          <div class="frame-427319145">
+                            <label class="checkbox-label">
+                              <input type="checkbox">
+                              <span class="custom-checkbox"></span>
+                            </label>
+                      
+                            <div class="frame-427319129">
+                              <div class="vacina-o">Vacinação</div>
+                              <div class="badge4">
+                                <div class="text8">Muito urgente</div>
+                              </div>
+                            </div>
+                          </div>
+                          <svg
+                            class="chevron-down4"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6 9L12 15L18 9"
+                              stroke="#516778"
+                              stroke-width="1.66667"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                      
+                          <svg
+                            class="printer-d3"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M5.25 7.5V3.75C5.25 3.33579 5.58579 3 6 3H18C18.4142 3 18.75 3.33579 18.75 3.75V7.5C18.75 7.91421 18.4142 8.25 18 8.25H6C5.58579 8.25 5.25 7.91421 5.25 7.5ZM17.25 6.75H6.75V4.5H17.25V6.75Z"
+                              fill="#516778"
+                            />
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M5.25 20.625V14.25C5.25 13.8358 5.58579 13.5 6 13.5H18C18.4142 13.5 18.75 13.8358 18.75 14.25V20.625C18.75 21.0392 18.4142 21.375 18 21.375H6C5.58579 21.375 5.25 21.0392 5.25 20.625ZM17.25 19.875H6.75V15H17.25V19.875Z"
+                              fill="#516778"
+                            />
+                            <path
+                              d="M20.625 15.75H18C17.5858 15.75 17.25 16.0858 17.25 16.5C17.25 16.9142 17.5858 17.25 18 17.25H21.375C21.7892 17.25 22.125 16.9142 22.125 16.5V9C22.125 8.0534 21.4071 7.38986 21.4071 7.38986C20.7149 6.75 19.7531 6.75 19.7531 6.75L4.24687 6.75C3.28514 6.75 2.59288 7.38986 2.59288 7.38986C1.875 8.0534 1.875 9 1.875 9V16.5C1.875 16.9142 2.21079 17.25 2.625 17.25H6C6.41421 17.25 6.75 16.9142 6.75 16.5C6.75 16.0858 6.41421 15.75 6 15.75H3.375V9C3.375 8.70955 3.61103 8.49139 3.61103 8.49139C3.87219 8.25 4.24687 8.25 4.24687 8.25L19.7531 8.25C20.1278 8.25 20.389 8.49139 20.389 8.49139C20.625 8.70955 20.625 9 20.625 9V15.75Z"
+                              fill="#516778"
+                            />
+                            <path
+                              d="M18.75 10.875C18.75 11.4963 18.2463 12 17.625 12C17.0037 12 16.5 11.4963 16.5 10.875C16.5 10.2537 17.0037 9.75 17.625 9.75C18.2463 9.75 18.75 10.2537 18.75 10.875Z"
+                              fill="#516778"
+                            />
+                          </svg>
+                        </div>
+                        <div class="frame-427319130">
+                          <div class="frame-427319128">
+                            <div class="frame-427319127">
+                              <div class="placeholder-3">
+                                Davila Monique Serra Ascendino - Enfermeiro da estratégia de saúde da
+                                família - 423423 | Equipe 1249081428091 - USF CAMAMUZINHO
+                                <br>
+                                <p class="pt-2"><b>CONSULTA COM PROFISSIONAL DE APS - 46</b> (CIAP2)</p>
+                              </div>
+                            </div>
+                            <div class="frame-427319146">
+                              <div class="badge-3">
+                                <div class="text-atendido-hora">Procedimento clínico</div>
+                              </div>
+                              <div class="badge-3">
+                                <div class="text-atendido-hora">Atendido às 15:35</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="rectangle2-34624086"></div>
+                          <div class="frame-427319145">
+                            <label class="checkbox-label">
+                              <input type="checkbox">
+                              <span class="custom-checkbox"></span>
+                            </label>
+                            <div class="frame-427319129">
+                              <div class="escuta-inicial">Escuta inicial</div>
+                              <div class="badge-2">
+                                <div class="text-pouco-urgente">Pouco urgente</div>
+                              </div>
+                            </div>
+                          </div>
+                          <svg
+                            class="chevron-down5"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6 9L12 15L18 9"
+                              stroke="#516778"
+                              stroke-width="1.66667"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                      
+                          <svg
+                            class="printer-d4"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M5.25 7.5V3.75C5.25 3.33579 5.58579 3 6 3H18C18.4142 3 18.75 3.33579 18.75 3.75V7.5C18.75 7.91421 18.4142 8.25 18 8.25H6C5.58579 8.25 5.25 7.91421 5.25 7.5ZM17.25 6.75H6.75V4.5H17.25V6.75Z"
+                              fill="#516778"
+                            />
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M5.25 20.625V14.25C5.25 13.8358 5.58579 13.5 6 13.5H18C18.4142 13.5 18.75 13.8358 18.75 14.25V20.625C18.75 21.0392 18.4142 21.375 18 21.375H6C5.58579 21.375 5.25 21.0392 5.25 20.625ZM17.25 19.875H6.75V15H17.25V19.875Z"
+                              fill="#516778"
+                            />
+                            <path
+                              d="M20.625 15.75H18C17.5858 15.75 17.25 16.0858 17.25 16.5C17.25 16.9142 17.5858 17.25 18 17.25H21.375C21.7892 17.25 22.125 16.9142 22.125 16.5V9C22.125 8.0534 21.4071 7.38986 21.4071 7.38986C20.7149 6.75 19.7531 6.75 19.7531 6.75L4.24687 6.75C3.28514 6.75 2.59288 7.38986 2.59288 7.38986C1.875 8.0534 1.875 9 1.875 9V16.5C1.875 16.9142 2.21079 17.25 2.625 17.25H6C6.41421 17.25 6.75 16.9142 6.75 16.5C6.75 16.0858 6.41421 15.75 6 15.75H3.375V9C3.375 8.70955 3.61103 8.49139 3.61103 8.49139C3.87219 8.25 4.24687 8.25 4.24687 8.25L19.7531 8.25C20.1278 8.25 20.389 8.49139 20.389 8.49139C20.625 8.70955 20.625 9 20.625 9V15.75Z"
+                              fill="#516778"
+                            />
+                            <path
+                              d="M18.75 10.875C18.75 11.4963 18.2463 12 17.625 12C17.0037 12 16.5 11.4963 16.5 10.875C16.5 10.2537 17.0037 9.75 17.625 9.75C18.2463 9.75 18.75 10.2537 18.75 10.875Z"
+                              fill="#516778"
+                            />
+                          </svg>
+                        </div>
+                        <div class="button2">
+                          <div class="text9">Imprimir selecionados</div>
+                          <svg
+                            class="printer-d5"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M5.25 7.5V3.75C5.25 3.33579 5.58579 3 6 3H18C18.4142 3 18.75 3.33579 18.75 3.75V7.5C18.75 7.91421 18.4142 8.25 18 8.25H6C5.58579 8.25 5.25 7.91421 5.25 7.5ZM17.25 6.75H6.75V4.5H17.25V6.75Z"
+                              fill="#F9FAFB"
+                            />
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M5.25 20.625V14.25C5.25 13.8358 5.58579 13.5 6 13.5H18C18.4142 13.5 18.75 13.8358 18.75 14.25V20.625C18.75 21.0392 18.4142 21.375 18 21.375H6C5.58579 21.375 5.25 21.0392 5.25 20.625ZM17.25 19.875H6.75V15H17.25V19.875Z"
+                              fill="#F9FAFB"
+                            />
+                            <path
+                              d="M20.625 15.75H18C17.5858 15.75 17.25 16.0858 17.25 16.5C17.25 16.9142 17.5858 17.25 18 17.25H21.375C21.7892 17.25 22.125 16.9142 22.125 16.5V9C22.125 8.0534 21.4071 7.38986 21.4071 7.38986C20.7149 6.75 19.7531 6.75 19.7531 6.75L4.24687 6.75C3.28514 6.75 2.59288 7.38986 2.59288 7.38986C1.875 8.0534 1.875 9 1.875 9V16.5C1.875 16.9142 2.21079 17.25 2.625 17.25H6C6.41421 17.25 6.75 16.9142 6.75 16.5C6.75 16.0858 6.41421 15.75 6 15.75H3.375V9C3.375 8.70955 3.61103 8.49139 3.61103 8.49139C3.87219 8.25 4.24687 8.25 4.24687 8.25L19.7531 8.25C20.1278 8.25 20.389 8.49139 20.389 8.49139C20.625 8.70955 20.625 9 20.625 9V15.75Z"
+                              fill="#F9FAFB"
+                            />
+                            <path
+                              d="M18.75 10.875C18.75 11.4963 18.2463 12 17.625 12C17.0037 12 16.5 11.4963 16.5 10.875C16.5 10.2537 17.0037 9.75 17.625 9.75C18.2463 9.75 18.75 10.2537 18.75 10.875Z"
+                              fill="#F9FAFB"
+                            />
+                          </svg>
+                        </div>
+                        <svg
+                          class="vector-5"
+                          width="1369"
+                          viewBox="0 0 1369 0"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M0 0L1369 0.000119682" stroke="#D5DDE2" />
+                        </svg>
+                      </div>
+                      
+                    <br>
+                    
+                    <div class="frame-6188">
+                        <div class="button-cancelar-atendimento">
+                          <div class="text-cancelar-atendimento">Cancelar atendimento individual</div>
+                        </div>
+                      </div>
+                      
+            
+                <div class="display-type"></div>
+
+            </div>
+                <script src="https://kit.fontawesome.com/fbf22f7a56.js" crossorigin="anonymous"></script>
+
+                <script src="bower_components/jquery/dist/jquery.min.js"></script>
+                <script src="bower_components/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
+                <script src="bower_components/ckeditor/ckeditor.js"></script>
+                <script src="bower_components/bootstrap-validator/dist/validator.min.js"></script>
+                <script src="bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+                <script src="bower_components/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js"></script>
+                <script src="bower_components/bootstrap/js/dist/util.js"></script>
+                <script src="bower_components/bootstrap/js/dist/alert.js"></script>
+                <script src="bower_components/bootstrap/js/dist/button.js"></script>
+                <script src="bower_components/bootstrap/js/dist/carousel.js"></script>
+                <script src="bower_components/bootstrap/js/dist/collapse.js"></script>
+                <script src="bower_components/bootstrap/js/dist/dropdown.js"></script>
+                <script src="bower_components/bootstrap/js/dist/modal.js"></script>
+                <script src="bower_components/bootstrap/js/dist/tab.js"></script>
+                <script src="bower_components/bootstrap/js/dist/tooltip.js"></script>
+                <script src="bower_components/bootstrap/js/dist/popover.js"></script>
+                <script src="js/main.js?version=4.4.0"></script>
+                <script>
+                    (function (i, s, o, g, r, a, m) {
+                        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                            (i[r].q = i[r].q || []).push(arguments)
+                        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+                    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+                    ga('create', 'UA-XXXXXXX-9', 'auto');
+                    ga('send', 'pageview');
+                </script>
+</body>
+
+</html>
