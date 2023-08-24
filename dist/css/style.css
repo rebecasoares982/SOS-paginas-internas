@@ -32484,6 +32484,7 @@ Contents:
  }
 */
 
+/*scroll-vincular*/
  .fa-circle-user {
    font-size: 25px;
    color: green;
@@ -32526,7 +32527,7 @@ Contents:
  .scroll-container:hover .person-container {
    transform: translateX(-100px);
  }
-
+/**/
 
  .aviso-recuperacao {
    display: inline-flex;
