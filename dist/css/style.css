@@ -32484,7 +32484,7 @@ Contents:
  }
 */
 
-/*scroll-vincular*/
+ /*scroll-vincular*/
  .fa-circle-user {
    font-size: 25px;
    color: green;
@@ -32527,7 +32527,8 @@ Contents:
  .scroll-container:hover .person-container {
    transform: translateX(-100px);
  }
-/**/
+
+ /**/
 
  .aviso-recuperacao {
    display: inline-flex;
@@ -35090,10 +35091,10 @@ Contents:
  .frame-26 {
    background: var(--light-1, #ffffff);
    border-radius: 8px;
-   border-style: solid;
+   /* border-style: solid; */
    border-color: var(--color-alabaster-300, #b0bfc9);
    border-width: 1px;
-   padding: 8px;
+   /* padding: 8px; */
    display: flex;
    flex-direction: column;
    gap: 8px;
@@ -35101,10 +35102,11 @@ Contents:
    justify-content: flex-start;
    position: absolute;
    left: 1273px;
-   top: 252px;
+   top: 243px;
  }
 
- .frame-427319174 {
+
+ /*.frame-427319174 {
    border-radius: 8px;
    display: flex;
    flex-direction: row;
@@ -35113,14 +35115,19 @@ Contents:
    justify-content: flex-start;
    flex-shrink: 0;
    position: relative;
- }
+ }*/
 
- .outubro {
-   color: var(--color-alabaster-950, #22292f);
+ .filtro-meses {
+   color:#22292f;
    text-align: left;
    font: 400 12px "Inter", sans-serif;
    position: relative;
+   background: var(--light-1, #ffffff);
+   border-radius: 8px;
+   border-color: #b0bfc9;
+   border-width: 1px;
  }
+ 
 
  .chevron-down-1 {
    flex-shrink: 0;
@@ -35471,13 +35478,13 @@ Contents:
    transform: rotate(-30deg) scale(1, 1);
  }
 
- .taxa-de-ocupa-o-dos-leitos {
+ .taxa-de-ocupacao-dos-leitos {
    color: var(--color-alabaster-950, #22292f);
    text-align: center;
    font: 600 18px "Inter", sans-serif;
    position: absolute;
-   left: calc(50% - -401px);
-   top: 726px;
+   right: 150px;
+   top: 740px;
  }
 
  .cards,
@@ -35520,6 +35527,18 @@ Contents:
    width: 200px;
    position: relative;
    right: 85px;
+ }
+
+ .card-3 {
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+   align-items: flex-start;
+   justify-content: flex-start;
+   flex-shrink: 0;
+   width: 200px;
+   position: relative;
+   right: 65px;
  }
 
  .frame-427319175 {
@@ -35773,7 +35792,7 @@ Contents:
    padding: 24px 32px 24px 32px;
    display: flex;
    flex-direction: row;
-   gap: 34px;
+   gap: 24px;
    align-items: flex-start;
    justify-content: flex-start;
    position: absolute;
@@ -36285,31 +36304,46 @@ Contents:
    border-color: var(--color-alabaster-200, #d5dde2);
    border-width: 1px;
    margin-left: 800px;
-   margin-top: 20px;
+   margin-top: 25px;
  }
 
  .spinner-container {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  position: relative;
-  animation: spin 2s linear infinite;
-  border: 8px solid #f3f3f3;
-  border-top: 8px solid #0f6e31;
-  left: 850px;
-  bottom: 200px;
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   position: relative;
+   animation: spin 2s linear infinite;
+   border: 8px solid #f3f3f3;
+   border-top: 8px solid #0f6e31;
+   left: 885px;
+   bottom: 200px;
+ }
+
+ .spinner-text {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   font-size: 20px;
+   font-weight: bold;
+   color: #0f6e31;
+ }
+
+ .container-responsive {
+   display: flex;
+   flex-wrap: wrap;
+   /* Permite que os itens quebrem para a próxima linha quando não há espaço suficiente */
+   justify-content: space-between;
+   /* Distribui os itens com espaço entre eles */
+   align-items: flex-start;
+   /* Alinha os itens ao topo do contêiner */
+   background-color: #fff;
+ }
+
+ select {
+  outline: none;
 }
 
-.spinner-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 20px;
-  font-weight: bold;
-  color: #0f6e31;
-}
- 
 
  /* ##. User Override Styles */
  /*# sourceMappingURL=main.css.map */
