@@ -34037,9 +34037,8 @@ Contents:
    flex-direction: row;
    gap: 88px;
    justify-content: flex-start;
-   margin-top: 1500px;
+   margin-top: 1300px;
  }
-
 
  .text-rascunho-salvo {
    color: var(--color-primary-700, #227338);
@@ -36418,9 +36417,8 @@ Contents:
    width: 452px;
    position: absolute;
    left: 1050px;
-   top: 1800px;
+   top: 1590px;
  }
-
 
  .button {
    background: var(--base-white, #ffffff);
@@ -37032,7 +37030,7 @@ Contents:
    border-color: var(--color-alabaster-200, #d5dde2);
    border-width: 1px;
    width: 340px;
-   height: 380px;
+   height: 425px;
    position: absolute;
    left: 1168px;
    top: 1310px;
@@ -37102,6 +37100,8 @@ Contents:
    justify-content: flex-start;
    flex-shrink: 0;
    position: relative;
+   left: 14px;
+   top: -5px;
  }
 
  .label5 {
@@ -37233,7 +37233,7 @@ Contents:
  .frame-427319164 {
    display: flex;
    flex-direction: row;
-   gap: 16px;
+   /*gap: 16px;*/
    align-items: flex-start;
    justify-content: flex-start;
    position: absolute;
@@ -37280,7 +37280,7 @@ Contents:
  .frame-427319165 {
    display: flex;
    flex-direction: row;
-   gap: 16px;
+   /*gap: 16px;*/
    align-items: flex-start;
    justify-content: flex-start;
    position: absolute;
@@ -37416,7 +37416,6 @@ Contents:
  .frame-427319151 {
    display: flex;
    flex-direction: column;
-   gap: 4px;
    align-items: flex-start;
    justify-content: flex-start;
    flex-shrink: 0;
@@ -37815,11 +37814,6 @@ Contents:
 
  }
 
- .bullet-lembretes {
-  list-style-type: disc; /* Define o estilo das marcadores como bolinhas */
-  margin-left: 20px;     /* Adiciona um recuo à esquerda para melhor aparência */
-  padding-left: 10px;    /* Adiciona um espaçamento à esquerda para separar o texto das bolinhas */
-}
 
  /* ##. User Override Styles */
  /*# sourceMappingURL=main.css.map */
