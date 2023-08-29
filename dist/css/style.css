@@ -36659,7 +36659,7 @@ Contents:
    top: 71px;
  }
 
- .badge4 {
+ .badge-4 {
    background: var(--color-alabaster-100, #eceff2);
    border-radius: 16px;
    padding: 4px 8px 4px 8px;
@@ -36671,6 +36671,7 @@ Contents:
    position: absolute;
    left: 487px;
    top: 127px;
+   border: none;
  }
 
  .vector-9 {
@@ -36808,16 +36809,16 @@ Contents:
  }
 
  .frame-427319162 {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: absolute;
-  left: 24px;
-  top: 114px;
-  overflow: hidden;
-}
+   display: flex;
+   flex-direction: column;
+   gap: 2px;
+   align-items: flex-start;
+   justify-content: flex-start;
+   position: absolute;
+   left: 24px;
+   top: 114px;
+   overflow: hidden;
+ }
 
  .frame-427319155 {
    display: flex;
@@ -36933,13 +36934,13 @@ Contents:
  }
 
  .frame-427319113 {
-   background: #ffffff;
+   background: rgb(255, 255, 255);
    border-radius: 8px;
    border-style: solid;
    border-color: var(--color-alabaster-200, #d5dde2);
    border-width: 1px;
    width: 340px;
-   height: 195px;
+   height: 220px;
    position: absolute;
    left: 1168px;
    top: 854px;
@@ -36979,12 +36980,11 @@ Contents:
    overflow: hidden;
  }
 
- .text9 {
+ .text-99 {
    color: #b69111;
-   text-align: left;
-   font: 600 14px "Inter", sans-serif;
-   text-decoration: underline;
-   position: relative;
+   flex-wrap: wrap;
+   margin-left: -9px;
+   width: 290px;
  }
 
  .vacina-o {
@@ -37000,7 +37000,7 @@ Contents:
  }
 
  .frame-427319119 {
-   background: #ffffff;
+   background: rgb(255, 255, 255);
    border-radius: 8px;
    border-style: solid;
    border-color: var(--color-alabaster-200, #d5dde2);
@@ -37009,7 +37009,7 @@ Contents:
    height: 187px;
    position: absolute;
    left: 1168px;
-   top: 1073px;
+   top: 1100px;
    overflow: hidden;
  }
 
@@ -37035,7 +37035,7 @@ Contents:
    height: 380px;
    position: absolute;
    left: 1168px;
-   top: 1284px;
+   top: 1310px;
    overflow: hidden;
  }
 
@@ -37805,6 +37805,21 @@ Contents:
    line-height: 18px;
    padding-top: 12px;
  }
+
+ .text-lembretes {
+   padding-top: 25%;
+ }
+
+ .text-lembretes-2 {
+   margin-left: 15px;
+
+ }
+
+ .bullet-lembretes {
+  list-style-type: disc; /* Define o estilo das marcadores como bolinhas */
+  margin-left: 20px;     /* Adiciona um recuo à esquerda para melhor aparência */
+  padding-left: 10px;    /* Adiciona um espaçamento à esquerda para separar o texto das bolinhas */
+}
 
  /* ##. User Override Styles */
  /*# sourceMappingURL=main.css.map */
